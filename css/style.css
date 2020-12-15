@@ -1,3 +1,208 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.left {
+    width: 70%;
+    float: left;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.btn-outline {
+    border: 1px solid #666;
+    border-radius: 5px;
+    padding: 2px 5px;
+    color: #666;
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sub {
+    color: #9b9b9b;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.sub a, .hashtag a {
+    color: #f60;
+}
+
+.ratting {
+    background-color: #fff3e5;
+    height: 50px;
+    padding: 0 30px;
+    /* font-size: 35px; */
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 22px;
+    font-weight: 400;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.ratting i, .ratting2 i {
+    color: #ff8a00;
+    font-size: 22px;
+    line-height: 10px;
+    margin-right: 10px;
+}
+
+.small {
+    font-size: 35px;
+    line-height: 50px;
+}
+
+.swiper-container {
+    width: 680px;
+    height: 480px;
+    background-color: #000;
+    margin: 0;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-container img {
+    height: 100%;
+}
+
+.content {
+    font-size: larger;
+    line-height: 150%;
+}
+
+.content h2 {
+    margin: 20px 0 10px 0;
+}
+
+.hashtag {
+    margin-bottom: 20px;
+}
+
+.hashtag a {
+    margin-right: 10px;
+}
+
+.ttquan {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    box-sizing: content-box;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
+}
+
+.ttquan .avatar img {
+    height: 100px;
+}
+
+.avatar {
+    width: 100px;
+    margin-right: 20px;
+}
+
+.post {
+    border: 1px solid #999;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+}
+
+a.btn {
+    color: #999;
+}
+
+.post img {
+    width: 50%;
+}
+
+.ttquan p {
+    margin: 0;
+}
+
+.ttquan_chitiet {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ratting2 {
+    display: flex;
+}
+
+.ratting2 span {
+    font-weight: 600;
+}
+
+.ttquan_chitiet a {
+    color: #000;
+}
+
+.ttquan_chitiet strong {
+    font-size: 18px;
+}
+
+.thanhtuongtac {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.thanhtuongtac img{
+    height: 30px;
+}
+
+.thanhtuongtac div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.thanhtuongtac div:first-child img {
+    margin-right: 5px;
+}
+
+.thanhtuongtac div:last-child img {
+    margin-left: 10px;
+}
+
+.view {
+    background-color: #f4f3f3;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 *{
     padding: 0;
@@ -287,4 +492,28 @@ main {
 }
 .xh{
     height: 480px !important;
+}
+
+footer {
+    background-color: #000;
+    color: #efefef;
+}
+
+.mxh {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-bottom: 1px solid #666;
+}
+
+.mxh a {
+    margin-right: 10px;
+}
+
+.coppyright {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
 }
