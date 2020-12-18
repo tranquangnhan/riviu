@@ -6,7 +6,7 @@ function ketnoidb()
     $password = "";
 
     try {
-        $conn = new PDO("mysql:host=$servername;dbname=duan1", $username, $password);
+        $conn = new PDO("mysql:host=$servername;dbname=riviu", $username, $password);
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $conn->exec("set names utf8");

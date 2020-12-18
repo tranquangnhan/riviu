@@ -41,6 +41,7 @@ switch ($act) {
         //         }else $mess= "<p class='text-danger mt-2'>Đăng nhập không thành công</p>"; 
         //     }else $mess= "<p class='text-danger mt-2'>Đăng nhập không thành công</p>";
         // }
+        $monan = laymonan();
         $view = "./site/views/home.php";
         require_once "./site/views/layout.php";
         break;
