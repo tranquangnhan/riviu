@@ -2,7 +2,7 @@
 session_start();
 ob_start();
 require_once "./site/models/index.php";
-require_once "./system/share.php";
+
 require_once "./system/conn.php";
 
 if (isset($_GET['act'])) {
