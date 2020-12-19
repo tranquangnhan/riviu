@@ -44,7 +44,8 @@ a {
     font-size: 15px;
 }
 
-.sub a, .hashtag a {
+.sub a,
+.hashtag a {
     color: #f60;
 }
 
@@ -62,7 +63,8 @@ a {
     align-items: center;
 }
 
-.ratting i, .ratting2 i {
+.ratting i,
+.ratting2 i {
     color: #ff8a00;
     font-size: 22px;
     line-height: 10px;
@@ -180,7 +182,7 @@ a.btn {
     margin-top: 20px;
 }
 
-.thanhtuongtac img{
+.thanhtuongtac img {
     height: 30px;
 }
 
@@ -204,49 +206,60 @@ a.btn {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Open Sans', sans-serif;
 }
-img{
+
+img {
     max-width: 100%;
 }
-ul,li {
+
+ul,
+li {
     list-style: none;
 }
-.boxcenter{
+
+.boxcenter {
     max-width: 85%;
     margin: 0 auto;
 }
-.nav{
+
+.nav {
     display: flex;
     padding: 2rem 0.5rem;
 }
-.logo{
+
+.logo {
     width: 10%;
 }
-.logo img{
+
+.logo img {
     width: 80%;
     height: 40px;
 }
-.search{
+
+.search {
     display: flex;
     width: 70%;
     height: 45px;
     align-items: center;
 }
-.search .search-left{
+
+.search .search-left {
     width: 20%;
     padding: 0.7rem 1.5rem;
     background-color: #f7f7f7;
     position: relative;
-    border-radius:3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
 }
-.search .search-left::before{
+
+.search .search-left::before {
     content: "";
     position: absolute;
     width: 1px;
@@ -255,19 +268,22 @@ ul,li {
     top: 7px;
     background-color: #9999;
 }
-.search .search-right{
+
+.search .search-right {
     width: 80%;
     padding: 0rem 1rem;
     background-color: #f7f7f7;
     display: flex;
     align-items: center;
 }
-.search .search-left button{
+
+.search .search-left button {
     outline: none;
     border: none;
     background-color: #f7f7f7;
 }
-.search .search-right input{
+
+.search .search-right input {
     width: 97%;
     background-color: transparent;
     outline: none;
@@ -275,23 +291,28 @@ ul,li {
     border: none;
     border-radius: 0 0 3px 3px;
 }
-.profile{
+
+.profile {
     width: 20%;
     display: flex;
 }
-.profile .chuong img,.profile .avt img{
+
+.profile .chuong img,
+.profile .avt img {
     width: 50px;
 }
-.profile .baiviet{
+
+.profile .baiviet {
     height: 44px;
     border-radius: 24px;
     width: 106px;
-    box-shadow: 0 0 8px 0 rgba(0,0,0,.7);
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .7);
     background-color: #f60;
     text-align: center;
     line-height: 44px;
 }
-.profile .baiviet span{
+
+.profile .baiviet span {
     font-family: Helvetica;
     font-size: 18px;
     font-weight: 700;
@@ -302,50 +323,64 @@ ul,li {
     text-align: center;
     color: #fff;
 }
+
 main {
     background-color: #f7f7f7;
     width: 100%;
-    height: 5000px;
+    height: 2000px;
 }
-.mt-1{
+
+.mt-1 {
     margin-top: 1rem;
 }
-.mt-2{
+
+.mt-2 {
     margin-top: 2rem;
 }
-.mt-3{
+
+.mt-3 {
     margin-top: 3rem;
 }
-.pt-3{
+
+.pt-3 {
     padding-top: 3rem;
 }
-.pt-2{
+
+.pt-2 {
     padding-top: 2rem;
 }
-.mb-1{
+
+.mb-1 {
     margin-bottom: 1rem;
 }
-.mb-3{
+
+.mb-3 {
     margin-bottom: 3rem;
 }
+
 .danhmuc {
-    border: 1px solid rgba(0,0,0,.09);
+    border: 1px solid rgba(0, 0, 0, .09);
     padding-bottom: 2rem;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
 }
-.img-dm{
+
+.img-dm {
     height: 130px;
     object-fit: cover;
 }
-.danhmuc-text{
+
+.danhmuc-text {
     margin: 0.5rem 1rem;
 }
-.owl-carousel .owl-nav button.owl-next, .owl-carousel .owl-nav button.owl-prev, .owl-carousel button.owl-dot{
+
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel button.owl-dot {
     font-size: 25px;
     position: absolute;
-    top:40%;
+    top: 40%;
     background-color: white;
     width: 35px;
     height: 35px;
@@ -355,28 +390,37 @@ main {
     font-weight: bold;
     color: #bbb;
 }
-.owl-carousel .owl-nav button.owl-next:hover, .owl-carousel .owl-nav button.owl-prev:hover {
+
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover {
     border-color: #f60;
     background: #f60;
-    color:white;
+    color: white;
 }
-.owl-carousel .owl-nav button.owl-next{
-    right:-17px;
+
+.owl-carousel .owl-nav button.owl-next {
+    right: -17px;
 }
-.owl-carousel .owl-nav button.owl-prev{
-    left:-17px;
+
+.owl-carousel .owl-nav button.owl-prev {
+    left: -17px;
 }
-.imgbaner{
+
+.imgbaner {
     border-radius: 10px;
 }
 
+
 /* Style the tab */
+
 .tab {
     overflow: hidden;
-  }
-  
-  /* Style the buttons inside the tab */
-  .tab button {
+}
+
+
+/* Style the buttons inside the tab */
+
+.tab button {
     background-color: inherit;
     float: left;
     border: none;
@@ -389,108 +433,130 @@ main {
     background-color: #efefef;
     margin-right: 1rem;
     color: #707070;
-  }
-  .tab button span{
+}
+
+.tab button span {
     position: relative;
     padding-bottom: 0.1rem;
-  }
-  /* Change background color of buttons on hover */
-  .tab button span:hover{
-      border-bottom: 3px solid #f60 ;
-  }
+}
 
 
-  /* Create an active/current tablink class */
-  .tab button.active {
+/* Change background color of buttons on hover */
+
+.tab button span:hover {
+    border-bottom: 3px solid #f60;
+}
+
+
+/* Create an active/current tablink class */
+
+.tab button.active {
     color: #fff;
     background-color: #f60;
-  }
-  
-  /* Style the tab content */
-  .tabcontent {
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
     display: none;
     border-top: none;
 }
-.baivietct{
+
+.baivietct {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .baivietct .baivietct-item {
     width: 32%;
     height: 450px;
 }
+
 .baivietct .baivietct-item .baivietct-item__img {
     height: 70%;
     position: relative;
-
 }
-.baivietct .baivietct-item .baivietct-item__img:hover .img-boxhover{
+
+.baivietct .baivietct-item .baivietct-item__img:hover .img-boxhover {
     display: block;
     opacity: 1;
     cursor: pointer;
 }
-.baivietct .baivietct-item .baivietct-item__img:hover .img-boxhover p{
+
+.baivietct .baivietct-item .baivietct-item__img:hover .img-boxhover p {
     transform: translateY(0);
 }
-.img-boxhover{
+
+.img-boxhover {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, .7);
     color: #fff;
     padding: 1rem;
     border-radius: 10px;
     font-size: 11pt;
-    transition: 0.5s ;
+    transition: 0.5s;
     opacity: 0;
 }
-.img-boxhover img{
+
+.img-boxhover img {
     width: 30px !important;
     height: 30px !important;
 }
+
 .img-boxhover p {
     transform: translateY(30px);
-    transition: 0.5s ;
+    transition: 0.5s;
 }
-.baivietct .baivietct-item .baivietct-item__img img{
+
+.baivietct .baivietct-item .baivietct-item__img img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
-.kh{
+
+.kh {
     margin-top: 1rem;
     justify-content: space-between;
 }
-.kh,.name{
+
+.kh,
+.name {
     display: flex;
 }
 
-.kh .name img{
+.kh .name img {
     width: 25px;
     height: 25px;
     border-radius: 25px;
     object-fit: cover;
     margin-right: 0.5rem;
 }
-.kh .star{
-    width:10%;
+
+.kh .star {
+    width: 10%;
     object-fit: cover;
     display: flex;
     line-height: 20px;
 }
-.kh .star img{
+
+.kh .star img {
     width: 20px;
     height: 20px;
     object-fit: cover;
     margin-right: 0.4rem;
 }
-.kh .star p{
+
+.kh .star p {
     font-weight: bold;
 }
-.xh{
+
+.xh {
     height: 480px !important;
 }
 

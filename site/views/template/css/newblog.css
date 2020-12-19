@@ -1,0 +1,179 @@
+.boxnewblog {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.boxform {
+    padding-left: 55px;
+    display: flex;
+    margin: 0.2rem 0;
+}
+
+.boxform .tieude {
+    min-width: 10%;
+    font-weight: 700;
+    font-size: 14px;
+    font-family: Helvetica-Bold;
+    padding: .7rem!important;
+    background-color: white;
+    position: relative;
+}
+
+.boxform .tieudeafter::after {
+    content: "";
+    right: 0px;
+    top: 8px;
+    width: 1px;
+    height: 50%;
+    background-color: #ccc;
+    position: absolute;
+}
+
+.boxform .boxinput {
+    width: 90%;
+    color: #1a1a1a;
+}
+
+::-webkit-input-placeholder {
+    color: #ccc;
+}
+
+.boxform .boxinput input {
+    font-weight: 500;
+    color: #1a1a1a;
+    font-size: 13px;
+    background: transparent;
+    border: unset;
+    box-shadow: unset;
+    padding: .7rem!important;
+    width: 100%;
+    outline: none;
+    background-color: white;
+}
+
+.noidung {
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: unset;
+    box-shadow: unset;
+    background-color: white;
+    padding: .7rem!important;
+}
+
+.themhinh img {
+    background: #e4f8ff;
+    padding: 13px;
+    border-radius: 50%;
+}
+
+.themhinh {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+.inputhinh label {
+    color: #80b2ec;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.diadiem,
+.diadiem input {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.boxform select {
+    outline: none;
+    border: 0px;
+    margin: 0 1.5rem;
+    width: 30%;
+}
+
+.boxform select:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.formqc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.formqc .boxqc {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+}
+
+.boxqc .boxqc-right {
+    margin-left: 1rem;
+}
+
+.boxqc .boxqc-left {
+    padding: 1rem;
+}
+
+.boxqc .boxqc-left img {
+    width: 20px;
+    height: 20px;
+}
+
+.boxqc .boxqc-left img:hover {
+    transition: box-shadow .25s;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2), 0 4px 15px 0 rgba(0, 0, 0, .19);
+}
+
+.boxqc .boxqc-right {
+    font-size: 13px;
+    color: #666;
+}
+
+.boxqc .boxqc-right:hover {
+    color: #f60;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.danhgia {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.boxdanhgia {
+    width: 100%;
+    background-color: white;
+    font-size: 13px;
+    color: #666;
+    font-weight: 400 !important;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.rate {
+    margin-left: 2rem;
+}
+
+.btn-review {
+    border: 1px solid #f60;
+    color: #f60;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: Helvetica-Bold;
+    text-transform: uppercase;
+    font-size: 12px;
+    width: 122px;
+    background: #ffecdf;
+    outline: none;
+    margin-top: 0.5rem;
+}
