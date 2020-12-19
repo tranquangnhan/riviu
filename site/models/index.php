@@ -32,4 +32,8 @@ function gettag($id) {
     }
     return $tagList;
 }
+
+function getallBaiviet() {
+    return laydulieu("Select * from baiviet bv inner join taikhoan tk on bv.iduser = tk.id order by bv.id desc");
+}
 ?>
