@@ -1,15 +1,24 @@
+<?php 
+    $ngaydang = date("d-m-Y", strtotime($baiviet['ngaydang']));
+    $tagList = gettag($baiviet['idhashtag']);
+    if(isset($baiviet['idquan']))
+        $quan = getQuanById($baiviet['idquan']);
+?>
 <div class="container">
         <div class="left">
             <div class="info">
-                <div class="avatar">
-                    <img src="./site/views/images/avatar.jpeg" alt="">
+                <div>
+                    <div class="avatar">
+                        <img src="./site/views/images/avatar.jpeg" alt="">
+                    </div>
+                    <div class="tttg">
+                        <div><strong><?= $baiviet['name'] ?></strong> <a href="" class="btn-outline">Theo dõi</a></div>
+                        <div class="sub"><?= $ngaydang ?> tại <a href=""> <?= $quan['diachi'] ?></a></div>
+                    </div>
                 </div>
-                <div class="tttg">
-                    <div><strong>Mạnh Cường</strong> <a href="" class="btn-outline">Theo dõi</a></div>
-                    <div class="sub">22:59 ngày 13/12/2020 tại <a href=""> Hương Vị Nhật - Ẩm Thực Nhật</a></div>
-                </div>
+                
                 <div class="ratting">
-                    <i class="fa fa-star checked"></i><p><span class="small">4</span>/5</p>
+                    <i class="fa fa-star checked"></i><p><span class="small"><?= $baiviet['sao'] ?></span>/5</p>
                 </div>
             </div>
             <div class="swiper-container">
@@ -31,23 +40,23 @@
             </div>
         
             <div class="content">
-                <h2>Tới Hương vị Nhật thưởng thức mì udon</h2>
-                <p>Quán có 2 loại ăn: ăn theo dạng buffet và tính theo đầu người và ăn theo dạng cơm phần. Mình gọi udon phần là udon nóng có thêm 1 phần thịt bò xào để ăn vs udon và 1 phần gà kiểu nhật. Sợi udon dày và dai dai ngon lắm, nước soup siêu đậm đà và bò xào rất ngon, vừa miệng mà hơi nhiều hành. Gà chiên thì giòn rụm lớp vỏ có tẩm bột vị như bbq còn gà ở trong thì mềm và thơm, mà hơi nhiều dầu. Tổng thiệt hại là 120k siêu no nê.</p>
+                <h2><?= $baiviet['tieude'] ?></h2>
+                <p><?= $baiviet['noidung'] ?></p>
             </div>
             <div class="hashtag">
-                <a href="">#monnhat</a>
-                <a href="">#udon</a>
-                <a href="">#gachien</a>
+                <?php foreach ($tagList as $tag) { ?>
+                    <a href="desau">#<?=$tag?></a>
+                <?php } ?>
             </div>
             <div class="ttquan">
                 <div style="display: flex;">
                     <div class="avatar">
-                        <img src="./images/anh_quan.svg" alt="">
+                        <img src="<?= $quan['img']?>" alt="">
                     </div>
                     <div class="ttquan_chitiet">
                         <div>
-                            <strong><a href="#">Hương vị Nhật -  ẩm thực Nhật</a></strong>
-                            <p>Địa chỉ ở đây</p>
+                            <strong><a href="#"><?= $quan['tenquan'] ?></a></strong>
+                            <p><?= $quan['diachi'] ?></p>
                         </div>
                         <div class="ratting2">
                             <i class="fa fa-star checked"></i>
@@ -59,7 +68,7 @@
                 <a class="btn" href="">
                 <div class="post">
                     
-                        <img src="./images/dang.svg" alt="">
+                        <img src="./site/views/images/dang.svg" alt="">
                         <p>Viết review</p>
                     
                 </div>
@@ -68,19 +77,19 @@
             <div class="comment">
                 <div class="thanhtuongtac">
                     <div>
-                        <img src="./images/heart.png" alt="">
+                        <img src="./site/views/images/heart.png" alt="">
                         <span>99</span>
                     </div>
                     <div>
-                        <img src="./images/bookmark_black.png" alt="">
-                        <img src="./images/share_black.png" alt="">
+                        <img src="./site/views/images/bookmark_black.png" alt="">
+                        <img src="./site/views/images/share_black.png" alt="">
                     </div>
                 </div>
                 <div class="view">
                     <strong>331</strong> lượt xem bài viết
                 </div>
                 <div class="binhluan">
-                    <img src="./images/anhmh.png" alt="" style="margin-top: 10px;">
+                    <img src="./site/views/images/anhmh.png" alt="" style="margin-top: 10px;">
                 </div>
             </div>
         </div>

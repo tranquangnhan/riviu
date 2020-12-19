@@ -47,6 +47,9 @@ switch ($act) {
         break;
 
     case 'chitiet':
+        if(isset($_GET['id'])) {
+            $baiviet = layDanhgiaChitiet($_GET['id']);
+        }
         $view = "./site/views/chitiet.php";
         require_once "./site/views/layout.php";
         break;
