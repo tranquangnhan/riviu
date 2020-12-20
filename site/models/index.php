@@ -47,7 +47,8 @@ function searchQuan($key) {
     // print_r($dulieu) ;
 }
 
-function themrv($tieude, $noidung, $tag, $diadiem, $vitri, $danhgia) {
-    return postdulieu("INSERT INTO baiviet(tieude,noidung,idquan,idmon,idhashtag,sao) VALUES ($tieude,$noidung,$diadiem,$tag,$danhgia);");
+function themrv($tieude, $noidung, $tag, $diadiem,$idmon, $vitri, $danhgia) {
+    $sql = "INSERT INTO baiviet(tieude,noidung,idquan,idmon,idhashtag,sao) VALUES ('$tieude','$noidung','$diadiem','$idmon','$tag','$danhgia')";
+    return exec1($sql);
 }
 ?>

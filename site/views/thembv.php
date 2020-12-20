@@ -27,7 +27,7 @@
                         </ol>
                     </nav>
                 </div>
-                <form action="index.php?act=thembv_" method="post">
+                <form action="index.php?act=thembv_" method="post"  enctype="multipart/form-data">
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tiêu Đề</div>
                     <div class="boxinput">
@@ -53,7 +53,7 @@
                         <img src="site/views/images/icon_image.png" alt="">
                         <div class="inputhinh">
                             <label for="inputhinh"><b>Thêm Hình</b> </label>
-                            <input type="file" id="inputhinh" accept="image/png, image/jpg, image/jpeg" multiple="multiple" style="display: none">
+                            <input type="file" name="img[]" id="inputhinh" accept="image/png, image/jpg, image/jpeg" multiple="multiple" style="display: none">
                         </div>
                     </div>
                 </div>

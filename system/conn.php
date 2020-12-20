@@ -39,7 +39,7 @@ function laymot($sql) {
         $row = $result->fetch(PDO::FETCH_ASSOC);
         return $row;
     }
-function postdulieu($sql) {
+    function postdulieu($sql) {
         $conn = ketnoidb();
         $result = $conn ->exec($sql);
         return $result;

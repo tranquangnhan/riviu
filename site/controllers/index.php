@@ -3,7 +3,7 @@ session_start();
 ob_start();
 require_once "./site/models/index.php";
 require_once "./system/conn.php";
-
+require_once "lib/myfunctions.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
 } else {
@@ -41,10 +41,15 @@ switch ($act) {
             $noidung = $_POST['noidung'];
             $tag = $_POST['tag'];
             // ahdesau
+            $allFile = $_FILES['img'];
+                            //upload nhiều ảnh
+            $imgupload = checkUpLoadMany($allFile);
+            print_r($imgupload);
+
             $diadiem = $_POST['diadiem'];
             $vitri = $_POST['vitri'];
             $danhgia = $_POST['danhgia'];
-            themrv($tieude, $noidung, $tag, $diadiem, $vitri, $danhgia);
+            //themrv($tieude, $noidung, $tag, $diadiem,$idmon, $vitri, $danhgia);
         }
         break;
     case 'login':
