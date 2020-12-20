@@ -79,6 +79,7 @@ Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
 <script src="site/views/js/ajax/searchQuan.js"></script>
 <script src="site/views/js/SweetAlert2.js"></script>
 <script src="site/views/js/ajax/login.js"></script>
+<script src="site/views/js/ajax/signup.js"></script>
 <script src="site/views/js/home.js"></script>
 </body>
 </html>

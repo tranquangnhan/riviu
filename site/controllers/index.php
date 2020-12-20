@@ -60,6 +60,13 @@ switch ($act) {
         $QuanList = array("quanarr"=>$quan); 
         print_r(json_encode($QuanList));
         break;
+        
+    case 'signup':
+        echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
+        echo '<link rel="stylesheet" href="site/views/css/login.css">';
+        $view = "./site/views/signup.php";
+        require_once "./site/views/layout.php";
+        break;
 }
 
 ?>
