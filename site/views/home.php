@@ -4,13 +4,13 @@
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                 <?php
-                foreach ($monan as $ma) {
+                foreach ($tag as $tg) {
                    
-                    $anhmon = layImgMonAn($ma['id']);
+                    $anhtag = layImgTag($tg['id']);
                     echo '<div class="item danhmuc">
-                            <img src="'. $anhmon['img'].'" alt="" class="img-dm">
+                            <img src="'. $anhtag['img'].'" alt="" class="img-dm">
                             <div class="danhmuc-text">
-                                <h4>'.$ma['ten'].'</h4>
+                                <h4>'.$tg['tentag'].'</h4>
                                 <p>206 bài viết</p>
                             </div>
                         </div>';
@@ -18,7 +18,7 @@
                 ?>
             </div>
         </div>
-        <h2 class="mt-2">Coffee</h2>
+        <!-- <h2 class="mt-2">Coffee</h2>
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                 <div class="item danhmuc">
@@ -141,7 +141,7 @@
                     <h4>5</h4>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="boxbanner mt-2">
             <img src="./site/views/images/banner.png" alt="" class="imgbaner">
         </div>

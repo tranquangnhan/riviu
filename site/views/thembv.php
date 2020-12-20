@@ -22,8 +22,9 @@
                 <div class="navmain">
                     <nav>
                         <ol data-v-53d0ffbc="" class="breadcrumb">
-                            <li class="active breadcrumb-item">Trang chủ</li>
-                            <li class="breadcrumb-item">Buffet Nướng</li>
+                            <h2>Đăng cảm nhận</h2>
+                            <!-- <li class="active breadcrumb-item">Trang chủ</li>
+                            <li class="breadcrumb-item">Buffet Nướng</li> -->
                         </ol>
                     </nav>
                 </div>
@@ -31,11 +32,11 @@
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tiêu Đề</div>
                     <div class="boxinput">
-                        <input type="text" placeholder="Hãy viết tiêu đề bài">
+                        <input type="text" name="tieude" placeholder="Hãy viết tiêu đề bài">
                     </div>
                 </div>
                 <div class="boxform">
-                    <textarea class="noidung" name="" value="" id="" cols="30" rows="10" placeholder="Hãy viết cảm nhận của bạn"></textarea>
+                    <textarea class="noidung" name="noidung" value="" id="" cols="30" rows="10" placeholder="Hãy viết cảm nhận của bạn"></textarea>
                 </div>
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tag</div>

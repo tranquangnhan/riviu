@@ -15,7 +15,7 @@ switch ($act) {
         $mess = "";
         $baiviet = getallBaiviet();
 
-        $monan = laymonan();
+        $tag = layDSTag();
         // print_r($monan);
         $view = "./site/views/home.php";
         require_once "./site/views/layout.php";
@@ -39,12 +39,9 @@ switch ($act) {
         if(isset($_POST['submit'])) {
             $tieude = $_POST['tieude'];
             $noidung = $_POST['noidung'];
-            $tag = $_POST['tag'];
-            // ahdesau
-            $diadiem = $_POST['diadiem'];
-            $vitri = $_POST['vitri'];
-            $danhgia = $_POST['danhgia'];
-            themrv($tieude, $noidung, $tag, $diadiem, $vitri, $danhgia);
+            $tag = $_POST['idTag'];
+            $quan = $_POST['idquan'];
+            themrv($tieude, $noidung, $tag, $quan);
         }
         break;
     case 'login':
