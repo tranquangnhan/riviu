@@ -60,7 +60,11 @@ function addTag(i) {
     $('#box-suggest').hide();
     $('#boxinpt-tag').append('<span class="Tagselected">'+nameTag+'</span>');
     $('#tag').val('');
-    listidtag += i+",";
+    if(listidtag=="")
+        listidtag += i;
+    else
+        listidtag += ","+i;
+    
     $('#idTag').val(listidtag);
 
 }
