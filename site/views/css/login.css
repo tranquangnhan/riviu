@@ -1,0 +1,103 @@
+.boxlogin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.login {
+    width: 450px;
+    min-height: 650px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imglogin {
+    margin-top: 3rem;
+}
+
+.imglogin img {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+.dnface {
+    width: 80%;
+}
+
+.btndnface {
+    color: #fff;
+    background: #527ad0;
+    border: 1px solid #527ad0;
+    width: 100%;
+    font-weight: 600;
+    height: 38px;
+    border-radius: 24px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.inputdn {
+    border: unset;
+    background: transparent;
+    width: 100%;
+    height: 26px;
+    padding: 24px 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    outline: none;
+}
+
+.line {
+    border-bottom: 1px solid silver;
+    margin-bottom: 0.5rem;
+    width: 80%;
+}
+
+.btn-login {
+    width: 80%;
+    margin: 1rem;
+}
+
+.btnsubmit {
+    border: 1px solid #f60;
+    background-color: #f60;
+    color: #fff;
+    width: 100%;
+    font-weight: 600;
+    height: 38px;
+    border-radius: 24px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.dangky {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+    width: 80%;
+    padding: 0 2rem;
+}
+
+.dangky a,
+div {
+    color: #a6a6a6;
+    font-size: 12px;
+}
+
+.boxapp {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.taiapp {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.boxapp img {
+    width: 150px;
+}
