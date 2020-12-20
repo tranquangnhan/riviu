@@ -15,7 +15,7 @@ switch ($act) {
         $mess = "";
         $baiviet = getallBaiviet();
 
-        $monan = laymonan();
+        $tag = layDSTag();
         // print_r($monan);
         $view = "./site/views/home.php";
         require_once "./site/views/layout.php";
@@ -30,26 +30,26 @@ switch ($act) {
         break;
     
     case 'thembv':
+        
         echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
         $view = "./site/views/thembv.php";
         require_once "./site/views/layout.php";
         break;
 
     case 'thembv_':
+
         if(isset($_POST['submit'])) {
             $tieude = $_POST['tieude'];
             $noidung = $_POST['noidung'];
-            $tag = $_POST['tag'];
-            // ahdesau
+            $tag = $_POST['idTag'];
+            $quan = $_POST['idquan'];
             $allFile = $_FILES['img'];
-                            //upload nhiều ảnh
-            $imgupload = checkUpLoadMany($allFile);
-            print_r($imgupload);
+                        //upload nhiều ảnh
+            $img = checkUpLoadMany($allFile);
+            $sao = $_POST['sao'];
+            $iduser =$_SESSION['sid'];
 
-            $diadiem = $_POST['diadiem'];
-            $vitri = $_POST['vitri'];
-            $danhgia = $_POST['danhgia'];
-            //themrv($tieude, $noidung, $tag, $diadiem,$idmon, $vitri, $danhgia);
+            themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser);
         }
         break;
     case 'login':

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="site/views/css/newblog.css">
     <link rel="stylesheet" href="site/views/css/jquery.rateyo.min.css">
     <link rel="stylesheet" href="site/views/css/SweetAlert2.css">
-    
+
     <script src="site/views/js/jquery.rateyo.min.js"></script>
     <script src="site/views/js/newblog.js"></script>
 </head>

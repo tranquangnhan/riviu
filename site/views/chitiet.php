@@ -1,6 +1,6 @@
 <?php 
     $ngaydang = date("d-m-Y", strtotime($baiviet['ngaydang']));
-    $tagList = gettag($baiviet['idhashtag']);
+    // $tagList = gettag($baiviet['idhashtag']);
     if(isset($baiviet['idquan']))
         $quan = getQuanById($baiviet['idquan']);
 ?>
@@ -43,11 +43,11 @@
                 <h2><?= $baiviet['tieude'] ?></h2>
                 <p><?= $baiviet['noidung'] ?></p>
             </div>
-            <div class="hashtag">
+            <!-- <div class="hashtag">
                 <?php foreach ($tagList as $tag) { ?>
                     <a href="desau">#<?=$tag?></a>
                 <?php } ?>
-            </div>
+            </div> -->
             <div class="ttquan">
                 <div style="display: flex;">
                     <div class="avatar">

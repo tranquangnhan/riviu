@@ -1,15 +1,15 @@
 <?php 
-function checkdangnhap($us){
-    return laymot("SELECT * FROM taikhoan WHERE tendn = '$us'");
-}
+// function checkdangnhap($us){
+//     return laymot("SELECT * FROM taikhoan WHERE tendn = '$us'");
+// }
 
-function laymonan() {
-    $sql = "select * from monan";
+function layDSTag() {
+    $sql = "select * from tag";
     return result1(0,$sql);
 }
 
-function layImgMonAn($idmon) {
-    return laymot("SELECT img FROM baiviet WHERE idmon = $idmon limit 1");
+function layImgTag($id) {
+    return laymot("SELECT img FROM tag WHERE id = $id limit 1");
 }
 
 function layDanhgiaChitiet($id) {
@@ -47,8 +47,8 @@ function searchQuan($key) {
     // print_r($dulieu) ;
 }
 
-function themrv($tieude, $noidung, $tag, $diadiem,$idmon, $vitri, $danhgia) {
-    $sql = "INSERT INTO baiviet(tieude,noidung,idquan,idmon,idhashtag,sao) VALUES ('$tieude','$noidung','$diadiem','$idmon','$tag','$danhgia')";
-    return exec1($sql);
+function themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser) {
+    return postdulieu("INSERT INTO baiviet(tieude,noidung,idquan,idhashtag,sao,img,iduser) 
+    VALUES ('$tieude','$noidung','$quan','$tag','$sao','$img','$iduser')");
 }
 ?>
