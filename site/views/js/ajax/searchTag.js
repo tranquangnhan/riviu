@@ -14,9 +14,10 @@
               processData: false,
               data: formData,
               success: function (response) {
-                for (let i = 0; i < response.key.length; i++) {
-                    console.log(response.key[i].tentag)
-                    
+                $('#box-suggest li').remove();
+                for (let i = 0; i < response.key.length; i++) {                   
+                    $('#box-suggest').show();
+                    $('#box-suggest').append("<li onclick='addTag("+response.key[i].id+")' id='"+ response.key[i].id +"'>"+response.key[i].tentag+"</li>");
                 }
                 //   alert(response.key.tentag);
                 //   console.log(response.key);

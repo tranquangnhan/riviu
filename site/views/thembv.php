@@ -39,8 +39,13 @@
                 </div>
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tag</div>
-                    <div class="boxinput">
+                    <div class="boxinput" id="boxinpt-tag">
                         <input type="text" placeholder="Tìm kiếm hay thêm tag" name="tag" id="tag">
+                        <div class="box-suggest">
+                            <ul id="box-suggest">
+                                
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="boxform">
@@ -53,12 +58,12 @@
                     </div>
                 </div>
                 <div class="boxform">
-                    <div class="tieude diadiem">Địa điểm</div>
+                    <div class="tieude diadiem">Tên quán</div>
                     <div class="boxinput diadiem">
-                        <input type="text" placeholder="Hãy nhập địa điểm">
+                        <input type="text" id="tenquan" placeholder="Hãy nhập tên của quán">
                     </div>
                 </div>
-                <div class="boxform">
+                <!-- <div class="boxform">
                     <div class="tieude ">Vị trí</div>
                     <select name="" id="">
                         <option value="">Thành Phố</option>
@@ -72,41 +77,10 @@
                         <option value="">Quận/Huyện</option>
                         <option value="">Cưkuin</option>
                     </select>
-                </div>
+                </div> -->
                 <div class="boxform">
-                    <div class="formqc">
-                        <div class="boxqc">
-                            <div class="boxqc-left">
-                                <img src="site/views/images/icon_place.png" alt="">
-                            </div>
-                            <div class="boxqc-right">
-                                Bắp Xào Thiên Di
-                            </div>
-                        </div>
-                        <div class="boxqc">
-                            <div class="boxqc-left">
-                                <img src="site/views/images/icon_place.png" alt="">
-                            </div>
-                            <div class="boxqc-right">
-                                Quán Cơm Ti Ti - Phan Xích Long
-                            </div>
-                        </div>
-                        <div class="boxqc">
-                            <div class="boxqc-left">
-                                <img src="site/views/images/icon_place.png" alt="">
-                            </div>
-                            <div class="boxqc-right">
-                                Bắp Xào Thiên Di
-                            </div>
-                        </div>
-                        <div class="boxqc">
-                            <div class="boxqc-left">
-                                <img src="site/views/images/icon_place.png" alt="">
-                            </div>
-                            <div class="boxqc-right">
-                                Quán Cơm Ti Ti - Phan Xích Long
-                            </div>
-                        </div>
+                    <div class="formqc" id="formqc">
+                        
                     </div>
 
 
@@ -120,12 +94,14 @@
                         <div class="rate" id="rateYo"></div>
                     </div>
                 </div>
-                <div class="boxform">
+                <!-- <div class="boxform">
                     <div class="tieude tieudeafter">Youtube</div>
                     <div class="boxinput">
                         <input type="text" placeholder="https://youtube.com/watch?v=zzzzz">
                     </div>
-                </div>
+                </div> -->
+                <input type="hidden" name="idquan" id="idquan">
+                <input type="hidden" name="idTag" id="idTag">
                 <div class="boxform">
                     <input type="submit" name="submit" value="Đăng bài" class="btn btn-review btn-submit hover">
                 </div>

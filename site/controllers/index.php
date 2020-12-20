@@ -53,6 +53,13 @@ switch ($act) {
         $view = "./site/views/login.php";
         require_once "./site/views/layout.php";
         break;
+
+    case 'searchQuan':
+        if(isset($_GET['name']))
+        $quan = searchQuan($_GET['name']);
+        $QuanList = array("quanarr"=>$quan); 
+        print_r(json_encode($QuanList));
+        break;
 }
 
 ?>

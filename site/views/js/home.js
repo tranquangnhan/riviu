@@ -39,3 +39,35 @@ function openCity(evt, cityName) {
 }
 
 // Get the element with id="defaultOpen" and click on it
+
+// $('#tag').blur(function (e) { 
+//     e.preventDefault();
+//     $('#box-suggest').hide();
+// });
+
+// $('#tag').focus(function (e) { 
+//     e.preventDefault();
+//     $('#box-suggest').show();
+// });
+
+$('.item').click(function () { 
+    
+});
+listidtag = '';
+function addTag(i) {
+    nameTag = $('#'+i).text();
+    idTag = i;
+    $('#box-suggest').hide();
+    $('#boxinpt-tag').append('<span class="Tagselected">'+nameTag+'</span>');
+    $('#tag').val('');
+    listidtag += i+",";
+    $('#idTag').val(listidtag);
+
+}
+
+function chonquan(i) {
+    $('#idquan').val(i);
+    nameQuan = $('#q'+i).text();
+    $('#tenquan').val(nameQuan);
+    $('.boxqc').remove();
+}

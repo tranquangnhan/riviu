@@ -42,6 +42,11 @@ function searchTag($key) {
     return laydulieu("SELECT * FROM tag WHERE tentag LIKE '$key%'");
 }
 
+function searchQuan($key) {
+    return laydulieu("SELECT id, tenquan FROM quan WHERE tenquan LIKE '$key%'");
+    // print_r($dulieu) ;
+}
+
 function themrv($tieude, $noidung, $tag, $diadiem, $vitri, $danhgia) {
     return postdulieu("INSERT INTO baiviet(tieude,noidung,idquan,idmon,idhashtag,sao) VALUES ($tieude,$noidung,$diadiem,$tag,$danhgia);");
 }
