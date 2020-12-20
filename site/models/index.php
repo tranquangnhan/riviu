@@ -36,4 +36,12 @@ function gettag($id) {
 function getallBaiviet() {
     return laydulieu("Select * from baiviet bv inner join taikhoan tk on bv.iduser = tk.id order by bv.id desc");
 }
+
+function searchTag($key) {
+    return laydulieu("SELECT * FROM tag WHERE tentag LIKE '$key%'");
+}
+
+function themrv($tieude, $noidung, $tag, $diadiem, $vitri, $danhgia) {
+    return postdulieu("INSERT INTO baiviet(tieude,noidung,idquan,idmon,idhashtag,sao) VALUES ($tieude,$noidung,$diadiem,$tag,$danhgia);");
+}
 ?>

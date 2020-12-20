@@ -74,5 +74,6 @@ Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
     </div>
 </footer>
 <script src="site/views/js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+<script src="site/views/js/ajax/searchTag.js"></script>
 </body>
 </html>

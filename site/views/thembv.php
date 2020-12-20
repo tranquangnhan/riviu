@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/jquery.rateyo.min.css">
     <script src="js/jquery.rateyo.min.js"></script>
     <script src="js/newblog.js"></script>
-</head>
+</head> -->
 
     <!-- end header -->
     <main>
@@ -40,7 +40,7 @@
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tag</div>
                     <div class="boxinput">
-                        <input type="text" placeholder="Tìm kiếm hay thêm tag">
+                        <input type="text" placeholder="Tìm kiếm hay thêm tag" name="tag" id="tag">
                     </div>
                 </div>
                 <div class="boxform">
