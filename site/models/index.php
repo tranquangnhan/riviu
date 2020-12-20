@@ -4,7 +4,8 @@ function checkdangnhap($us){
 }
 
 function laymonan() {
-    return laydulieu("select * from monan");
+    $sql = "select * from monan";
+    return result1(0,$sql);
 }
 
 function layImgMonAn($idmon) {

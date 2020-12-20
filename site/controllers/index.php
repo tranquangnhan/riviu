@@ -14,7 +14,9 @@ switch ($act) {
     case 'home':
         $mess = "";
         $baiviet = getallBaiviet();
+
         $monan = laymonan();
+        // print_r($monan);
         $view = "./site/views/home.php";
         require_once "./site/views/layout.php";
         break;
@@ -28,6 +30,7 @@ switch ($act) {
         break;
     
     case 'thembv':
+        echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
         $view = "./site/views/thembv.php";
         require_once "./site/views/layout.php";
         break;
@@ -43,6 +46,12 @@ switch ($act) {
             $danhgia = $_POST['danhgia'];
             themrv($tieude, $noidung, $tag, $diadiem, $vitri, $danhgia);
         }
+        break;
+    case 'login':
+        echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
+        echo '<link rel="stylesheet" href="site/views/css/login.css">';
+        $view = "./site/views/login.php";
+        require_once "./site/views/layout.php";
         break;
 }
 

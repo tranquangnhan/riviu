@@ -2,16 +2,20 @@
         <div class="boxlogin">
             <div class="login">
                 <div class="imglogin">
-                    <img src="../images/logologin.png" alt="">
+                    <img src="site/views/images/logologin.png" alt="">
                 </div>
                 <div class="line">
-                    <input class="inputdn" type="text" placeholder="Nhập tên tài khoản">
+                    <input class="inputdn" type="text"  id="username" placeholder="Nhập tên tài khoản">
                 </div>
                 <div class="line">
-                    <input class="inputdn" type="password" placeholder="Nhập mật khẩu">
+                    <input class="inputdn" type="password" id="password" placeholder="Nhập mật khẩu">
+                </div>
+                <div class="nhotk">
+                    <div class="mr-1">Nhớ tài khoản ?</div>
+                    <div><input type="checkbox" id="remember" ></div>
                 </div>
                 <div class="btn-login">
-                    <button class="btnsubmit">
+                    <button class="btnsubmit"  id="login">
                     ĐĂNG NHẬP
                     </button>
                 </div>
@@ -27,10 +31,10 @@
                 <div class="taiapp mt-3">Tải app Riviu</div>
                 <div class="boxapp">
                     <div class="boxappleft">
-                        <img src="../images/app-store.png" alt="">
+                        <img src="site/views/images/app-store.png" alt="">
                     </div>
                     <div class="boxappright">
-                        <img src="../images/ch-play.png" alt="">
+                        <img src="site/views/images/ch-play.png" alt="">
                     </div>
                 </div>
             </div>

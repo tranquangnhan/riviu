@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>riviu</title>
-    <script src="site/views/js/home.js"></script>
+
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="site/views/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="site/views/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- /Nhân  -->
     <script src="site/views/jquery/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="site/views/css/allblog.css">
+
     <link rel="stylesheet" href="site/views/css/newblog.css">
     <link rel="stylesheet" href="site/views/css/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="site/views/css/SweetAlert2.css">
+    
     <script src="site/views/js/jquery.rateyo.min.js"></script>
     <script src="site/views/js/newblog.js"></script>
 </head>
@@ -75,5 +76,8 @@ Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
 </footer>
 <script src="site/views/js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 <script src="site/views/js/ajax/searchTag.js"></script>
+<script src="site/views/js/SweetAlert2.js"></script>
+<script src="site/views/js/ajax/login.js"></script>
+<script src="site/views/js/home.js"></script>
 </body>
 </html>

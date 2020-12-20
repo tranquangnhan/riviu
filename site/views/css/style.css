@@ -3,6 +3,11 @@
     font-family: sans-serif;
 }
 
+button {
+    outline: none;
+    cursor: pointer;
+}
+
 .container {
     width: 75%;
     margin: 0 auto;

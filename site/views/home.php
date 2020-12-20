@@ -4,22 +4,18 @@
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                 <?php
-
                 foreach ($monan as $ma) {
+                   
                     $anhmon = layImgMonAn($ma['id']);
-
-
+                    echo '<div class="item danhmuc">
+                            <img src="'. $anhmon['img'].'" alt="" class="img-dm">
+                            <div class="danhmuc-text">
+                                <h4>'.$ma['ten'].'</h4>
+                                <p>206 bài viết</p>
+                            </div>
+                        </div>';
+                }
                 ?>
-                    <div class="item danhmuc">
-                        <img src="<?= (isset($anhmon['img'])) ? $anhmon['img'] : ''; ?>" alt="" class="img-dm">
-                        <div class="danhmuc-text">
-                            <h4><?= $ma['ten'] ?></h4>
-                            <p>206 bài viết</p>
-                        </div>
-                    </div>
-                <?php } ?>
-
-
             </div>
         </div>
         <h2 class="mt-2">Coffee</h2>
