@@ -1,56 +1,61 @@
 <?php 
-  function checkUser($user,$pass,$remember){
+    session_start();
+  function checkuser($name,$password,$remember){
     if($remember) {
         $_COOKIE['sessionId'] = session_id();
     } else{
         unset($_COOKIE);
     } 
-    $user = str_replace(";","",$user);
-    $user = str_replace("'","",$user);
-    $user = str_replace('"',"",$user);
-    $pass = str_replace(";","",$pass);
-    $pass = str_replace("'","",$pass);
-    $pass = str_replace('"',"",$pass);
-    $user = addslashes($user);
-    $pass = addslashes($pass);
-    $sql = "select * from khachhang where user=? and pass=?";
-    $user = result1(1,$sql,$user,$pass);
-    if(is_array($user)){
-        $_SESSION['sid'] = $user['id'];
-        $_SESSION['suser']= $user['user'];
-        $_SESSION['role'] = $user['role'];
+    $name = str_replace(";","",$name);
+    $name = str_replace("'","",$name);
+    $name = str_replace('"',"",$name);
+    $password = str_replace(";","",$password);
+    $password = str_replace("'","",$password);
+    $password = str_replace('"',"",$password);
+    $name = addslashes($name);
+    $password = addslashes($password);
+    $sql = "select * from taikhoan where name=? and password=?";
+    $name = result1(1,$sql,$name,$password);
+    if(is_array($name)){
+        $_SESSION['sid'] = $name['id'];
+        $_SESSION['sname']= $name['name'];
+        $_SESSION['role'] = $name['role'];
         return true;
     }else{
         return false;
     }
 }
-function checkUserSignup($user,$pass){
-    $user = str_replace(";","",$user);
-    $user = str_replace("'","",$user);
-    $user = str_replace('"',"",$user);
-    $pass = str_replace(";","",$pass);
-    $pass = str_replace("'","",$pass);
-    $pass = str_replace('"',"",$pass);
-    $user = addslashes($user);
-    $pass = addslashes($pass);
-    $sql = "select * from khachhang where user=? and pass=?";
-    $user = result1(1,$sql,$user,$pass);
-    if(is_array($user)){
-        $_SESSION['sid'] = $user['id'];
-        $_SESSION['suser']= $user['user'];
-        $_SESSION['role'] = $user['role'];
+function checkuserSignup($name,$password){
+    $name = str_replace(";","",$name);
+    $name = str_replace("'","",$name);
+    $name = str_replace('"',"",$name);
+    $password = str_replace(";","",$password);
+    $password = str_replace("'","",$password);
+    $password = str_replace('"',"",$password);
+    $name = addslashes($name);
+    $password = addslashes($password);
+    $sql = "select * from taikhoan where name=? and password=?";
+    $name = result1(1,$sql,$name,$password);
+    if(is_array($name)){
+        $_SESSION['sid'] = $name['id'];
+        $_SESSION['sname']= $name['name'];
+        $_SESSION['role'] = $name['role'];
         return true;
     }else{
         return false;
     }
 }
-function IsExist ($user){ // kiểm tra xem user đã tồn tại hay chưa
-    $sql = "select * from khachhang where user='{$user}'";
-    return result1(1,$sql);
+function IsExist ($name){ // kiểm tra xem name đã tồn tại hay chưa
+    $sql = "select * from taikhoan where name=?";
+    return result1(1,$sql,$name);
 }
 
 function checkEmailTonTai($email){
-    $sql = "select * from khachhang where email='{$email}'";
-    return result1(1,$sql);
+    $sql = "select * from taikhoan where email=?";
+    return result1(1,$sql,$email);
+}
+function addUser($userName,$passWord){
+    $sql = "INSERT INTO taikhoan (name,password) VALUES (?,?)";
+    return exec1($sql,$userName,$passWord);
 }
 ?>

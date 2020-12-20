@@ -1,6 +1,5 @@
 let UserLoginRegex = /^[a-zA-Z0-9]+$/i;
-let MailRegex = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-let PhoneRegex = /((09|03|07|08|05)+([0-9]{8})\b)/i;
+
 
 // validate user, phone, mail
 
@@ -26,7 +25,7 @@ $("#signup").click(async function() {
         allowOutsideClick: false,
         showConfirmButton: false,
         text: 'Vui lòng chờ trong giây lát...',
-        imageUrl: 'views/img/Default/Loading.gif',
+        imageUrl: 'site/views/images/Default/Loading.gif',
     });
     if (username2 === "" || dienthoai2 === "" || email2 === "" || passWord2 === "" || rePassWord2 === "") {
         fireErr('Vui lòng nhập đầy đủ thông tin');
@@ -34,14 +33,6 @@ $("#signup").click(async function() {
     }
     if (UserLoginRegex.test(username2) === false) {
         fireErr('Tên đăng nhập không hợp lệ');
-        return;
-    }
-    if (PhoneRegex.test(dienthoai2) === false) {
-        fireErr('Số điện thoại không hợp lệ.');
-        return;
-    }
-    if (MailRegex.test(email2) === false) {
-        fireErr('Địa chỉ email không hợp lệ hoặc để trống');
         return;
     }
     if (passWord2.length < 6) {
@@ -52,24 +43,19 @@ $("#signup").click(async function() {
         fireErr('Vui lòng xác nhận mật khẩu.');
         return;
     }
-
-
     if (rePassWord2 !== "" && passWord2 !== "" && rePassWord2 !== passWord2) {
         fireErr('Mật khẩu xác nhận không chính xác');
         return;
     }
-
     let CheckUserEmailIsExist = new FormData();
 
     CheckUserEmailIsExist.append('Login', username2); //tên
-    CheckUserEmailIsExist.append('email', email2);
-    CheckUserEmailIsExist.append('phone', dienthoai2);
-    CheckUserEmailIsExist.append('Action', 'CheckEmailNamePhoneExist'); //check tài khoản đã tồn tại hay chưa
+    CheckUserEmailIsExist.append('Action', 'CheckNameExist'); //check tài khoản đã tồn tại hay chưa
 
 
     await $.ajax({
         type: 'POST',
-        url: 'controllers/ajax/loginsignup.php',
+        url: 'site/controllers/ajax/loginsignup.php',
         dataType: 'JSON',
         cache: false,
         contentType: false,
@@ -80,25 +66,15 @@ $("#signup").click(async function() {
                 Loading.close();
                 fireErr('Tài khoản đã tồn tại trên hệ thống.');
             }
-            if (response.StatusCode === 2) {
-                Loading.close();
-                fireErr('Email đã tồn tại trên hệ thống.');
-            }
-            if (response.StatusCode === 3) {
-                Loading.close();
-                fireErr('Số điện thoại đã tồn tại trên hệ thống.');
-            }
             if (response.StatusCode === 0) {
 
                 let signup = new FormData();
                 signup.append('username', username2); //tên
-                signup.append('email', email2); //tên
-                signup.append('phone', dienthoai2);
                 signup.append('password', passWord2); //tên
                 signup.append('Action', 'signup'); //check tài khoản đã tồn tại hay chưa
                 await $.ajax({
                     type: 'POST',
-                    url: 'controllers/ajax/loginsignup.php',
+                    url: 'site/controllers/ajax/loginsignup.php',
                     dataType: 'JSON',
                     cache: false,
                     contentType: false,
@@ -107,15 +83,15 @@ $("#signup").click(async function() {
                     success: function(response) {
                         if (response.StatusCode === 1) {
                             Loading.close();
-
                             Swal.fire({
                                 //timer: 3000,
                                 type: 'success',
                                 title: 'Đăng ký thành công.',
-                                text: 'Chúng tôi đã gửi thư kích hoạt tới địa chỉ ' + email2 + '. Vui lòng kích hoạt tài khoản.',
+                                text: 'Chúng tôi đang chuyển hướng về trang chủ.',
                                 showConfirmButton: true,
                                 showCancelButton: false,
                             });
+                            window.location.href = ('?act=home');
                         }
                     }
                 });
