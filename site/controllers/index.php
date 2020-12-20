@@ -26,6 +26,17 @@ switch ($act) {
         $view = "./site/views/chitiet.php";
         require_once "./site/views/layout.php";
         break;
+    
+    case 'thembv':
+        $view = "./site/views/thembv.php";
+        require_once "./site/views/layout.php";
+        break;
+
+    case 'thembv_':
+        if(isset($_POST['submit'])) {
+                    
+        }
+        break;
 }
 
 ?>

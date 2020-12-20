@@ -15,44 +15,6 @@
     <script src="js/newblog.js"></script>
 </head>
 
-<body>
-    <!-- start header  -->
-    <header>
-        <div class="boxcenter">
-            <div class="nav">
-                <div class="logo">
-                    <img src="images/logo.png" alt="">
-                </div>
-                <div class="search">
-                    <div class="search-left">
-                        <button>HỒ CHÍ MINH</button>
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="search-right">
-                        <input type="search" placeholder="Đi đâu, ăn gì ?">
-                        <div class="btn-search">
-                            <img src="images/search.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="profile">
-                    <div class="chuong">
-                        <img src="images/chuong.png" alt="">
-                    </div>
-                    <div class="avt">
-                        <img src="images/avt.png" alt="">
-                    </div>
-                    <div class="baiviet">
-                        <span>Viết Bài</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </header>
-
-
-
     <!-- end header -->
     <main>
         <div class="boxcenter">
@@ -65,6 +27,7 @@
                         </ol>
                     </nav>
                 </div>
+                <form action="index.php?act=thembv_" method="post">
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tiêu Đề</div>
                     <div class="boxinput">
@@ -82,7 +45,7 @@
                 </div>
                 <div class="boxform">
                     <div class="themhinh">
-                        <img src="images/icon_image.png" alt="">
+                        <img src="site/views/images/icon_image.png" alt="">
                         <div class="inputhinh">
                             <label for="inputhinh"><b>Thêm Hình</b> </label>
                             <input type="file" id="inputhinh" accept="image/png, image/jpg, image/jpeg" multiple="multiple" style="display: none">
@@ -114,7 +77,7 @@
                     <div class="formqc">
                         <div class="boxqc">
                             <div class="boxqc-left">
-                                <img src="images/icon_place.png" alt="">
+                                <img src="site/views/images/icon_place.png" alt="">
                             </div>
                             <div class="boxqc-right">
                                 Bắp Xào Thiên Di
@@ -122,7 +85,7 @@
                         </div>
                         <div class="boxqc">
                             <div class="boxqc-left">
-                                <img src="images/icon_place.png" alt="">
+                                <img src="site/views/images/icon_place.png" alt="">
                             </div>
                             <div class="boxqc-right">
                                 Quán Cơm Ti Ti - Phan Xích Long
@@ -130,7 +93,7 @@
                         </div>
                         <div class="boxqc">
                             <div class="boxqc-left">
-                                <img src="images/icon_place.png" alt="">
+                                <img src="site/views/images/icon_place.png" alt="">
                             </div>
                             <div class="boxqc-right">
                                 Bắp Xào Thiên Di
@@ -138,7 +101,7 @@
                         </div>
                         <div class="boxqc">
                             <div class="boxqc-left">
-                                <img src="images/icon_place.png" alt="">
+                                <img src="site/views/images/icon_place.png" alt="">
                             </div>
                             <div class="boxqc-right">
                                 Quán Cơm Ti Ti - Phan Xích Long
@@ -164,26 +127,9 @@
                     </div>
                 </div>
                 <div class="boxform">
-                    <button type="button" class="btn btn-review btn-submit hover" data-v-2cd4fa19="">
-                        Đăng bài
-                    </button>
+                    <input type="submit" name="submit" value="Đăng bài" class="btn btn-review btn-submit hover">
                 </div>
+                </form>
             </div>
-
         </div>
     </main>
-
-
-    <footer>
-        <div class="mxh">
-            <a href=""><img src="images/facebook.svg" alt=""></a>
-            <a href=""><img src="images/insta.svg" alt=""></a>
-            <a href=""><img src="images/tiktok.svg" alt=""></a>
-        </div>
-        <div class="coppyright">
-            © Công Ty TNHH RIVICO Địa chỉ: 372-374 Trần Hưng Đạo, Phường 2, Quận 5, HCM Số điện thoại: 1900 272736 MST:0316141166 Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
-        </div>
-    </footer>
-</body>
-
-</html>
