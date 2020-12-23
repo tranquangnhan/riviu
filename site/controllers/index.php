@@ -30,27 +30,37 @@ switch ($act) {
         break;
     
     case 'thembv':
-        
-        echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
-        $view = "./site/views/thembv.php";
-        require_once "./site/views/layout.php";
-        break;
-
-    case 'thembv_':
-
-        if(isset($_POST['submit'])) {
-            $tieude = $_POST['tieude'];
-            $noidung = $_POST['noidung'];
-            $tag = $_POST['idTag'];
-            $quan = $_POST['idquan'];
-            $allFile = $_FILES['img'];
-                        //upload nhiều ảnh
-            $img = checkUpLoadMany($allFile);
-            $sao = $_POST['sao'];
-            $iduser =$_SESSION['sid'];
-
-            themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser);
+        if($_SESSION['sid'] && isset($_SESSION['sid'])){
+            echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
+            $view = "./site/views/thembv.php";
+            require_once "./site/views/layout.php";
+            break;
+        }else{
+            header("location: login.php");
         }
+       
+    case 'thembv_':
+        if($_SESSION['sid'] && isset($_SESSION['sid'])){
+            if(isset($_POST['submit'])) {
+                $tieude = $_POST['tieude'];
+                $noidung = $_POST['noidung'];
+                $tag = $_POST['idTag'];
+                $quan = $_POST['idquan'];
+                $allFile = $_FILES['img'];
+                            //upload nhiều ảnh
+                $img = checkUpLoadMany($allFile);
+                $sao = $_POST['sao'];
+                $iduser =$_SESSION['sid'];
+
+                if(themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser)){
+                    header("location: index.php?act=home");
+                };
+            }
+
+        }else{
+            header("location: login.php");
+        }
+   
         break;
 
     case 'monan':
