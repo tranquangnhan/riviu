@@ -68,4 +68,43 @@ function getNameMon($id) {
     $name = laymot("SELECT name FROM monan WHERE id = $id");
     return $name['name'];
 }
+
+function getInfoQuan($idquan) {
+    return laymot("Select * from quan where id = $idquan");
+}
+
+function getInfoTacgia($id) {
+    return laymot("Select * from taikhoan where id = $id");
+}
+
+function getTagName($idtag) {
+    return laymot("Select * from tag where id = $idtag");
+}
+
+function getImgmon($idmon) {
+    $mon = laymot("select * from monan where id = $idmon");
+    return $mon['img'];
+}
+
+function countLike($idbv) {
+    $likeNumer = laymot("SELECT COUNT(*) as 'like' FROM likebv WHERE idbaiviet = $idbv");
+    return $likeNumer['like'];
+}
+
+function checkLike($idbv, $iduser) {
+    $isLike = laymot("SELECT COUNT(*) AS 'like' FROM likebv WHERE iduser = $iduser AND idbaiviet = $idbv");
+    return $isLike['like'] == 1;
+}
+
+function like($idbv, $iduser) {
+    // exit("INSERT INTO `likebv` (`iduser`, `idbaiviet`) VALUES ('$iduser', '$idbv');");
+    return postdulieu("INSERT INTO `likebv` (`iduser`, `idbaiviet`) VALUES ('$iduser', '$idbv');");
+}
+
+function unlike($idbv, $iduser) {
+    // exit("DELETE FROM likebv
+    // WHERE iduser = $iduser AND idbaiviet=$idbv");
+    return postdulieu("DELETE FROM likebv
+    WHERE iduser = $iduser AND idbaiviet=$idbv");
+}
 ?>

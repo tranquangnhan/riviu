@@ -27,3 +27,15 @@
           });
         }    
     });
+
+
+    function like(idbv, iduser) {
+      alert("index.php?act=like&idbv="+idbv+"&iduser="+iduser);
+      $.ajax({
+          type: "GET",
+          url: "index.php?act=like&idbv="+idbv+"&iduser="+iduser,
+          success: function (data) {
+              alert(data);
+          }
+      });
+  }

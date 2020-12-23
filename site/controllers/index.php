@@ -66,9 +66,9 @@ switch ($act) {
     case 'monan':
         if(isset($_GET['idmon'])) {
             $reviewList = getBvByMon($_GET['idmon']);
-            $tenMon = getNameMon($id);
+            $tenMon = getNameMon($_GET['idmon']);
         }
-        $view = "./site/views/allbv.php";
+        $view = "./site/views/monan.php";
         require_once "./site/views/layout.php";
         break;
 
@@ -91,6 +91,19 @@ switch ($act) {
         echo '<link rel="stylesheet" href="site/views/css/login.css">';
         $view = "./site/views/signup.php";
         require_once "./site/views/layout.php";
+        break;
+
+    case 'like':
+        if(isset($_GET['iduser'])&&(isset($_GET['idbv']))) {
+            $check = checkLike($_GET['idbv'], $_GET['iduser']);
+            if($check) {
+                unlike($_GET['idbv'], $_GET['iduser']);
+                print(0);
+            }else{
+                like($_GET['idbv'], $_GET['iduser']);
+                print(1);
+            }
+        }
         break;
 }
 
