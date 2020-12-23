@@ -1,53 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>riviu</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/allblog.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-    <!-- start header  -->
-    <header>
-        <div class="boxcenter">
-            <div class="nav">
-                <div class="logo">
-                    <img src="images/logo.png" alt="">
-                </div>
-                <div class="search">
-                    <div class="search-left">
-                        <button>HỒ CHÍ MINH</button>
-                        <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
-                    <div class="search-right">
-                        <input type="search" placeholder="Đi đâu, ăn gì ?">
-                        <div class="btn-search">
-                            <img src="images/search.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="profile">
-                    <div class="chuong">
-                        <img src="images/chuong.png" alt="">
-                    </div>
-                    <div class="avt">
-                        <img src="images/avt.png" alt="">
-                    </div>
-                    <div class="baiviet">
-                        <span>Viết Bài</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </header>
-
-
-
     <!-- end header -->
     <main>
         <div class="boxcenter">
@@ -62,18 +12,23 @@
                 </div>
                 <div class="box-imgdm">
                     <div class="imgdm">
-                        <img src="images/imgdm.jpeg" alt="">
+                        <img src="./site/views/images/imgdm.jpeg" alt="">
                         <div class="overplay cover"></div>
-                        <div class="btn-share"><img src="images/btn-share.png" alt=""></div>
+                        <div class="btn-share"><img src="./site/views/images/btn-share.png" alt=""></div>
                     </div>
-                    <div class="title">Buffet Nướng</div>
+                    <div class="title"><?= $tenMon ?></div>
                 </div>
 
-
+                <?php
+                if (!is_null($reviewList)) {
+                    foreach ($reviewList as $review) {
+                        # code...
+                    
+                ?>
                 <!-- start blog -->
                 <div class="blog">
                     <div class="author">
-                        <img src="images/author.png" alt="">
+                        <img src="./site/views/images/author.png" alt="">
                     </div>
                     <div class="blog-content">
                         <div class="content-nav">
@@ -93,21 +48,21 @@
                         <div class="boxcontent-img mt-2">
                             <div class="container1">
                                 <div class="bg1">
-                                    <img src="images/blog1.jpeg" alt="">
+                                    <img src="./site/views/images/blog1.jpeg" alt="">
                                 </div>
                                 <div class="bg1">
-                                    <img src="images/blog2.jpeg" alt="">
+                                    <img src="./site/views/images/blog2.jpeg" alt="">
                                 </div>
                                 <div class="bg1">
-                                    <img src="images/blog3.jpeg" alt="">
+                                    <img src="./site/views/images/blog3.jpeg" alt="">
                                 </div>
                             </div>
                             <div class="container2">
                                 <div class="bg2">
-                                    <img src="images/blog4.jpeg" alt="">
+                                    <img src="./site/views/images/blog4.jpeg" alt="">
                                 </div>
                                 <div class="bg2">
-                                    <img src="images/blog5.jpeg" alt="">
+                                    <img src="./site/views/images/blog5.jpeg" alt="">
                                     <div class="them"><span>+14</span></div>
                                 </div>
                             </div>
@@ -132,7 +87,7 @@
                             </div>
                             <div class="boxaddress">
                                 <div class="boxaddress-img">
-                                    <img src="images/address.jpeg" alt="">
+                                    <img src="./site/views/images/address.jpeg" alt="">
                                 </div>
                                 <div class="boxaddress-text">
                                     <h3 class="title-h3"><b>K-Pub Lê Văn Sỹ</b></h3>
@@ -141,16 +96,16 @@
                             </div>
                             <div class="boxlike">
                                 <div class="like">
-                                    <img src="images/btnlike.png" alt="">
+                                    <img src="./site/views/images/btnlike.png" alt="">
                                 </div>
                                 <div class="cmt">
-                                    <img src="images/btncmt.png" alt="">
+                                    <img src="./site/views/images/btncmt.png" alt="">
                                 </div>
                                 <div class="bookmark">
-                                    <img src="images/btnbookmark.png" alt="">
+                                    <img src="./site/views/images/btnbookmark.png" alt="">
                                 </div>
                                 <div class="share">
-                                    <img src="images/sharebv.png" alt="">
+                                    <img src="./site/views/images/sharebv.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -159,9 +114,11 @@
 
                 </div>
 
+                <?php }}?>
+
                 <div class="blog mt-2">
                     <div class="author">
-                        <img src="images/author.png" alt="">
+                        <img src="./site/views/images/author.png" alt="">
                     </div>
                     <div class="blog-content">
                         <div class="content-nav">
@@ -181,21 +138,21 @@
                         <div class="boxcontent-img mt-2">
                             <div class="container1">
                                 <div class="bg1">
-                                    <img src="images/blog1.jpeg" alt="">
+                                    <img src="./site/views/images/blog1.jpeg" alt="">
                                 </div>
                                 <div class="bg1">
-                                    <img src="images/blog2.jpeg" alt="">
+                                    <img src="./site/views/images/blog2.jpeg" alt="">
                                 </div>
                                 <div class="bg1">
-                                    <img src="images/blog3.jpeg" alt="">
+                                    <img src="./site/views/images/blog3.jpeg" alt="">
                                 </div>
                             </div>
                             <div class="container2">
                                 <div class="bg2">
-                                    <img src="images/blog4.jpeg" alt="">
+                                    <img src="./site/views/images/blog4.jpeg" alt="">
                                 </div>
                                 <div class="bg2">
-                                    <img src="images/blog5.jpeg" alt="">
+                                    <img src="./site/views/images/blog5.jpeg" alt="">
                                     <div class="them"><span>+14</span></div>
                                 </div>
                             </div>
@@ -220,7 +177,7 @@
                             </div>
                             <div class="boxaddress">
                                 <div class="boxaddress-img">
-                                    <img src="images/address.jpeg" alt="">
+                                    <img src="./site/views/images/address.jpeg" alt="">
                                 </div>
                                 <div class="boxaddress-text">
                                     <h3 class="title-h3"><b>K-Pub Lê Văn Sỹ</b></h3>
@@ -229,16 +186,16 @@
                             </div>
                             <div class="boxlike">
                                 <div class="like">
-                                    <img src="images/btnlike.png" alt="">
+                                    <img src="./site/views/images/btnlike.png" alt="">
                                 </div>
                                 <div class="cmt">
-                                    <img src="images/btncmt.png" alt="">
+                                    <img src="./site/views/images/btncmt.png" alt="">
                                 </div>
                                 <div class="bookmark">
-                                    <img src="images/btnbookmark.png" alt="">
+                                    <img src="./site/views/images/btnbookmark.png" alt="">
                                 </div>
                                 <div class="share">
-                                    <img src="images/sharebv.png" alt="">
+                                    <img src="./site/views/images/sharebv.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -248,7 +205,7 @@
                 </div>
                 <div class="blog mt-2">
                     <div class="author">
-                        <img src="images/author.png" alt="">
+                        <img src="./site/views/images/author.png" alt="">
                     </div>
                     <div class="blog-content">
                         <div class="content-nav">
@@ -268,21 +225,21 @@
                         <div class="boxcontent-img mt-2">
                             <div class="container1">
                                 <div class="bg1">
-                                    <img src="images/blog1.jpeg" alt="">
+                                    <img src="./site/views/images/blog1.jpeg" alt="">
                                 </div>
                                 <div class="bg1">
-                                    <img src="images/blog2.jpeg" alt="">
+                                    <img src="./site/views/images/blog2.jpeg" alt="">
                                 </div>
                                 <div class="bg1">
-                                    <img src="images/blog3.jpeg" alt="">
+                                    <img src="./site/views/images/blog3.jpeg" alt="">
                                 </div>
                             </div>
                             <div class="container2">
                                 <div class="bg2">
-                                    <img src="images/blog4.jpeg" alt="">
+                                    <img src="./site/views/images/blog4.jpeg" alt="">
                                 </div>
                                 <div class="bg2">
-                                    <img src="images/blog5.jpeg" alt="">
+                                    <img src="./site/views/images/blog5.jpeg" alt="">
                                     <div class="them"><span>+14</span></div>
                                 </div>
                             </div>
@@ -307,7 +264,7 @@
                             </div>
                             <div class="boxaddress">
                                 <div class="boxaddress-img">
-                                    <img src="images/address.jpeg" alt="">
+                                    <img src="./site/views/images/address.jpeg" alt="">
                                 </div>
                                 <div class="boxaddress-text">
                                     <h3 class="title-h3"><b>K-Pub Lê Văn Sỹ</b></h3>
@@ -316,16 +273,16 @@
                             </div>
                             <div class="boxlike">
                                 <div class="like">
-                                    <img src="images/btnlike.png" alt="">
+                                    <img src="./site/views/images/btnlike.png" alt="">
                                 </div>
                                 <div class="cmt">
-                                    <img src="images/btncmt.png" alt="">
+                                    <img src="./site/views/images/btncmt.png" alt="">
                                 </div>
                                 <div class="bookmark">
-                                    <img src="images/btnbookmark.png" alt="">
+                                    <img src="./site/views/images/btnbookmark.png" alt="">
                                 </div>
                                 <div class="share">
-                                    <img src="images/sharebv.png" alt="">
+                                    <img src="./site/views/images/sharebv.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -338,18 +295,3 @@
 
         </div>
     </main>
-
-
-    <footer>
-        <div class="mxh">
-            <a href=""><img src="images/facebook.svg" alt=""></a>
-            <a href=""><img src="images/insta.svg" alt=""></a>
-            <a href=""><img src="images/tiktok.svg" alt=""></a>
-        </div>
-        <div class="coppyright">
-            © Công Ty TNHH RIVICO Địa chỉ: 372-374 Trần Hưng Đạo, Phường 2, Quận 5, HCM Số điện thoại: 1900 272736 MST:0316141166 Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
-        </div>
-    </footer>
-</body>
-
-</html>

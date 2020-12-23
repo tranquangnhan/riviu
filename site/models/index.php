@@ -51,4 +51,21 @@ function themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser) {
     return postdulieu("INSERT INTO baiviet(tieude,noidung,idquan,idhashtag,sao,img,iduser) 
     VALUES ('$tieude','$noidung','$quan','$tag','$sao','$img','$iduser')");
 }
+
+function getAllMonAn() {
+    return laydulieu("SELECT * FROM monan order by id");
+}
+
+function getallDouong() {
+    return laydulieu("SELECT * from monan where loai = 0");
+}
+
+function getBvByMon($idmon) {
+    return laydulieu("SELECT * FROM `baiviet` WHERE idmonan = $idmon");
+}
+
+function getNameMon($id) {
+    $name = laymot("SELECT name FROM monan WHERE id = $id");
+    return $name['name'];
+}
 ?>

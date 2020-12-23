@@ -4,13 +4,11 @@
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                 <?php
-                foreach ($tag as $tg) {
-                   
-                    $anhtag = layImgTag($tg['id']);
+                foreach ($monan as $mon) {
                     echo '<div class="item danhmuc">
-                            <img src="'. $anhtag['img'].'" alt="" class="img-dm">
+                            <img src="' . $mon['img'] . '" alt="" class="img-dm">
                             <div class="danhmuc-text">
-                                <h4>'.$tg['tentag'].'</h4>
+                                <h4>' . $mon['name'] . '</h4>
                                 <p>206 bài viết</p>
                             </div>
                         </div>';
@@ -18,66 +16,20 @@
                 ?>
             </div>
         </div>
-        <!-- <h2 class="mt-2">Coffee</h2>
+        <h2 class="mt-2">Đồ uống</h2>
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
-                <div class="item danhmuc">
-                    <img src="./site/views/images/buffet.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Buffet Nướng</h4>
-                        <p>206 bài viết</p>
+                <?php
+                foreach ($monUong as $mon) {
+                ?>
+                    <div class="item danhmuc">
+                        <img src="<?=$mon['img']?>" alt="" class="img-dm">
+                        <div class="danhmuc-text">
+                            <h4><?= $mon['name'] ?></h4>
+                            <p>206 bài viết</p>
+                        </div>
                     </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/milodam.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Hài Sản</h4>
-                        <p>206 bài viết</p>
-                    </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/haisan.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Milo Dầm</h4>
-                        <p>206 bài viết</p>
-                    </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/lau.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Bún Bò</h4>
-                        <p>206 bài viết</p>
-                    </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/bunbo.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Phở</h4>
-                        <p>206 bài viết</p>
-                    </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/buffet.jpeg" alt="" class="img-dm">
-                    <h4>1</h4>
-                    <p>206 bài viết</p>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/milodam.jpeg" alt="" class="img-dm">
-                    <h4>2</h4>
-                    <p>206 bài viết</p>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/haisan.jpeg" alt="" class="img-dm">
-                    <h4>3</h4>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/lau.jpeg" alt="" class="img-dm">
-                    <h4>4</h4>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/bunbo.jpeg" alt="" class="img-dm">
-                    <h4>5</h4>
-                </div>
+                <?php } ?>
             </div>
         </div>
         <h2 class="mt-2">Ẩm thực vùng miền</h2>
@@ -141,7 +93,7 @@
                     <h4>5</h4>
                 </div>
             </div>
-        </div> -->
+        </div>
         <div class="boxbanner mt-2">
             <img src="./site/views/images/banner.png" alt="" class="imgbaner">
         </div>
@@ -162,7 +114,7 @@
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img src="<?=$bv['img']?>" alt="">
+                                    <img src="<?= $bv['img'] ?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
                                         <p><?= $bv['noidung'] ?></p>
@@ -171,7 +123,7 @@
                                 <h4 class="mt-1"><?= $bv['tieude'] ?></h4>
                                 <div class="kh">
                                     <div class="name">
-                                        <img src="<?= $bv['avatar']?>" alt="">
+                                        <img src="<?= $bv['avatar'] ?>" alt="">
                                         <p><?= $bv['name'] ?></p>
                                     </div>
                                     <div class="star">
@@ -182,7 +134,7 @@
                             </div>
                     <?php   }
                     } ?>
- 
+
                 </div>
             </div>
             <!--end tab 1 -->

@@ -13,9 +13,9 @@ if (isset($_GET['act'])) {
 switch ($act) {
     case 'home':
         $mess = "";
-        $baiviet = getallBaiviet();
-
-        $tag = layDSTag();
+        // $baiviet = getallBaiviet();
+        $monUong = getallDouong();
+        $monan = getAllMonAn();
         // print_r($monan);
         $view = "./site/views/home.php";
         require_once "./site/views/layout.php";
@@ -52,6 +52,16 @@ switch ($act) {
             themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser);
         }
         break;
+
+    case 'monan':
+        if(isset($_GET['idmon'])) {
+            $reviewList = getBvByMon($_GET['idmon']);
+            $tenMon = getNameMon($id);
+        }
+        $view = "./site/views/allbv.php";
+        require_once "./site/views/layout.php";
+        break;
+
     case 'login':
         echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
         echo '<link rel="stylesheet" href="site/views/css/login.css">';

@@ -1,14 +1,14 @@
 <?php
-      // start mailer
-      use PHPMailer\PHPMailer\PHPMailer;
-      use PHPMailer\PHPMailer\Exception;
-      use PHPMailer\PHPMailer\SMTP;
-      include_once "PHPMailer-master/src/Exception.php";
-      include_once "PHPMailer-master/src/OAuth.php";
-      include_once "PHPMailer-master/src/PHPMailer.php";
-      include_once "PHPMailer-master/src/POP3.php";
-      include_once "PHPMailer-master/src/SMTP.php";
-      //end mailer 
+    //   // start mailer
+    //   use PHPMailer\PHPMailer\PHPMailer;
+    //   use PHPMailer\PHPMailer\Exception;
+    //   use PHPMailer\PHPMailer\SMTP;
+    //   include_once "PHPMailer-master/src/Exception.php";
+    //   include_once "PHPMailer-master/src/OAuth.php";
+    //   include_once "PHPMailer-master/src/PHPMailer.php";
+    //   include_once "PHPMailer-master/src/POP3.php";
+    //   include_once "PHPMailer-master/src/SMTP.php";
+    //   //end mailer 
     //strip the string from html tags;
     function stripTags($str){
         return trim(strip_tags($str));

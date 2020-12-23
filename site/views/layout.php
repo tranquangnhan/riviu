@@ -29,10 +29,10 @@
                     <img src="site/views/images/logo.png" alt="">
                 </div>
                 <div class="search">
-                    <div class="search-left">
+                    <!-- <div class="search-left">
                         <button>HỒ CHÍ MINH</button>
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </div>
+                    </div> -->
                     <div class="search-right">
                         <input type="search" placeholder="Đi đâu, ăn gì ?">
                         <div class="btn-search">
@@ -48,7 +48,7 @@
                         <img src="site/views/images/avt.png" alt="">
                     </div>
                     <div class="baiviet">
-                       <span>Viết Bài</span> 
+                       <span><a href="?act=thembv">Viết Bài</a></span> 
                     </div>
                 </div>
             </div>
