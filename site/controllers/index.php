@@ -30,13 +30,15 @@ switch ($act) {
         break;
     
     case 'thembv':
+        echo ' <link rel="stylesheet" href="site/views/css/newblog.css">';
+        echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
         if($_SESSION['sid'] && isset($_SESSION['sid'])){
-            echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
+            
             $view = "./site/views/thembv.php";
             require_once "./site/views/layout.php";
             break;
         }else{
-            header("location: login.php");
+            header("location: index.php?act=login");
         }
        
     case 'thembv_':
@@ -58,7 +60,7 @@ switch ($act) {
             }
 
         }else{
-            header("location: login.php");
+            header("location: index.php?act=login");
         }
    
         break;
