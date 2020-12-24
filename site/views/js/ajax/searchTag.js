@@ -29,11 +29,11 @@
     });
 
 
-    function like(idbv, iduser) {
-      alert("index.php?act=like&idbv="+idbv+"&iduser="+iduser);
+    function like(idbv) {
+      alert("index.php?act=like&idbv="+idbv);
       $.ajax({
           type: "GET",
-          url: "index.php?act=like&idbv="+idbv+"&iduser="+iduser,
+          url: "index.php?act=like&idbv="+idbv,
           success: function (data) {
               alert(data);
           }

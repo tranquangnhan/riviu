@@ -3,15 +3,20 @@
         <h2>Hôm nay ăn gì - Để Riviu lo</h2>
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
+
                 <?php
                 foreach ($monan as $mon) {
-                    echo '<div class="item danhmuc">
-                            <img src="' . $mon['img'] . '" alt="" class="img-dm">
-                            <div class="danhmuc-text">
-                                <h4>' . $mon['name'] . '</h4>
-                                <p>206 bài viết</p>
-                            </div>
-                        </div>';
+                    echo '
+                    <a href="?act=monan&idmon=' . $mon['id'] . '">
+                    <div class="item danhmuc">
+                        <img src="' . $mon['img'] . '" alt="" class="img-dm">
+                        <div class="danhmuc-text">
+                            <h4>' . $mon['name'] . '</h4>
+                            <p>206 bài viết</p>
+                        </div>
+                    </div>
+                    
+                </a>';
                 }
                 ?>
             </div>
@@ -23,7 +28,7 @@
                 foreach ($monUong as $mon) {
                 ?>
                     <div class="item danhmuc">
-                        <img src="<?=$mon['img']?>" alt="" class="img-dm">
+                        <img src="<?= $mon['img'] ?>" alt="" class="img-dm">
                         <div class="danhmuc-text">
                             <h4><?= $mon['name'] ?></h4>
                             <p>206 bài viết</p>

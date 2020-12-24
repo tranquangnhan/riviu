@@ -107,4 +107,11 @@ function unlike($idbv, $iduser) {
     return postdulieu("DELETE FROM likebv
     WHERE iduser = $iduser AND idbaiviet=$idbv");
 }
+
+function dangCmt($noidung, $idbv) {
+    $iduser = $_SESSION['sid'];
+    var_dump("INSERT INTO `binhluan` (`noidung`, `idbaiviet`, `iduser`) VALUES ('$noidung', '$idbv','$iduser');");
+    exit();
+    return postdulieu("INSERT INTO `binhluan` (`noidung`, `idbaiviet`, `iduser`) VALUES ('$noidung', '$idbv','$iduser');");
+}
 ?>

@@ -112,15 +112,20 @@
                                         </div>
                                     </div>
                                     <div class="boxlike">
-                                        <div class="like" onclick="like(<?= $review['id'].','.$_SESSION['sid'] ?>)">
-                                            <img src="<?=
-                                            $likeimg = (checkLike($review['id'], $_SESSION['sid'])) ? "./site/views/images/heart_fill.png" : "./site/views/images/btnlike.png" ;
+                                        <div class="like" onclick="like(<?= $review['id'] ?>)">
+                                        <?php
+                                            if(isset($_SESSION['sid'])){
+                                                $likeimg = (checkLike($review['id'], $_SESSION['sid'])) ? "./site/views/images/heart_fill.png" : "./site/views/images/btnlike.png" ;
+                                            }else $likeimg ="./site/views/images/btnlike.png";
                                             
-                                            ?>" alt="">
+                                        ?>    
+                                        <img src="<?=$likeimg?>" alt="">
                                             <span><?= countLike($review['id']) ?></span>
                                         </div>
                                         <div class="cmt">
+                                            <a href="?act=chitiet&id=<?=$review['id']?>">
                                             <img src="./site/views/images/btncmt.png" alt="">
+                                            </a>
                                         </div>
                                         <div class="share">
                                             <img src="./site/views/images/sharebv.png" alt="">

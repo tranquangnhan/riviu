@@ -94,7 +94,7 @@ switch ($act) {
         break;
 
     case 'like':
-        if(isset($_GET['iduser'])&&(isset($_GET['idbv']))) {
+        if(isset($_SESSION['sid'])&&(isset($_GET['idbv']))) {
             $check = checkLike($_GET['idbv'], $_GET['iduser']);
             if($check) {
                 unlike($_GET['idbv'], $_GET['iduser']);
@@ -103,6 +103,16 @@ switch ($act) {
                 like($_GET['idbv'], $_GET['iduser']);
                 print(1);
             }
+        }else {
+            header("location: login.php");
+        }
+        break;
+
+    case 'comment':
+        if(isset($_SESSION['id'])) {
+            $noidung = $_GET['noidung'];
+            $idbv = $_GET['idbv'];
+            dangCmt($noidung, $idbv);
         }
         break;
 }

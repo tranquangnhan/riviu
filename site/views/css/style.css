@@ -1159,3 +1159,76 @@ img {
 .like {
     cursor: pointer;
 }
+
+.border-bottom {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 20px;
+}
+
+.box-cmt {
+    display: flex;
+    margin: 10px 0;
+}
+
+.box-cmt img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.box-cmt textarea {
+    width: 100%;
+    border-radius: 20px;
+    height: 100px;
+    padding: 15px;
+}
+
+.box-cmt form {
+    width: 100%;
+}
+
+.bbtn {
+    padding: 7px 15px;
+    background-color: #f60;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+}
+
+.bbtn-second {
+    padding: 7px 15px;
+    background-color: #efefef;
+    color: #000;
+    border-radius: 20px;
+    border: none;
+    font-size: 18px;
+}
+
+.binhluan {
+    margin-top: 20px;
+}
+
+.binhluanlist {
+    border-top: 1px solid #efefef;
+    padding-top: 20px;
+}
+
+.binhluanlist .item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item .user {
+    font-weight: 600;
+}
+
+.binhluanlist img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
