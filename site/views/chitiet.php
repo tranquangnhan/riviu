@@ -5,7 +5,6 @@ if (isset($baiviet['idquan']))
     $quan = getQuanById($baiviet['idquan']);
 ?>
 <div class="container">
-    <?php print_r($baiviet) ?>
     <div class="left">
         <div class="info">
             <div>
@@ -92,25 +91,30 @@ if (isset($baiviet['idquan']))
                 <strong>331</strong> lượt xem bài viết
             </div> -->
             <div class="binhluan">
-                <p class="border-bottom pb-3"><strong>0 Bình luận</strong></p>
+                <p class="border-bottom pb-3"><strong><?= countCmt($_GET['id']) ?> Bình luận</strong></p>
                 <div class="box-cmt">
                     <img src="https://picsum.photos/200/300" alt="">
                     <form action="?act=comment" method="post">
                         <textarea name="noidung" id="" cols="12" rows="10" placeholder="Bình luận"></textarea>
-                        <input type="submit" value="Bình luận" class="bbtn">
                         <input type="reset" value="Hủy" class="bbtn-second">
                         <input type="hidden" name="idbv" value="<?=$_GET['id']?>">
+                        <input type="submit" value="Bình luận" class="bbtn">
                     </form>
                 </div>
             </div>
             <div class="binhluanlist">
+                <?php 
+                    $cmtList = getAllComment($_GET['id']);
+                    foreach ($cmtList as $cmt) {
+                ?>
                 <div class="item">
-                    <img src="https://picsum.photos/200/300" alt="">
+                    <img src="<?=$cmt['avatar']?>" alt="">
                     <div>
-                        <p class="user">Bình</p>
-                        <p>dfgdfg kgdkgdgdg dfgdlgjdfgjdflgd gdjglkdgjdf gldgdlg lgd</p>
+                        <p class="user"><?= $cmt['name'] ?></p>
+                        <p><?= $cmt['noidung'] ?></p>
                     </div>
                 </div>
+                <?php }?>
             </div>
         </div>
     </div>

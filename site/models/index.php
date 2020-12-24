@@ -110,8 +110,19 @@ function unlike($idbv, $iduser) {
 
 function dangCmt($noidung, $idbv) {
     $iduser = $_SESSION['sid'];
-    var_dump("INSERT INTO `binhluan` (`noidung`, `idbaiviet`, `iduser`) VALUES ('$noidung', '$idbv','$iduser');");
-    exit();
     return postdulieu("INSERT INTO `binhluan` (`noidung`, `idbaiviet`, `iduser`) VALUES ('$noidung', '$idbv','$iduser');");
+}
+
+function countCmt($idbv) {
+    $demCmt = laymot("SELECT COUNT(*) as tong FROM binhluan WHERE idbaiviet = $idbv");
+    return $demCmt['tong'];
+} 
+
+function getAllComment($idbv) {
+    return laydulieu("SELECT * FROM binhluan bl INNER JOIN taikhoan tk on bl.iduser = tk.id WHERE idbaiviet = $idbv");
+}
+
+function  searchByKey($key) {
+    return laydulieu("SELECT * FROM `monan` WHERE name LIKE '%$key%' limit 5");
 }
 ?>

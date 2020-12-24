@@ -106,16 +106,26 @@ switch ($act) {
                 print(1);
             }
         }else {
-            header("location: login.php");
+            header("location: index.php?act=login");
         }
         break;
 
     case 'comment':
-        if(isset($_SESSION['id'])) {
-            $noidung = $_GET['noidung'];
-            $idbv = $_GET['idbv'];
+        if(isset($_SESSION['sid'])) {
+            $noidung = $_POST['noidung'];
+            $idbv = $_POST['idbv'];
             dangCmt($noidung, $idbv);
+            header("location: index.php?act=chitiet&id=$idbv");
+        }else header("location: index.php?act=login");
+        break;
+
+    case 'search':
+        $arr = array();
+        if(isset($_POST['key'])) {
+            $arrSearch = searchByKey($_POST['key']);
+            $arr['monan'] = $arrSearch;
         }
+        echo json_encode($arr['monan']);
         break;
 }
 

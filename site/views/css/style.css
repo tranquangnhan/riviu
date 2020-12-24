@@ -498,6 +498,7 @@ li {
     background-color: #f7f7f7;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .search .search-left button {
@@ -1231,4 +1232,21 @@ img {
     height: 50px;
     border-radius: 50%;
     margin-right: 10px;
+}
+
+#listSearch {
+    position: absolute;
+    left: 0;
+    left: 0;
+    top: 45px;
+    width: 100%;
+    height: auto;
+    border: 1px solid #efefef;
+    background-color: #fff;
+    z-index: 0999;
+}
+
+#listSearch a {
+    padding: 20px;
+    display: block;
 }
