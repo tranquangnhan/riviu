@@ -177,3 +177,42 @@
     outline: none;
     margin-top: 0.5rem;
 }
+
+.ouputimg {
+    background-color: white;
+    width: 100%;
+    display: flex;
+}
+
+#list {
+    display: flex;
+}
+
+.output-fet {
+    width: 90%;
+}
+
+#list img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+#clear {
+    margin: 10px 20px 50px 20px;
+    padding: 10px 20px;
+    background-color: #f60;
+    color: white;
+    border-radius: 10px;
+    max-height: 37px;
+}
+
+.hidden {
+    display: none;
+}
+
+.block {
+    display: block;
+}

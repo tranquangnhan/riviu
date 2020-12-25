@@ -33,7 +33,7 @@ switch ($act) {
         echo ' <link rel="stylesheet" href="site/views/css/newblog.css">';
         echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
         if($_SESSION['sid'] && isset($_SESSION['sid'])){
-            
+            $loaiMonAn = loaiMonAn();
             $view = "./site/views/thembv.php";
             require_once "./site/views/layout.php";
             break;
@@ -42,29 +42,31 @@ switch ($act) {
         }
        
     case 'thembv_':
-        if($_SESSION['sid'] && isset($_SESSION['sid'])){
-            if(isset($_POST['submit'])) {
+        if($_SESSION['sid'] && isset($_SESSION['sid']))
+        {
+            if(isset($_POST['submit'])) 
+            {
                 $tieude = $_POST['tieude'];
                 $noidung = $_POST['noidung'];
                 $tag = $_POST['idTag'];
                 $quan = $_POST['idquan'];
                 $allFile = $_FILES['img'];
-                            //upload nhiều ảnh
+        
                 $img = checkUpLoadMany($allFile);
                 $sao = $_POST['sao'];
                 $iduser =$_SESSION['sid'];
+                $loaiMon = $_POST['loaimon'];
 
-                if(themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser)){
+                if( themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon)){
                     header("location: index.php?act=home");
                 };
             }
 
-        }else{
+        }else
+        {
             header("location: index.php?act=login");
         }
-   
         break;
-
     case 'monan':
         if(isset($_GET['idmon'])) {
             $reviewList = getBvByMon($_GET['idmon']);

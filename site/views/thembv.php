@@ -37,6 +37,15 @@
                 </div>
                 <div class="boxform">
                     <textarea class="noidung" name="noidung" value="" id="" cols="30" rows="10" placeholder="Hãy viết cảm nhận của bạn"></textarea>
+                   
+                </div>
+                <div class="boxform boxshowimg hidden">
+                    <div class="ouputimg">
+                        <br>
+                        <div class="output-fet"><output id="list"></output></div>
+                        <a href="#" id="clear">Xoá</a>
+                    </div>
+                   
                 </div>
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tag</div>
@@ -44,7 +53,6 @@
                         <input type="text" placeholder="Tìm kiếm hay thêm tag" name="tag" id="tag">
                         <div class="box-suggest">
                             <ul id="box-suggest">
-                                
                             </ul>
                         </div>
                     </div>
@@ -53,8 +61,14 @@
                     <div class="themhinh">
                         <img src="site/views/images/icon_image.png" alt="">
                         <div class="inputhinh">
-                            <label for="inputhinh"><b>Thêm Hình</b> </label>
-                            <input type="file" name="img[]" id="inputhinh" accept="image/png, image/jpg, image/jpeg" multiple="multiple" style="display: none">
+                            <!-- <label for="inputhinh"><b>Thêm Hình</b> </label> -->
+                            <!-- <input type="file" class="imagefet" name="img[]" id="inputhinh" accept="image/png, image/jpg, image/jpeg" multiple="multiple" style="display: none"> -->
+                            <label for="control">
+                                <span class="btn">Thêm Ảnh</span>
+                            </label> 
+                            <input style="visibility: hidden; position: absolute;" class="imagefet" type="file" name="img[]" id="control" multiple="multiple">
+
+                   
                         </div>
                     </div>
                 </div>
@@ -64,21 +78,14 @@
                         <input type="text" id="tenquan" placeholder="Hãy nhập tên của quán">
                     </div>
                 </div>
-                <!-- <div class="boxform">
-                    <div class="tieude ">Vị trí</div>
-                    <select name="" id="">
-                        <option value="">Thành Phố</option>
-                        <option value="">Hồ Chí Minh</option>
+                <div class="boxform">
+                    <div class="tieude">Loại Món Ăn</div>
+                    <select name="loaimon" id="">
+                        <?php foreach ($loaiMonAn as $loai) {
+                           echo '<option value="'.$loai['id'].'">'.$loai['name'].'</option>';
+                        } ?>
                     </select>
-                    <select name="" id="">
-                        <option value="">Tỉnh</option>
-                        <option value="">Daklak</option>
-                    </select>
-                    <select name="" id="">
-                        <option value="">Quận/Huyện</option>
-                        <option value="">Cưkuin</option>
-                    </select>
-                </div> -->
+                </div>
                 <div class="boxform">
                     <div class="formqc" id="formqc">
                         

@@ -20,11 +20,11 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM Khách Hàng</h3>
-                            <p class="text-center">Bạn có thể thêm khách hàng ở đây!</p>
+                            <h3 class="mt-4 text-center">THÊM TÀI KHOẢN</h3>
+                            <p class="text-center">Bạn có thể thêm tài khoản ở đây!</p>
                             <div class="row">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Ảnh Khách Hàng</strong></label>
+                                    <label for=""><strong>Ảnh tài khoản</strong></label>
                                 </div>
                                 <div class="col-lg-9">
                                     <img src="views/img/avt.png" alt="">

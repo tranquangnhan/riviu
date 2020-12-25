@@ -47,9 +47,10 @@ function searchQuan($key) {
     // print_r($dulieu) ;
 }
 
-function themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser) {
-    return postdulieu("INSERT INTO baiviet(tieude,noidung,idquan,idhashtag,sao,img,iduser) 
-    VALUES ('$tieude','$noidung','$quan','$tag','$sao','$img','$iduser')");
+function themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon) {
+   $sql = "INSERT INTO baiviet(tieude,noidung,idquan,idhashtag,sao,img,iduser,idmonan)
+    VALUES ('$tieude','$noidung','$quan','$tag','$sao','$img','$iduser','$loaiMon')";
+    echo $sql;
 }
 
 function getAllMonAn() {
@@ -124,5 +125,9 @@ function getAllComment($idbv) {
 
 function  searchByKey($key) {
     return laydulieu("SELECT * FROM `monan` WHERE name LIKE '%$key%' limit 5");
+}
+function loaiMonAn(){
+    $sql ="SELECT id,name FROM monan ORDER BY id DESC";
+    return result1(0,$sql); 
 }
 ?>
