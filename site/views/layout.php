@@ -23,7 +23,7 @@
 <body>  
     <!-- start header  -->
     <header>
-        <div class="boxcenter">
+        <div class="boxcenter-header">
             <div class="nav">
                 <div class="logo">
                     <a href="index.php">
@@ -48,12 +48,18 @@
                     <div class="chuong">
                         <img src="site/views/images/chuong.png" alt="">
                     </div>
-                    <div class="avt">
+                    <?php if(isset($_SESSION['sid'])) echo '
+                     <div class="avt">
                         <img src="site/views/images/avt.png" alt="">
                     </div>
                     <div class="baiviet">
-                       <span><a href="?act=thembv">Viết Bài</a></span> 
+                        <span><a href="?act=thembv">Viết Bài</a></span> 
                     </div>
+                    ';else echo ' 
+                     <div class="baiviet">
+                        <span><a href="?act=login">Đăng Nhập</a></span> 
+                    </div>';
+                     ?>
                 </div>
             </div>
           
