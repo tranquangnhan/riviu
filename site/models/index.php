@@ -9,7 +9,8 @@ function layDSTag() {
 }
 
 function layImgTag($id) {
-    return laymot("SELECT img FROM tag WHERE id = $id limit 1");
+    $sql = "SELECT img FROM tag WHERE id = ? limit 1";
+    return result1(1,$sql,$id);
 }
 
 function layDanhgiaChitiet($id) {
@@ -50,8 +51,8 @@ function searchQuan($key) {
 
 function themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon) {
    $sql = "INSERT INTO baiviet(tieude,noidung,idquan,idhashtag,sao,img,iduser,idmonan)
-    VALUES ('$tieude','$noidung','$quan','$tag','$sao','$img','$iduser','$loaiMon')";
-    return exec1($sql);
+    VALUES (?,?,?,?,?,?,?,?)";
+    return exec1($sql,$tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon);
 }
 
 function getAllMonAn() {

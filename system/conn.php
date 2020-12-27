@@ -29,13 +29,13 @@ function ketnoidb()
       echo "Lỗi Kết Nối database: " . $e->getMessage();
     }
 }
-function laydulieu($sql)   {
-    $conn = ketnoidb();
-    $result = $conn->query($sql);
-    $row = $result->fetchAll(PDO::FETCH_ASSOC);
-    return $row;
+    function laydulieu($sql)   {
+        $conn = ketnoidb();
+        $result = $conn->query($sql);
+        $row = $result->fetchAll(PDO::FETCH_ASSOC);
+        return $row;
     }
-function laymot($sql) {
+    function laymot($sql) {
         $conn = ketnoidb();
         $result = $conn->query($sql);
         $row = $result->fetch(PDO::FETCH_ASSOC);
