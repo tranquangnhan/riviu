@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="row d-flex justify-content-between mt-3">
             <div class="col-lg-4 mt-3">
-                <h2>MÓN ĂN</h2>
+                <h2>DANH MỤC MÓN ĂN</h2>
             </div>
             <div class="col-lg-4 mt-3">
                 <nav aria-label="breadcrumb ">
@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="col-lg-9">
                                     <img src="<?=PATH_IMG_ADMIN.$motDm['img']?>" alt="" width="150">
-                                    <input type="file" class="form-control-file mt-2" name="avatar1[]" id="avatar1" multiple required
+                                    <input type="file" class="form-control-file mt-2" name="avatar1[]" id="avatar1" multiple 
                                     >
                                 </div>
                             </div>
@@ -42,20 +42,28 @@
                                 </div>
                             </div>
 
-
-                      
-
                             <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Loại Danh Mục</strong></label>
                                 </div>
+                               
                                 <div class="col-lg-9">
                                     <select class="custom-select form-control" name="loaidm" id="" required>
                                         <option selected value="">Loại</option>
-                                        <option value="0">Đồ Ăn</option>
-                                        <option value="1">Đồ Uống</option>
-                                        <option value="2">Ẩm Thực Vùng Miền</option>
-                                      
+                                        <?php 
+                                        $arr = array("0" => "Đồ Ăn",'1' => "Thức Uổng","2"=>"Ẩm Thực Vùng Miền");
+                                            for ($i=0; $i <count($arr) ; $i++) { 
+                                                if($i == $dm['loai']){
+                                                    echo '<option value="'.$i.'" selected>'.$arr[$i].'</option>';
+                                                }else{
+                                                    echo '<option value="'.$i.'" >'.$arr[$i].'</option>';
+                                                }
+                                               
+                                            }
+                                        ?>
+                                        <!-- <option value="0">Đồ Ăn</option>
+                                        <option value="1">Thức Uống</option>
+                                        <option value="2">Ẩm Thực Vùng Miền</option> -->
                                     </select>
                                 </div>
                             </div>
@@ -73,7 +81,7 @@
                                         </div>
                                         <div class="col-lg-5 pr-2 mr-2">
                                             <div class="form-group">
-                                                <input type="submit" name="them" id="" value="Thêm Món Ăn"
+                                                <input type="submit" name="them" id="" value="Sửa Món Ăn"
                                                     class="btn btn-submit text-center">
                                             </div>
                                         </div>

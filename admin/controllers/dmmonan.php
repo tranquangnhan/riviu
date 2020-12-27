@@ -11,8 +11,8 @@ $act = $_GET['act'];
 }
 switch ($act) {
     case 'index':
-        $showAllQuan = showAllQuan();
-        require_once "views/quanindex.php";
+        $showAllDmMonAn = showAllDmMonAn();
+        require_once "views/dmmonanindex.php";
         break;
     case 'add':
         if(isset($_GET['idedit'])&&($_GET['idedit'])){
@@ -39,7 +39,7 @@ switch ($act) {
             }else{
                 addDmMonAn($tenDm,$imgupload,$loaiDm );
             }
-            // header("location: index.php?ctrl=monan&act=index");
+            header("location: index.php?ctrl=monan&act=index");
         }   
     break;
     case 'del':
@@ -47,7 +47,7 @@ switch ($act) {
             $id = $_GET['iddel'];
             xoaDmQuan($id);
         }
-        $showAllQuan = showAllQuan();
+        $showAllDmMonAn = showAllDmMonAn();
         require_once "views/dmmonanindex.php";
     break;
         default:
