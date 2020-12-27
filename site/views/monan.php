@@ -12,7 +12,7 @@
                 </div>
                 <div class="box-imgdm">
                     <div class="imgdm">
-                        <img src="<?=getImgmon($reviewList[0]['idmonan'])?>" alt="">
+                        <img src="./uploads/<?=getImgmon($reviewList[0]['idmonan'])?>" alt="">
                         <div class="overplay cover"></div>
                         <div class="btn-share"><img src="./site/views/images/btn-share.png" alt=""></div>
                     </div>
@@ -31,7 +31,7 @@
                             $tacgia = getInfoTacgia($review['iduser']);
                             ?>
                             <div class="author">
-                                <img src="<?= $tacgia['avatar'] ?>" alt="">
+                                <img src="./uploads/<?= $tacgia['avatar'] ?>" alt="">
                             </div>
                             <div class="blog-content">
                                 <div class="content-nav">

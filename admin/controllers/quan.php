@@ -1,6 +1,5 @@
 <?php
 ob_start();
-session_start();
 include "../models/khachhang.php";
 include "../../system/conn.php";
 include "../../lib/myfunctions.php";

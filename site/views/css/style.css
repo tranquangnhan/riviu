@@ -524,6 +524,7 @@ li {
 .profile {
     width: 20%;
     display: flex;
+    justify-content: space-around;
 }
 
 .profile .chuong img,
@@ -533,7 +534,8 @@ li {
 }
 
 .profile .avt img {
-    margin-right: 2rem;
+    border-radius: 50%;
+    border: 1px solid #efefef;
 }
 
 .profile .avt img:hover {
@@ -575,7 +577,7 @@ li {
 
 .menudx {
     position: absolute;
-    top: 0px;
+    top: 10px;
     left: 0px;
     transform: translate3d(0px, 35px, 0px);
     min-width: 10rem;
@@ -590,6 +592,10 @@ li {
     border: 1px solid rgba(0, 0, 0, .15);
     border-radius: .25rem;
     display: none;
+}
+
+.btn-review  {
+    cursor: pointer;
 }
 
 .menudx ul li {
@@ -661,7 +667,6 @@ main {
 
 .danhmuc {
     border: 1px solid rgba(0, 0, 0, .09);
-    padding-bottom: 2rem;
     border-radius: 12px;
     position: relative;
     overflow: hidden;
@@ -775,6 +780,14 @@ main {
     height: 450px;
 }
 
+.baivietct-item a {
+    color: #000;
+}
+
+.baivietct-item h4 {
+    text-transform: uppercase;
+}
+
 .baivietct .baivietct-item .baivietct-item__img {
     height: 70%;
     position: relative;
@@ -798,11 +811,12 @@ main {
     bottom: 0;
     background-color: rgba(0, 0, 0, .7);
     color: #fff;
-    padding: 1rem;
+    padding: 20px;
     border-radius: 10px;
     font-size: 11pt;
     transition: 0.5s;
     opacity: 0;
+    overflow: hidden;
 }
 
 .img-boxhover img {
@@ -813,6 +827,7 @@ main {
 .img-boxhover p {
     transform: translateY(30px);
     transition: 0.5s;
+    margin-top: 10px;
 }
 
 .baivietct .baivietct-item .baivietct-item__img img {
@@ -1082,6 +1097,10 @@ img {
     width: 15%;
 }
 
+.card-body .author{
+    width: 100%;
+}
+
 .blog-content {
     width: 80%;
 }
@@ -1168,10 +1187,6 @@ img {
 
 .tags a:hover {
     color: #aeaeae;
-}
-
-.star {
-    margin: 1.5rem 0;
 }
 
 .star i {
@@ -1311,4 +1326,22 @@ img {
 #listSearch a {
     padding: 20px;
     display: block;
+}
+
+.owl  a {
+    color: #000 !important;
+}
+
+.danhmuc-text {
+    padding: 15px 0;
+}
+
+.danhmuc-text h4 {
+    font-size: 18px;
+}
+
+.danhmuc p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #999;
 }

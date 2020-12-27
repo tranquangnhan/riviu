@@ -46,15 +46,16 @@
                 </div>
              
                 <div class="profile">
-                    <div class="chuong">
-                        <img src="site/views/images/chuong.png" alt="">
-                    </div>
-                    <?php if(isset($_SESSION['sid'])) echo '
+                    <?php
+                    $avatar = getTacGia($_SESSION['sid']);
+                    $avatar = $avatar['avatar'];
+                    if(isset($_SESSION['sid'])) {
+                      ?>
                      <div class="avt">
-                        <img src="site/views/images/avt.png" alt="" id="open">
+                        <img src="./uploads/<?=$avatar?>" alt="" id="open">
                         <div class="menudx"  id="popup">
                             <ul>
-                                <li><a href="">Thông tin tài khoản</a></li>
+                                <li><a href="?act=tttk">Thông tin tài khoản</a></li>
                                 <li><a href="index.php?act=logout&idout=1">Đăng xuất</a></li>
                             </ul>
                         </div>
@@ -62,11 +63,11 @@
                     <div class="baiviet">
                         <span><a href="?act=thembv">Viết Bài</a></span> 
                     </div>
-                    ';else echo ' 
+                    <?php }else{?>
                      <div class="baiviet">
                         <span><a href="?act=login">Đăng Nhập</a></span> 
-                    </div>';
-                     ?>
+                    </div>
+                    <?php }?>
                 </div>
             </div>
           

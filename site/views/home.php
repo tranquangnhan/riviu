@@ -12,7 +12,7 @@
                         <img src="'.PATH_IMG_SITE.$mon['img'] . '" alt="" class="img-dm">
                         <div class="danhmuc-text">
                             <h4>' . $mon['name'] . '</h4>
-                            <p>206 bài viết</p>
+                            <p>'.demSobv($mon['id']).' bài viết</p>
                         </div>
                     </div>
                     
@@ -25,19 +25,21 @@
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                 <?php
-                foreach ($monUong as $mon) {
-                ?>
+                foreach ($monUong as $monu) {
+                    echo '
+                    <a href="?act=monan&idmon=' . $monu['id'] . '">
                     <div class="item danhmuc">
-                        <img src="<?= PATH_IMG_SITE.$mon['img'] ?>" alt="" class="img-dm">
+                        <img src="'.PATH_IMG_SITE.$monu['img'] . '" alt="" class="img-dm">
                         <div class="danhmuc-text">
-                            <h4><?= $mon['name'] ?></h4>
-                            <p>206 bài viết</p>
+                            <h4>' . $monu['name'] . '</h4>
+                            <p>'.demSobv($mon['id']).' bài viết</p>
                         </div>
                     </div>
-                <?php } ?>
+                    
+                </a>'; } ?>
             </div>
         </div>
-        <h2 class="mt-2">Ẩm thực vùng miền</h2>
+        <!-- <h2 class="mt-2">Ẩm thực vùng miền</h2>
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                 <div class="item danhmuc">
@@ -98,11 +100,11 @@
                     <h4>5</h4>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="boxbanner mt-2">
             <img src="./site/views/images/banner.png" alt="" class="imgbaner">
         </div>
-        <h2 class="mt-2">Đề xuất</h2>
+        <h2 class="mt-2">Mọi người đang ăn gì?</h2>
         <div class="boxbaiviet">
             <div class="tab mb-1">
                 <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen"><span>Tất
@@ -116,26 +118,29 @@
                     <?php
                     if (isset($baiviet)) {
                         foreach ($baiviet as $bv) {
+                            $tacgia = getTacGia($bv['iduser']);
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img src="<?= $bv['img'] ?>" alt="">
+                                    <img src="./uploads/<?=$bv['img'] ?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
                                         <p><?= $bv['noidung'] ?></p>
                                     </div>
                                 </div>
+                                <a href="?act=chitiet&id=<?=$bv['id']?>">
                                 <h4 class="mt-1"><?= $bv['tieude'] ?></h4>
                                 <div class="kh">
                                     <div class="name">
-                                        <img src="<?= $bv['avatar'] ?>" alt="">
-                                        <p><?= $bv['name'] ?></p>
+                                        <img src="./uploads/<?=$tacgia['avatar']?>" alt="">
+                                        <p><?= $tacgia['name'] ?></p>
                                     </div>
                                     <div class="star">
                                         <img src="./site/views/images/star.png" alt="">
                                         <p><?= $bv['sao'] ?></p>
                                     </div>
                                 </div>
+                                </a>
                             </div>
                     <?php   }
                     } ?>

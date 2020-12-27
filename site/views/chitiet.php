@@ -9,10 +9,10 @@ if (isset($baiviet['idquan']))
         <div class="info">
             <div>
                 <div class="avatar">
-                    <img src="./site/views/images/avatar.jpeg" alt="">
+                    <img src="./uploads/<?=$baiviet['avatar']?>" alt="">
                 </div>
                 <div class="tttg">
-                    <div><strong><?= $baiviet['name'] ?></strong> <a href="" class="btn-outline">Theo dõi</a></div>
+                    <div><strong><?= $baiviet['name'] ?></strong></div>
                     <div class="sub"><?= $ngaydang ?> tại <a href=""> <?= $quan['diachi'] ?></a></div>
                 </div>
             </div>
@@ -24,16 +24,7 @@ if (isset($baiviet['idquan']))
         </div>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="./site/views/images/slide1.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide2.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide1.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide2.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide1.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide2.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide1.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide2.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide1.jpeg" alt=""></div>
-                <div class="swiper-slide"><img src="./site/views/images/slide2.jpeg" alt="">0</div>
+                <div class="swiper-slide"><img src="uploads/<?= $baiviet['img'] ?>" alt=""></div>
             </div>
             <!-- Add Arrows -->
             <div class="swiper-button-next"></div>
@@ -62,7 +53,7 @@ if (isset($baiviet['idquan']))
 
                 </div>
             </div>
-            <a class="btn" href="">
+            <a class="btn" href="?act=thembv">
                 <div class="post">
 
                     <img src="./site/views/images/dang.svg" alt="">
@@ -93,7 +84,7 @@ if (isset($baiviet['idquan']))
             <div class="binhluan">
                 <p class="border-bottom pb-3"><strong><?= countCmt($_GET['id']) ?> Bình luận</strong></p>
                 <div class="box-cmt">
-                    <img src="https://picsum.photos/200/300" alt="">
+                <img src="./uploads/<?=$baiviet['avatar']?>" alt="">
                     <form action="?act=comment" method="post">
                         <textarea name="noidung" id="" cols="12" rows="10" placeholder="Bình luận"></textarea>
                         <input type="reset" value="Hủy" class="bbtn-second">

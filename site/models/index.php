@@ -35,7 +35,8 @@ function gettag($id) {
 }
 
 function getallBaiviet() {
-    return laydulieu("Select * from baiviet bv inner join taikhoan tk on bv.iduser = tk.id order by bv.id desc");
+    // exit("Select * from baiviet bv inner join taikhoan tk on bv.iduser = tk.id order by bv.id desc");
+    return laydulieu("SELECT * FROM baiviet order by id DESC");
 }
 
 function searchTag($key) {
@@ -58,7 +59,7 @@ function getAllMonAn() {
 }
 
 function getallDouong() {
-    return laydulieu("SELECT * from monan where loai = 0");
+    return laydulieu("SELECT * from monan where loai = 1");
 }
 
 function getBvByMon($idmon) {
@@ -129,5 +130,21 @@ function  searchByKey($key) {
 function loaiMonAn(){
     $sql ="SELECT id,name FROM monan ORDER BY id DESC";
     return result1(0,$sql); 
+}
+function getTacGia($idtg) {
+    return laymot("SELECT name, avatar FROM taikhoan WHERE id = $idtg");
+}
+
+function getThongtin($id) {
+    return laymot("SELECT * FROM taikhoan WHERE id = $id");
+}
+
+function changInfo($name, $username, $pass, $id) {
+    return postdulieu("UPDATE `taikhoan` SET `name`='$username',`password`='$pass',`tenkh`='$name' WHERE id = $id");
+}
+
+function demSobv($idmon) {
+    $tongbv = laymot("SELECT COUNT(*) as tong FROM baiviet WHERE idmonan = $idmon");
+    return $tongbv['tong'];
 }
 ?>

@@ -13,7 +13,7 @@ if (isset($_GET['act'])) {
 switch ($act) {
     case 'home':
         $mess = "";
-        // $baiviet = getallBaiviet();
+        $baiviet = getallBaiviet();
         $monUong = getallDouong();
         $monan = getAllMonAn();
         // print_r($monan);
@@ -138,6 +138,30 @@ switch ($act) {
             header('location: index.php');
         }
     break;
+
+    case 'tttk':
+        $thongtin = getThongtin($_SESSION['sid']);
+        $view = "./site/views/infoUser.php";
+        require_once "./site/views/layout.php";
+        break;
+
+    case 'changeinfo':
+        if(isset($_POST['submit'])) {
+            $name = $_POST['hoten'];
+            $username = $_POST['username'];
+            $pass = $_POST['pass'];
+            $id = $_POST['idus'];
+            if(isset($_POST['repass'])) {
+                $repass = $_POST['repass'];
+                if($repass==$pass)
+                    changInfo($name, $username, $pass, $id);
+                else $tb = "mật khẩu không khớp";
+            }else
+            changInfo($name, $username, $pass, $id);
+            header("location: index.php?act=tttk");
+            echo $tb;
+        }
+        break;
 }
 
 ?>
