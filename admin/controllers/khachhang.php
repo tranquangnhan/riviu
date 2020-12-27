@@ -19,7 +19,7 @@
             }
             if(isset($_POST['them'])&&($_POST['them'])||isset($_POST['sua'])&&($_POST['sua'])){
                 $allFile = $_FILES['avatar1'];                
-                $imgupload = checkUpLoadMany($allFile);
+                $imgupload = checkUpLoadMany($allFile,PATH_IMG_ADMIN);
 
                 $tenkh = stripTags($_POST['tenkh']);
                 $user = stripTags($_POST['tenuser']);

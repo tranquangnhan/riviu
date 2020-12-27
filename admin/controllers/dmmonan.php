@@ -18,15 +18,15 @@ switch ($act) {
         if(isset($_GET['idedit'])&&($_GET['idedit'])){
             $_SESSION['idedit'] = $_GET['idedit'];
             $id = $_GET['idedit'];
-            $motQuan = showMotQuan($id);
-            include_once "views/quanedit.php";
+            $motDm = showMotDmMa($id);
+            require_once "views/dmmonanedit.php";
         }else{
-            include_once "views/quanadd.php";
+            require_once "views/dmmonanadd.php";
         }
         if(isset($_POST['them'])&&($_POST['them'])){
            
-            $diaChi = stripTags($_POST['diachi']);
-            $tenQuan = stripTags($_POST['tenquan']);
+            $tenDm = stripTags($_POST['tendm']);
+            $loaiDm = stripTags($_POST['loaidm']);
 
             $allFile = $_FILES['avatar1'];              
             // //upload nhiều ảnh
@@ -34,21 +34,21 @@ switch ($act) {
 
             if(isset($_SESSION['idedit'])&&($_SESSION['idedit'])){
                 $id = $_SESSION['idedit'];
-                updateQuan($id,$diaChi,$tenQuan,$imgupload);
+                updateDmQuan($id,$tenDm ,$imgupload,$loaiDm);
                 unset($_SESSION['idedit']);
             }else{
-                 addQuan($diaChi,$tenQuan,$imgupload);
+                addDmMonAn($tenDm,$imgupload,$loaiDm );
             }
-            header("location: index.php?ctrl=quan&act=index");
+            // header("location: index.php?ctrl=monan&act=index");
         }   
     break;
     case 'del':
         if(isset($_GET['iddel'])&&($_GET['iddel'])>0){
             $id = $_GET['iddel'];
-            xoaQuan($id);
+            xoaDmQuan($id);
         }
         $showAllQuan = showAllQuan();
-        require_once "views/quanindex.php";
+        require_once "views/dmmonanindex.php";
     break;
         default:
             break;

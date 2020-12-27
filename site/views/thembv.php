@@ -28,7 +28,7 @@
                         </ol>
                     </nav>
                 </div>
-                <form action="index.php?act=thembv_" method="post"  enctype="multipart/form-data">
+                <form action="index.php?act=thembv_" method="post" id="formnewblog"  enctype="multipart/form-data">
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tiêu Đề</div>
                     <div class="boxinput">

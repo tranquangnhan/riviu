@@ -11,33 +11,7 @@ $(function() {
         }
     });
 });
-
-
-// $(document).ready(function() {
-//     if (window.File && window.FileList && window.FileReader) {
-//         var filesInput = document.getElementById("inputhinh");
-//         filesInput.addEventListener("change", function(event) {
-//             var files = event.target.files;
-//             var output = document.getElementById("output");
-//             for (var i = 0; i < files.length; i++) {
-//                 var file = files[i];
-//                 if (!file.type.match('image'))
-//                     continue;
-//                 var picReader = new FileReader();
-//                 picReader.addEventListener("load", function(event) {
-//                     var picFile = event.target;
-//                     var div = document.createElement("div");
-//                     div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" +
-//                         "title='" + picFile.name + "'/>";
-//                     output.insertBefore(div, null);
-//                 });
-//                 picReader.readAsDataURL(file);
-//             }
-
-//         });
-//     }
-
-// });
+// preview images when uploaded
 $(document).ready(function() {
 
 
@@ -83,4 +57,21 @@ $(document).ready(function() {
         });
 
     })
+
+    // validate new blog
+
+    $("#formnewblog").validate({
+        rules: {
+            tieude: {
+                required: true,
+            }
+        },
+        messages: {
+            tieude: {
+                required: "<script>fireErr('Vui lòng nhập tiêu đề')</script>",
+            }
+        }
+    });
+
+
 });

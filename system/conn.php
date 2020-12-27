@@ -8,7 +8,8 @@ define('ADMIN_URL',ROOT_URL.'/admin');
 define('SITE_URL',ROOT_URL.'/site/');   
 define('SYSTEM_PATH',ROOT_URL.'/system');
 define('PAGE_SIZE',6);
-define('PATH_IMG','../uploads/');
+define('PATH_IMG_SITE','uploads/');
+define('PATH_IMG_ADMIN','../uploads/');
 date_default_timezone_set("Asia/Bangkok");
 
 function ketnoidb()

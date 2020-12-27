@@ -8,6 +8,7 @@ function fireErr(text) {
         icon: "error"
     });
 }
+
 // khi click vào login
 $("#login").click(async function(e) {
     e.preventDefault();

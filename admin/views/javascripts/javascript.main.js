@@ -5,8 +5,9 @@ function checkDelete(link) {
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, delete it!'
+        cancelButtonColor: '#f60',
+        cancelButtonText: 'Huỷ',
+        confirmButtonText: 'Xác nhận xoá!'
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(

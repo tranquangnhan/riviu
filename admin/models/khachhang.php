@@ -6,8 +6,8 @@ function showallkh(){// show tất cả khách hàng
                             // tham số đầu tiên là 0: show tất cả, tham số 2 là $sql
 }
 function showTenKh($id){
-    $sql ="select * from khachhang where id= '$id'";
-    return result1(1,$sql)['user'];
+    $sql ="select * from taikhoan where id= '$id'";
+    return result1(1,$sql)['name'];
 }
 function xoakhachhang($id){
     $sql = "DELETE FROM taikhoan WHERE id=".$id;

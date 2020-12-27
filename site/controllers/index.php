@@ -1,8 +1,8 @@
 <?php
 session_start();
 ob_start();
-require_once "./site/models/index.php";
-require_once "./system/conn.php";
+require_once "site/models/index.php";
+require_once "system/conn.php";
 require_once "lib/myfunctions.php";
 if (isset($_GET['act'])) {
     $act = $_GET['act'];
@@ -49,10 +49,11 @@ switch ($act) {
                 $tieude = $_POST['tieude'];
                 $noidung = $_POST['noidung'];
                 $tag = $_POST['idTag'];
+
                 $quan = $_POST['idquan'];
                 $allFile = $_FILES['img'];
         
-                $img = checkUpLoadMany($allFile);
+                $img = checkUpLoadMany($allFile,PATH_IMG_SITE);
                 $sao = $_POST['sao'];
                 $iduser =$_SESSION['sid'];
                 $loaiMon = $_POST['loaimon'];

@@ -50,7 +50,7 @@ function searchQuan($key) {
 function themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon) {
    $sql = "INSERT INTO baiviet(tieude,noidung,idquan,idhashtag,sao,img,iduser,idmonan)
     VALUES ('$tieude','$noidung','$quan','$tag','$sao','$img','$iduser','$loaiMon')";
-    echo $sql;
+    return exec1($sql);
 }
 
 function getAllMonAn() {

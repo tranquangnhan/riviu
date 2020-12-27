@@ -14,8 +14,7 @@
         return trim(strip_tags($str));
     }
        // up load nhiều ảnh và check up load lên file upload
-    function checkUpLoadMany($allFile){
-        $pathimg = '../uploads/';
+    function checkUpLoadMany($allFile,$pathimg){
         foreach ($allFile['name'] as $file) {
             $nameimg[] = $file;
         }

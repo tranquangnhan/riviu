@@ -1,6 +1,6 @@
 <?php 
     function showAllBlog() {
-        $sql = "select * from baiviet limit 10";
+        $sql = "select * from baiviet order by id desc";
         return result1(0,$sql); 
     }
     function showdmbv() {

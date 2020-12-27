@@ -23,39 +23,37 @@
                                 <tr>
                                     <th>ID</th>
                                     <th width="100">Ảnh</th>
-                                    <th width="200">Tên Sản Phẩm</th>
-                                    <th>Trạng Thái</th>
-                                    <th>Tác Giả</th>
+                                    <th width="200">Tiêu Đề</th>
+                                    <th>Người Đăng</th>
                                     <th width="450">Nội Dung</th>
-                                    <th>Trang Thái</th>
-                                    <th>Hành Động</th>
+                                    <th >Ngày Đăng</th>
+                                    <th>Xoá</th>
                                 </tr>
                             </thead>
                             <tbody >
-                                <?php foreach ($showAllBlog as $motbl) {
+                                <?php
+                                    $stt = 0;
+                                foreach ($showAllBlog as $motbl) {
                                     $id = $motbl['id'];
-                                    $img = $pathimg.$motbl['img']; //Long test file img
+                                    $stt++;
+                                    $img = PATH_IMG.explode(",",$motbl['img'])[0];
                                     if(is_file($img)) $img = $img;else $img = "nothing";
-                                    $anhien = $motbl['public'];
-                                    if($anhien == 1){
-                                        $anhien = 'checked';
-                                    }else{
-                                        $anhien ='onclick="return false"';
-                                    }   
-                                    $linkdel = "index.php?ctrl=baiviet&act=del&iddel=".$id;
-                                    $linkedit = "index.php?ctrl=baiviet&act=add&idedit=".$id;         
+                                    $tieuDe = $motbl['tieude'];
+                                    $noiDung = $motbl['noidung'];
+                                    $nguoiDang = showTenKh($motbl['iduser']);
+                                    $ngayDang = $motbl['ngaydang'];
+                                    $linkdel = "index.php?ctrl=baiviet&act=del&iddel=".$id;       
                                 ?>
                                 <tr>
-                                    <td><?=$motbl['id']?></td>
+                                    <td><?=$stt?></td>
                                     <td width="100"><img width="100" src="<?=$img?>"></td>
-                                    <td class="ten" width="200"><a href="<?=$linkedit?>"><?=substr($motbl['name'],0,52)?></a> </td>      
-                                    <td> <?=$anhien?></td>                                                                       
-                                    <td><?=$motbl['tacgia']?></td>
-                                    <td class="noidung"><?=substr($motbl['noidung'],0,100)?></td>
-                                    <td><input type="radio" <?=$anhien?>> </td>
+                                    <td class="ten" width="200"><a href="<?=$linkedit?>"><?=substr($tieuDe,0,52)?></a> </td>      
+                                    <td><?=$nguoiDang?></td>
+                                    <td class="noidung"> <?=substr($noiDung,0,100)?></td>                                                                       
+                                  
+                                    <td ><?=$ngayDang?></td>
                                     <td>
                                         <a onclick="checkDelete('<?php echo $linkdel; ?>')"><i class="fa fa-trash mr-3" ></i></a>
-                                        <a href="<?=$linkedit?>"><i class="fa fa-edit"></i></a>
                                     </td>
                                 </tr>
                                 <?php }?>

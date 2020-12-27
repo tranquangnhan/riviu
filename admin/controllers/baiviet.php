@@ -7,7 +7,7 @@
     }
     switch ($act) {
         case 'index':
-            $showAllBlog = showAllBlog(10);
+            $showAllBlog = showAllBlog();
             include_once "views/baivietindex.php";
         break;
         case 'add':
@@ -24,7 +24,7 @@
                 $iddm = $_POST['iddanhmuc'];
                 $allFile = $_FILES['avatar1'];              
                 // //upload nhiều ảnh
-                $imgupload = checkUpLoadMany($allFile);
+                $imgupload = checkUpLoadMany($allFile,PATH_IMG_ADMIN);
                 // $img = $_POST['avatar'];
                 if ($imgupload == "") {
                     $imgupload = $_POST['avatar'];
