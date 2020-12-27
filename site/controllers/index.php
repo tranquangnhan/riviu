@@ -130,6 +130,14 @@ switch ($act) {
         }
         echo json_encode($arr['monan']);
         break;
+    case 'logout':
+        if($_GET['idout']==1){
+            unset($_SESSION['role']);
+            unset($_SESSION['sid']);
+            unset($_SESSION['suser']); 
+            header('location: index.php');
+        }
+    break;
 }
 
 ?>

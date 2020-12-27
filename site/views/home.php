@@ -9,7 +9,7 @@
                     echo '
                     <a href="?act=monan&idmon=' . $mon['id'] . '">
                     <div class="item danhmuc">
-                        <img src="' . $mon['img'] . '" alt="" class="img-dm">
+                        <img src="'.PATH_IMG_SITE.$mon['img'] . '" alt="" class="img-dm">
                         <div class="danhmuc-text">
                             <h4>' . $mon['name'] . '</h4>
                             <p>206 bài viết</p>
@@ -28,7 +28,7 @@
                 foreach ($monUong as $mon) {
                 ?>
                     <div class="item danhmuc">
-                        <img src="<?= $mon['img'] ?>" alt="" class="img-dm">
+                        <img src="<?= PATH_IMG_SITE.$mon['img'] ?>" alt="" class="img-dm">
                         <div class="danhmuc-text">
                             <h4><?= $mon['name'] ?></h4>
                             <p>206 bài viết</p>

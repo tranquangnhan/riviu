@@ -569,6 +569,46 @@ li {
     font-weight: 600;
 }
 
+.avt {
+    position: relative;
+}
+
+.menudx {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate3d(0px, 35px, 0px);
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    display: none;
+}
+
+.menudx ul li {
+    padding: 0.5rem 1rem;
+}
+
+.menudx ul li a {
+    color: #16181b;
+    font-size: 12px;
+}
+
+.menudx ul li:hover a {
+    color: #f60;
+}
+
+.menudx ul li:hover li {
+    background-color: #f8f9fa;
+}
+
 main {
     background-color: #f7f7f7;
     width: 100%;

@@ -23,6 +23,26 @@ window.onload = function() {
 
 }
 
+function closest(e, t) {
+    return !e ? false : e === t ? true : closest(e.parentNode, t);
+}
+
+container = document.getElementById("popup");
+open = document.getElementById("open");
+
+open.addEventListener("click", function(e) {
+    container.style.display = "block";
+    open.disabled = true;
+    e.stopPropagation();
+});
+
+document.body.addEventListener("click", function(e) {
+    if (!closest(e.target, container)) {
+        container.style.display = "none";
+        open.disabled = false;
+    }
+});
+
 
 function openCity(evt, cityName) {
     var i, tabcontent, tablinks;
@@ -50,28 +70,29 @@ function openCity(evt, cityName) {
 //     $('#box-suggest').show();
 // });
 
-$('.item').click(function () { 
-    
+$('.item').click(function() {
+
 });
 listidtag = '';
+
 function addTag(i) {
-    nameTag = $('#'+i).text();
+    nameTag = $('#' + i).text();
     idTag = i;
     $('#box-suggest').hide();
-    $('#boxinpt-tag').append('<span class="Tagselected">'+nameTag+'</span>');
+    $('#boxinpt-tag').append('<span class="Tagselected">' + nameTag + '</span>');
     $('#tag').val('');
-    if(listidtag=="")
+    if (listidtag == "")
         listidtag += i;
     else
-        listidtag += ","+i;
-    
+        listidtag += "," + i;
+
     $('#idTag').val(listidtag);
 
 }
 
 function chonquan(i) {
     $('#idquan').val(i);
-    nameQuan = $('#q'+i).text();
+    nameQuan = $('#q' + i).text();
     $('#tenquan').val(nameQuan);
     $('.boxqc').remove();
 }
