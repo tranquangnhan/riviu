@@ -5,6 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>riviu</title>
 
+   <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-firestore.js"></script>
+    <script>
+       var firebaseConfig = {
+            apiKey: "AIzaSyB3VhHhWoorBd0qv7XNuJy-VxRZZjJvkQQ",
+            authDomain: "login-ee176.firebaseapp.com",
+            projectId: "login-ee176",
+            storageBucket: "login-ee176.appspot.com",
+            messagingSenderId: "724584072357",
+            appId: "1:724584072357:web:294f8e044083cd3a85f94c",
+            measurementId: "G-B4DVSQFXM1"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        googleSignIn = () => {
+            base_provider = new firebase.auth.GoogleAuthProvider();
+    
+            firebase.auth().signInWithPopup(base_provider).then(function(result) {
+                console.log(result);
+                console.log('success login');
+            }).catch(function(err) {
+                console.log(err);
+                console.log('failed to do');
+            })
+        }
+    </script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="site/views/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
    
@@ -19,6 +55,7 @@
 
     <script src="site/views/js/jquery.rateyo.min.js"></script>
     <script src="site/views/js/newblog.js"></script>
+ 
 </head>
 <body>  
     <!-- start header  -->
@@ -92,6 +129,8 @@ MST:0316141166
 Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
     </div>
 </footer>
+
+
 <script src="site/views/js/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 <script src="site/views/js/ajax/searchTag.js"></script>
 <script src="site/views/js/ajax/searchQuan.js"></script>
@@ -101,5 +140,6 @@ Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
 <script src="site/views/js/ajax/search.js"></script>
 <script src="site/views/js/home.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+
 </body>
 </html>
