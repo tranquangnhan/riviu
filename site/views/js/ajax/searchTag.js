@@ -30,12 +30,32 @@
 
 
     function like(idbv) {
-      alert("index.php?act=like&idbv="+idbv);
+    //   alert("index.php?act=like&idbv="+idbv);
       $.ajax({
           type: "GET",
           url: "index.php?act=like&idbv="+idbv,
           success: function (data) {
-              alert(data);
+            //   alert(data);
+              if(data==0) {
+                $("#btn_like_"+idbv).attr("src","./site/views/images/btnlike.png");
+                //   element = '<img src="./site/views/images/btnlike.png" alt="">';
+                    
+              }else{
+                $("#btn_like_"+idbv).attr("src","./site/views/images/heart_fill.png");
+
+                //   element = '<img src="./site/views/images/heart_fill.png" alt="">';
+              }
+              refreshLike(idbv);
           }
       });
   }
+
+  function refreshLike(idbv) {
+    $.ajax({
+        type: "GET",
+        url: "index.php?act=countLike&idbv="+idbv,
+        success: function (response) {
+            $('#soLike_'+idbv).html(response);
+        }
+    });
+  };
