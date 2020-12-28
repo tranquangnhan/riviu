@@ -66,7 +66,7 @@ function getallDouong() {
 
 function getBvByMon($idmon) {
     $sql = "SELECT * FROM `baiviet` WHERE idmonan = ?";
-    return result1(1,$sql,$idmon);
+    return result1(0,$sql,$idmon);
 }
 
 function getNameMon($id) {

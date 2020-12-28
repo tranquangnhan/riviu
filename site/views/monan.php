@@ -12,7 +12,7 @@
                 </div>
                 <div class="box-imgdm">
                     <div class="imgdm">
-                        <img src="./uploads/<?=getImgmon($reviewList[0]['idmonan'])?>" alt="">
+                        <img src="./uploads/<?= getImgmon($reviewList[0]['idmonan']) ?>" alt="">
                         <div class="overplay cover"></div>
                         <div class="btn-share"><img src="./site/views/images/btn-share.png" alt=""></div>
                     </div>
@@ -43,6 +43,13 @@
                                             <!-- <div class="level">level 6</div> -->
                                         </div>
                                         <div class="date"><?= $review['ngaydang'] ?></div>
+                                        <div class="star">
+                                            <?php
+                                            for ($i = 0; $i < $review['sao']; $i++) {
+                                                echo '<i class="fa fa-star" aria-hidden="true"> </i> ';
+                                            }
+                                            ?>
+                                        </div>
                                     </div>
                                     <!-- <div class="box-theodoi">
                                          <div>Theo dõi</div> 
@@ -89,20 +96,8 @@
                                         <a href=""><span>#chuyencuaneo</span></a>
                                         <a href=""><span>#chuyencuaneo</span></a> -->
                                     </div>
-                                    <div class="star">
-                                        <?php
-                                        for ($i = 0; $i < $review['sao']; $i++) {
-                                            echo '<i class="fa fa-star" aria-hidden="true"> </i> ';
-                                        }
-                                        ?>
-                                        <!-- <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i> -->
-                                    </div>
                                     <div class="boxaddress">
-                                        <?php $quan = getInfoQuan($review['idquan'])?>
+                                        <?php $quan = getInfoQuan($review['idquan']) ?>
                                         <div class="boxaddress-img">
                                             <img src="<?= $quan['img'] ?>" alt="">
                                         </div>
@@ -113,18 +108,18 @@
                                     </div>
                                     <div class="boxlike">
                                         <div class="like" onclick="like(<?= $review['id'] ?>)">
-                                        <?php
-                                            if(isset($_SESSION['sid'])){
-                                                $likeimg = (checkLike($review['id'], $_SESSION['sid'])) ? "./site/views/images/heart_fill.png" : "./site/views/images/btnlike.png" ;
-                                            }else $likeimg ="./site/views/images/btnlike.png";
-                                            
-                                        ?>    
-                                        <img src="<?=$likeimg?>" alt="">
+                                            <?php
+                                            if (isset($_SESSION['sid'])) {
+                                                $likeimg = (checkLike($review['id'], $_SESSION['sid'])) ? "./site/views/images/heart_fill.png" : "./site/views/images/btnlike.png";
+                                            } else $likeimg = "./site/views/images/btnlike.png";
+
+                                            ?>
+                                            <img src="<?= $likeimg ?>" alt="">
                                             <span><?= countLike($review['id']) ?></span>
                                         </div>
                                         <div class="cmt">
-                                            <a href="?act=chitiet&id=<?=$review['id']?>">
-                                            <img src="./site/views/images/btncmt.png" alt="">
+                                            <a href="?act=chitiet&id=<?= $review['id'] ?>">
+                                                <img src="./site/views/images/btncmt.png" alt="">
                                             </a>
                                         </div>
                                         <div class="share">
