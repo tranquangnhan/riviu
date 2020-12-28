@@ -16,13 +16,9 @@ if(is_array($showbledit)){
 
     $noidung  =$showbledit['noidung'];    
     $idsp =$showbledit['idsp'];   
-    $anhien =  $showbledit['trangthai'];  
-    if($anhien == 1){
-        $anhien = 'checked';
-    }else{
-        $anhien = '';
-    }
-    
+
+    $showAllKh = showallkh();
+    $showAllBv = showallbv();
 ?>
 
 
@@ -52,7 +48,29 @@ if(is_array($showbledit)){
                         <div class="col-lg-8">
                             <h3 class="mt-4 text-center">SỬA BÌNH LUẬN</h3>
                             <p class="text-center">Bạn có thể thêm bình luận ở đây!</p>
-    
+                            <div class="row mt-4">
+                                <div class="col-lg-3">
+                                    <label for=""><strong>Người Bình Luận</strong></label>
+                                </div>  
+                                <div class="col-lg-9">
+                                    <select class="form-control" name="iduser" id="">
+                                    <?php
+                                            $showDm = '';
+                                            $idsp = $showbledit['iduser'];    
+                                            foreach ($showAllKh as $sp) {
+                                                $sl = "selected";
+                                                if($sp['id'] == $idsp){
+                                                    $showDm .= '<option value="'.$sp['id'].'"'.$sl.'>'.$sp['name'].'</option>';
+                                                }
+                                                else{
+                                                    $showDm .= '<option value="'.$sp['id'].'">'.$sp['name'].'</option>';
+                                                }
+                                            }     
+                                            echo $showDm;
+                                        ?>   
+                                    </select>
+                                </div>
+                            </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Bình Luận</strong></label>
@@ -63,37 +81,25 @@ if(is_array($showbledit)){
                             </div>
                             <div class="row mt-4">
                                 <div class="col-lg-3">
-                                    <label for=""><strong>Khách Hàng</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="form-control" name="idkh" id="" >
-                                        <option value="<?=$idkh?>"><?=$tenKH?></option>
-                                       
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
                                     <label for=""><strong>Bài Viết</strong></label>
                                 </div>
                                 <div class="col-lg-9">
                                     <select class="form-control" name="idbaiviet" id="" >
-                                        <option value="<?=$idbaiviet?>"><?=$tenbv?></option>
-                                      
+                                    <?php
+                                            $showDm = '';
+                                            $idsp = $showbledit['idbaiviet'];    
+                                            foreach ($showAllBv as $sp) {
+                                                $sl = "selected";
+                                                if($sp['id'] == $idsp){
+                                                    $showDm .= '<option value="'.$sp['id'].'"'.$sl.'>'.$sp['tieude'].'</option>';
+                                                }
+                                                else{
+                                                    $showDm .= '<option value="'.$sp['id'].'">'.$sp['tieude'].'</option>';
+                                                }
+                                            }     
+                                            echo $showDm;
+                                            ?>   
                                     </select>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Ẩn Hiện</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <div class="form-check">
-                                    <label class="form-check-label">
-                                    Hiện ?
-                                        <input type="checkbox" value="1" class="ml-2 form-check-input" name="anhien" id="" checked>
-                                    </label>
-                                    </div>
                                 </div>
                             </div>
                             <div class="row mt-5">
@@ -107,7 +113,7 @@ if(is_array($showbledit)){
                                         </div>
                                         <div class="col-lg-5 pr-2 mr-2">
                                             <div class="form-group">
-                                                <input type="submit" name="sua" id="" value="Thêm Bình Luận"
+                                                <input type="submit" name="sua" id="" value="Sửa Bình Luận"
                                                     class="btn btn-submit text-center">
                                             </div>
                                         </div>
