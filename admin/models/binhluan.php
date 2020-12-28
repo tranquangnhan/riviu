@@ -1,12 +1,8 @@
 <?php
-function addBinhLuan($star,$idkh,$idbaiviet,$noidung,$trangthai){
-    $sql = "INSERT INTO binhluan (star,idkh,idbaiviet,noidung,trangthai) VALUES 
-    ('{$star}', '{$idkh}', '{$idbaiviet}','{$noidung}','{$trangthai}')";
-    exec1($sql);
-}
-function editBinhLuan($id,$star,$idkh,$idbaiviet,$noidung,$trangthai){
-    $sql = "UPDATE binhluan SET star='{$star}', idkh = '{$idkh}' , idbaiviet = '{$idbaiviet}', noidung= '{$noidung}', trangthai= '{$trangthai}'  WHERE id=".$id;
-    execute1($sql);  
+
+function editBinhLuan($id,$idbaiviet,$noidung,$iduser){
+    $sql = "UPDATE binhluan SET iduser=?,idbaiviet=?,noidung=? WHERE id = ?";
+    return  exec1($sql,$iduser,$idbaiviet,$noidung,$id);  
 }
 
 function showallbv(){// show tất cả khách hàng
