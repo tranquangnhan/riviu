@@ -7,10 +7,6 @@
         $sql = "select * from dmbaiviet";
         return result1(0,$sql); 
     }
-    function showtenbvbyid($id) {
-        $sql = "select * from baiviet where id=$id";
-        return result1(1,$sql)['name']; 
-    }
     function addBlog($name,$imgupload,$iddm,$date,$noidung,$tacgia,$tag,$mota,$public) {
         $sql="insert into baiviet (name, img, iddm, date, noidung, tacgia, tag, mota, public)
         values('$name','$imgupload', '$iddm', '$date', '$noidung', '$tacgia', '$tag', '$mota', '$public')";
@@ -32,4 +28,8 @@
         $sql = "UPDATE baiviet SET name='$name', img='$imgupload', iddm='$iddm', noidung='$noidung', tacgia='$tacgia', tag='$tag', mota='$mota', public='$public' where id='$id';";
         execute1($sql); 
     }  
+    function showTenbv($id){
+        $sql ="select * from baiviet where id= ?";
+        return result1(1,$sql,$id)['tieude'];
+    }
 ?>

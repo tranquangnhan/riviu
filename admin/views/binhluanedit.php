@@ -11,7 +11,7 @@ if(is_array($showbledit)){
     }
   
     $idbaiviet=$showbledit['idbaiviet'];
-    $tenbv = showtenbvbyid($idbaiviet);
+    // $tenbv = showtenbvbyid($idbaiviet);
     $tenKH = showtenkh($idkh);
 
     $noidung  =$showbledit['noidung'];    
@@ -50,28 +50,9 @@ if(is_array($showbledit)){
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM BÌNH LUẬN</h3>
+                            <h3 class="mt-4 text-center">SỬA BÌNH LUẬN</h3>
                             <p class="text-center">Bạn có thể thêm bình luận ở đây!</p>
-                            <!-- <div class="row">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>ALL Sản Phẩm</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <select class="form-control" name="idsp" id="" >
-                                        <option value="">Chọn</option>
-                                      
-                                    </select>
-                                </div>
-                            </div> -->
-                            <div class="row mt-4">
-                                <div class="col-lg-3">
-                                    <label for=""><strong>Star</strong></label>
-                                </div>
-                                <div class="col-lg-9">
-                                    <input type="text" name="star" id="" class="form-control" placeholder="Star"
-                                        aria-describedby="helpId"  value="<?=$star?>">
-                                </div>
-                            </div>
+    
                             <div class="row mt-4">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Bình Luận</strong></label>

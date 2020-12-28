@@ -25,8 +25,9 @@
                                     <th width="10%">Khách Hàng</th>
                                     <th width="20%">Tên Bài Viết</th>
                                     <th width="40%">Nội Dung</th>
-                                    <th width="10%">Star</th>
-                                    <th width="10%">Trạng Thái</th>
+                                    <th width="15%">Thời gian</th>
+                                    <th width="10%">Xoá</th>
+                                    <th width="10%">Sửa</th>
                                 </tr>
                             </thead>
                             <tbody >                        
@@ -48,12 +49,12 @@
                                         ?>
                                     <tr>
                                         <td><strong><?=$id?></strong></td>
-                                        <td><strong><?=showTenKh($bl['idkh'])?></strong></td>
+                                        <td><strong><?=showTenKh($bl['iduser'])?></strong></td>
                                         <td><strong><?=showTenbv($bl['idbaiviet'])?></strong></td>
                                         <td><?=$noidung?></td>   
-                                        <td><?=$star?></td>   
-                                        <td><input type="radio" <?=$anhien?>> </td>                     
-                                        <td><a onclick="checkDelete('<?php echo $linkdel; ?>')"> <i  class="fa fa-trash mr-2" aria-hidden="true"></i></a> <a href="<?=$linkedit?>"> <i class="fa fa-edit"></i></a></td>
+                                        <td><?=$bl['date']?></td>                      
+                                        <td><a onclick="checkDelete('<?php echo $linkdel; ?>')"> <i  class="fa fa-trash mr-2" aria-hidden="true"></i></a> </td>
+                                        <td><a href="<?=$linkedit?>"> <i class="fa fa-edit"></i></a></td>
                                     </tr>
                                 <?php }?>
                             </tbody>

@@ -48,7 +48,7 @@
                     ?>
                     <tr>
                         <td><?=$i?></td> 
-                        <td><img src="<?=PATH_IMG.$kh['avatar']?>" width="150"></td>
+                        <td><img src="<?=PATH_IMG_ADMIN.$kh['avatar']?>" width="150"></td>
                         <td><?=$kh['name']?></td>
                         
                         <td><?=$kh['tenkh']?></td>

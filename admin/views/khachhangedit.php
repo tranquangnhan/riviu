@@ -22,15 +22,15 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM Khách Hàng</h3>
-                            <p class="text-center">Bạn có thể thêm khách hàng ở đây!</p>
+                            <h3 class="mt-4 text-center">SỬA KHÁCH HÀNG</h3>
+                            <p class="text-center">Bạn có thể sửa khách hàng ở đây!</p>
                             <div class="row">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Ảnh Khách Hàng</strong></label>
                                 </div>
                                
                                 <div class="col-lg-9">
-                                    <img width="150" src=" <?=PATH_IMG.$showkhedit['avatar']?>" alt="">
+                                    <img width="150" src=" <?=PATH_IMG_ADMIN.$showkhedit['avatar']?>" alt="">
                                     <input type="file" class=" mt-3 form-control-file" name="avatar1[]" id="avatar1" multiple >
                                 </div>
                             </div>

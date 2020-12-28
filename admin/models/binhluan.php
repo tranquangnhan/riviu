@@ -8,10 +8,7 @@ function editBinhLuan($id,$star,$idkh,$idbaiviet,$noidung,$trangthai){
     $sql = "UPDATE binhluan SET star='{$star}', idkh = '{$idkh}' , idbaiviet = '{$idbaiviet}', noidung= '{$noidung}', trangthai= '{$trangthai}'  WHERE id=".$id;
     execute1($sql);  
 }
-function showTenbv($id){
-    $sql ="select * from baiviet where id = '$id'";
-    return result1(1,$sql)['name'];
-}
+
 function showallbv(){// show tất cả khách hàng
     $sql ="select * from baiviet order by id desc";
     return result1(0,$sql);// thì ở đây hàm chỉ cần thêm 2 tham số

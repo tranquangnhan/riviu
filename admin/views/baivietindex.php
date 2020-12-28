@@ -36,8 +36,8 @@
                                 foreach ($showAllBlog as $motbl) {
                                     $id = $motbl['id'];
                                     $stt++;
-                                    $img = PATH_IMG.explode(",",$motbl['img'])[0];
-                                    if(is_file($img)) $img = $img;else $img = "nothing";
+                                    $img = PATH_IMG_ADMIN.explode(",",$motbl['img'])[0];
+                                    // if(is_file($img)) $img = $img;else $img = "nothing";
                                     $tieuDe = $motbl['tieude'];
                                     $noiDung = $motbl['noidung'];
                                     $nguoiDang = showTenKh($motbl['iduser']);
