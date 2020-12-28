@@ -58,4 +58,8 @@ function addUser($userName,$passWord){
     $sql = "INSERT INTO taikhoan (name,password) VALUES (?,?)";
     return exec1($sql,$userName,$passWord);
 }
+
+function changInfo($name, $username, $pass, $id) {
+    return postdulieu("UPDATE `taikhoan` SET `name`='$username',`password`='$pass',`tenkh`='$name' WHERE id = $id");
+}
 ?>

@@ -29,15 +29,14 @@ function gettag($id) {
     $tagList = array();
     $idList = explode(",",$id);
     foreach ($idList as $id) {
-        // print_r(gettag_($id));
         array_push($tagList, gettag_($id)['tentag']);
     }
     return $tagList;
 }
 
 function getallBaiviet() {
-    // exit("Select * from baiviet bv inner join taikhoan tk on bv.iduser = tk.id order by bv.id desc");
-    return laydulieu("SELECT * FROM baiviet order by id DESC");
+    $sql ="SELECT * FROM baiviet order by id DESC";
+    return result1(0,$sql);
 }
 
 function searchTag($key) {
@@ -56,15 +55,18 @@ function themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon) {
 }
 
 function getAllMonAn() {
-    return laydulieu("SELECT * FROM monan order by id");
+    $sql = "SELECT * FROM monan order by id";
+    return result1(0,$sql);
 }
 
 function getallDouong() {
-    return laydulieu("SELECT * from monan where loai = 1");
+    $sql = "SELECT * from monan where loai = 1";
+    return result1(0,$sql);
 }
 
 function getBvByMon($idmon) {
-    return laydulieu("SELECT * FROM `baiviet` WHERE idmonan = $idmon");
+    $sql = "SELECT * FROM `baiviet` WHERE idmonan = ?";
+    return result1(1,$sql,$idmon);
 }
 
 function getNameMon($id) {
@@ -133,16 +135,14 @@ function loaiMonAn(){
     return result1(0,$sql); 
 }
 function getTacGia($idtg) {
-    return laymot("SELECT name, avatar FROM taikhoan WHERE id = $idtg");
+    $sql ="SELECT name, avatar FROM taikhoan WHERE id = ?";
+    return result1(1,$sql,$idtg);
 }
 
 function getThongtin($id) {
     return laymot("SELECT * FROM taikhoan WHERE id = $id");
 }
 
-function changInfo($name, $username, $pass, $id) {
-    return postdulieu("UPDATE `taikhoan` SET `name`='$username',`password`='$pass',`tenkh`='$name' WHERE id = $id");
-}
 
 function demSobv($idmon) {
     $tongbv = laymot("SELECT COUNT(*) as tong FROM baiviet WHERE idmonan = $idmon");

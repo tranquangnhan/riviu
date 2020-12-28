@@ -22,7 +22,6 @@ function ketnoidb()
             );
 
         $conn = new PDO ('mysql:host='.HOST_DB.';dbname='.NAME_DB.';charset=utf8', USER_DB, PASS_DB, $ConnectionOption);
-
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $conn;
     } catch(PDOException $e) {
@@ -30,16 +29,48 @@ function ketnoidb()
     }
 }
     function laydulieu($sql)   {
-        $conn = ketnoidb();
-        $result = $conn->query($sql);
-        $row = $result->fetchAll(PDO::FETCH_ASSOC);
-        return $row;
+        $fe=0;
+        $sqlValue = array_slice(func_get_args(),2);
+        try {
+            $conn = ketnoidb(); //connect database
+            $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
+            $stmt->execute($sqlValue);// thực thi
+
+            // echo '<pre>';
+            // print_r($stmt -> debugDumpParams());
+            // echo '</pre>';
+            // echo '---------------------------------------------------------------------<br>'.PHP_EOL;
+
+            if($fe===0)return $stmt->fetchAll();elseif($fe===1)return $stmt->fetch(PDO::FETCH_ASSOC);// nếu tham số đầu tiên ===0 trả về tất cả sản phẩm, === 1 trả về 1 sản phẩm
+            
+        } catch (PDOException $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+        finally{
+            unset($conn);
+        }
     }
     function laymot($sql) {
-        $conn = ketnoidb();
-        $result = $conn->query($sql);
-        $row = $result->fetch(PDO::FETCH_ASSOC);
-        return $row;
+        $fe=1;
+        $sqlValue = array_slice(func_get_args(),2);
+        try {
+            $conn = ketnoidb(); //connect database
+            $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
+            $stmt->execute($sqlValue);// thực thi
+
+            // echo '<pre>';
+            // print_r($stmt -> debugDumpParams());
+            // echo '</pre>';
+            // echo '---------------------------------------------------------------------<br>'.PHP_EOL;
+
+            if($fe===0)return $stmt->fetchAll();elseif($fe===1)return $stmt->fetch(PDO::FETCH_ASSOC);// nếu tham số đầu tiên ===0 trả về tất cả sản phẩm, === 1 trả về 1 sản phẩm
+            
+        } catch (PDOException $e) {
+            echo "Lỗi: " . $e->getMessage();
+        }
+        finally{
+            unset($conn);
+        }
     }
     function postdulieu($sql) {
         $conn = ketnoidb();
@@ -70,6 +101,27 @@ function result1($fe,$sql){
         $conn = ketnoidb(); //connect database
         $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
         $stmt->execute($sqlValue);// thực thi
+        if($fe===0)return $stmt->fetchAll();elseif($fe===1)return $stmt->fetch(PDO::FETCH_ASSOC);// nếu tham số đầu tiên ===0 trả về tất cả sản phẩm, === 1 trả về 1 sản phẩm
+        
+    } catch (PDOException $e) {
+        echo "Lỗi: " . $e->getMessage();
+    }
+    finally{
+        unset($conn);
+    }
+}
+function SqlSelectDebug($fe,$sql){
+    $sqlValue = array_slice(func_get_args(),2);
+    try {
+        $conn = ketnoidb(); //connect database
+        $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
+        $stmt->execute($sqlValue);// thực thi
+            // debugs
+            // echo '<pre>';
+            // print_r($stmt -> debugDumpParams());
+            // echo '</pre>';
+            // echo '---------------------------------------------------------------------<br>'.PHP_EOL;
+
         if($fe===0)return $stmt->fetchAll();elseif($fe===1)return $stmt->fetch(PDO::FETCH_ASSOC);// nếu tham số đầu tiên ===0 trả về tất cả sản phẩm, === 1 trả về 1 sản phẩm
         
     } catch (PDOException $e) {
