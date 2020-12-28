@@ -100,16 +100,24 @@ switch ($act) {
 
     case 'like':
         if(isset($_SESSION['sid'])&&(isset($_GET['idbv']))) {
-            $check = checkLike($_GET['idbv'], $_GET['iduser']);
+            // exit($_SESSION['sid']);
+            $check = checkLike($_GET['idbv'], $_SESSION['sid']);
             if($check) {
-                unlike($_GET['idbv'], $_GET['iduser']);
+                unlike($_GET['idbv'], $_SESSION['sid']);
                 print(0);
             }else{
-                like($_GET['idbv'], $_GET['iduser']);
+                like($_GET['idbv'], $_SESSION['sid']);
                 print(1);
             }
         }else {
             header("location: index.php?act=login");
+        }
+        break;
+
+    case 'countLike':
+        if(isset($_GET['idbv'])) {
+            $like = refreshLike($_GET['idbv']);
+            print($like['tong']);
         }
         break;
 

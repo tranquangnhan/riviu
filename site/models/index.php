@@ -148,4 +148,21 @@ function demSobv($idmon) {
     $tongbv = laymot("SELECT COUNT(*) as tong FROM baiviet WHERE idmonan = $idmon");
     return $tongbv['tong'];
 }
+
+function refreshLike($idbv) {
+    $like = laymot("SELECT COUNT(*) as tong FROM likebv WHERE idbaiviet = $idbv");
+    return $like['tong'];
+}
+
+// function showAnh($soluong) {
+//     switch ($soluong) {
+//         case '1':
+//             return 
+//             break;
+        
+//         default:
+//             # code...
+//             break;
+//     }
+// }
 ?>

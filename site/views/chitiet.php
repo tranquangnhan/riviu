@@ -22,6 +22,7 @@ if (isset($baiviet['idquan']))
                 <p><span class="small"><?= $baiviet['sao'] ?></span>/5</p>
             </div>
         </div>
+        <?php if($baiviet['img']!="") {?>
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><img src="uploads/<?= $baiviet['img'] ?>" alt=""></div>
@@ -30,6 +31,7 @@ if (isset($baiviet['idquan']))
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
         </div>
+        <?php }?>
 
         <div class="content">
             <h2><?= $baiviet['tieude'] ?></h2>
@@ -71,8 +73,8 @@ if (isset($baiviet['idquan']))
                     } else $likeimg = "./site/views/images/btnlike.png";
 
                     ?>
-                    <img src="<?= $likeimg ?>" alt="">
-                    <span><?= countLike($_GET['id']) ?></span>
+                    <img id="btn_like" src="<?= $likeimg ?>" alt="">
+                    <span id="soLike_<?=$_GET['id']?>"><?= countLike($_GET['id']) ?></span>
                 </div>
                 <div>
                     <img src="./site/views/images/share_black.png" alt="">

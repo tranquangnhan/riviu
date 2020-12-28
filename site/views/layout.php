@@ -36,7 +36,7 @@
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </div> -->
                     <div class="search-right">
-                        <input type="search" id="search" placeholder="Ăn gì đây ?">
+                        <input autocomplete="off" type="search" id="search" placeholder="Ăn gì đây ?">
                         <div class="btn-search">
                             <img src="site/views/images/search.png" alt="">
                         </div>

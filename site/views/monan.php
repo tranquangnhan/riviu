@@ -20,6 +20,7 @@
                 </div>
 
                 <?php
+                var_dump($reviewList);
                 if (!is_null($reviewList)) {
                     foreach ($reviewList as $review) {
                         # code...
@@ -55,7 +56,18 @@
                                          <div>Theo dõi</div> 
                                     </div> -->
                                 </div>
-                                <div class="boxcontent-img mt-2">
+                                <?php if ($review['img'] != "") { ?>
+                                    <div class="boxcontent-img mt-2 type1">
+                                        <div class="container-type1">
+                                            <div class="bg1">
+                                                <img src="./uploads/<?= $review['img'] ?>" alt="">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                <?php } ?>
+                                <!-- <div class="boxcontent-img mt-2">
                                     <div class="container1">
                                         <div class="bg1">
                                             <img src="./site/views/images/blog1.jpeg" alt="">
@@ -76,9 +88,11 @@
                                             <div class="them"><span>+14</span></div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="boxtext">
-                                    <h2 data-v-ccafa7e2="" class="title-h2"><?= $review['tieude'] ?></h2>
+                                    <a href="?act=chitiet&id=<?= $review['id'] ?>">
+                                        <h2 data-v-ccafa7e2="" class="title-h2"><?= $review['tieude'] ?></h2>
+                                    </a>
                                     <div class="white-space-word">
                                         <?= $review['noidung'] ?>
                                         <span class="hover btn-see-more-content">Xem thêm</span>
@@ -114,8 +128,10 @@
                                             } else $likeimg = "./site/views/images/btnlike.png";
 
                                             ?>
-                                            <img src="<?= $likeimg ?>" alt="">
-                                            <span><?= countLike($review['id']) ?></span>
+                                            <!-- <img id="btn_like" src="<?= $likeimg ?>" alt="">
+                                            <span id="soLike_<?= $_GET['id'] ?>"><?= countLike($_GET['id']) ?></span> -->
+                                            <img id="btn_like_<?=$review['id']?>" src="<?= $likeimg ?>" alt="">
+                                            <span id="soLike_<?= $review['id'] ?>"><?= countLike($review['id']) ?></span>
                                         </div>
                                         <div class="cmt">
                                             <a href="?act=chitiet&id=<?= $review['id'] ?>">
