@@ -12,7 +12,7 @@ if (isset($baiviet['idquan']))
                     <img src="./uploads/<?=$baiviet['avatar']?>" alt="">
                 </div>
                 <div class="tttg">
-                    <div><strong><?= $baiviet['name'] ?></strong></div>
+                    <div><strong><?= $baiviet['tenkh'] ?></strong></div>
                     <div class="sub"><?= $ngaydang ?> tại <a href=""> <?= $quan['diachi'] ?></a></div>
                 </div>
             </div>

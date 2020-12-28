@@ -20,7 +20,6 @@
                 </div>
 
                 <?php
-                var_dump($reviewList);
                 if (!is_null($reviewList)) {
                     foreach ($reviewList as $review) {
                         # code...
@@ -39,7 +38,7 @@
                                     <div class="boxname">
                                         <div class="name-level">
                                             <div class="name">
-                                                <?= $tacgia['name'] ?>
+                                                <?= $tacgia['tenkh'] ?>
                                             </div>
                                             <!-- <div class="level">level 6</div> -->
                                         </div>
@@ -121,7 +120,9 @@
                                         </div>
                                     </div>
                                     <div class="boxlike">
+                                        
                                         <div class="like" onclick="like(<?= $review['id'] ?>)">
+                                        <a>
                                             <?php
                                             if (isset($_SESSION['sid'])) {
                                                 $likeimg = (checkLike($review['id'], $_SESSION['sid'])) ? "./site/views/images/heart_fill.png" : "./site/views/images/btnlike.png";
@@ -132,14 +133,18 @@
                                             <span id="soLike_<?= $_GET['id'] ?>"><?= countLike($_GET['id']) ?></span> -->
                                             <img id="btn_like_<?=$review['id']?>" src="<?= $likeimg ?>" alt="">
                                             <span id="soLike_<?= $review['id'] ?>"><?= countLike($review['id']) ?></span>
+                                            </a>
                                         </div>
+                                        
                                         <div class="cmt">
                                             <a href="?act=chitiet&id=<?= $review['id'] ?>">
                                                 <img src="./site/views/images/btncmt.png" alt="">
                                             </a>
                                         </div>
                                         <div class="share">
+                                            <a>
                                             <img src="./site/views/images/sharebv.png" alt="">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

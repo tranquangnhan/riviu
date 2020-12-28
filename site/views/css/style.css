@@ -1117,7 +1117,7 @@ img {
 }
 
 .boxname .name {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
 }
 
@@ -1137,6 +1137,7 @@ img {
 .boxname .date {
     color: #9b9b9b;
     font-size: 13px;
+    margin: 5px 0;
 }
 
 .box-theodoi {
@@ -1229,13 +1230,19 @@ img {
     padding: 0 0.5rem;
 }
 
-.boxlike>div>img {
-    width: 20px;
-    height: 20px;
+.boxlike img {
+   transform: scale(.75);
 }
 
 .like {
     cursor: pointer;
+    
+}
+
+.like a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .border-bottom {
