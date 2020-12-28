@@ -3,9 +3,17 @@
     font-family: sans-serif;
 }
 
-button {
+button,
+input,
+textarea {
     outline: none;
     cursor: pointer;
+    border: none;
+}
+
+button:focus {
+    border: none;
+    outline: none;
 }
 
 .container {
@@ -594,7 +602,7 @@ li {
     display: none;
 }
 
-.btn-review  {
+.btn-review {
     cursor: pointer;
 }
 
@@ -1097,7 +1105,7 @@ img {
     width: 15%;
 }
 
-.card-body .author{
+.card-body .author {
     width: 100%;
 }
 
@@ -1335,7 +1343,7 @@ img {
     display: block;
 }
 
-.owl  a {
+.owl a {
     color: #000 !important;
 }
 

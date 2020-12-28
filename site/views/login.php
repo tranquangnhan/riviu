@@ -20,8 +20,14 @@
                     </button>
                 </div>
                 <div class="dnface mb-1">
-                    <button class="btndnface">
+                    <button class="btndnface" >
                         Đăng nhập bằng Facebook
+                    </button>
+                </div>
+                <div class="dnface mb-1">
+                    <button class="btndngg" onclick="googleSignIn()">
+                        <img src="site/views/images/google.webp" alt="">
+                        <div>Đăng nhập bằng Google</div> 
                     </button>
                 </div>
                 <div class="dangky">

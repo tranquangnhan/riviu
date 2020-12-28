@@ -20,8 +20,8 @@
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-8">
-                            <h3 class="mt-4 text-center">THÊM QUÁN </h3>
-                            <p class="text-center">Bạn có thể thêm quán ở đây!</p>
+                            <h3 class="mt-4 text-center">SỬA QUÁN</h3>
+                            <p class="text-center">Bạn có thể sửa quán ở đây!</p>
                             <div class="row">
                                 <div class="col-lg-3">
                                     <label for=""><strong>Ảnh quán</strong></label>
@@ -60,7 +60,7 @@
                                         </div>
                                         <div class="col-lg-5 pr-2 mr-2">
                                             <div class="form-group">
-                                                <input type="submit" name="them" id="" value="Thêm User"
+                                                <input type="submit" name="them" id="" value="Sửa Quán"
                                                     class="btn btn-submit text-center">
                                             </div>
                                         </div>

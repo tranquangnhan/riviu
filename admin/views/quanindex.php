@@ -42,7 +42,7 @@
                     ?>
                     <tr>
                         <td><?=$i?></td>  
-                        <td><img width="150" src="<?=PATH_IMG.$quan['img']?>"></td>
+                        <td><img width="150" src="<?=PATH_IMG_ADMIN.$quan['img']?>"></td>
                         <td><?=$quan['tenquan']?></td>
                         <td><?=$quan['diachi']?></td>
                         <td>

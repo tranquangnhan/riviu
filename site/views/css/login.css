@@ -38,6 +38,36 @@
     border-radius: 24px;
     font-size: 13px;
     letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btndngg {
+    display: flex;
+}
+
+.btndngg {
+    width: 100%;
+    background-color: white;
+    padding: 0.3rem 2rem;
+    outline: none;
+    color: #575757;
+    border: 1px solid #c4c4c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+}
+
+.btndngg>div {
+    font-weight: 600;
+}
+
+.btndngg img {
+    width: 25px;
+    height: 25px;
+    margin-right: 0.7rem;
 }
 
 .inputdn {
