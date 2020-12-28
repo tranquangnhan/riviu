@@ -154,15 +154,7 @@ function refreshLike($idbv) {
     return $like['tong'];
 }
 
-// function showAnh($soluong) {
-//     switch ($soluong) {
-//         case '1':
-//             return 
-//             break;
-        
-//         default:
-//             # code...
-//             break;
-//     }
-// }
+function getallBaiviet_($type) {
+    return laydulieu("SELECT * FROM `baiviet` WHERE idmonan IN (SELECT id FROM monan WHERE loai= $type)");
+}
 ?>
