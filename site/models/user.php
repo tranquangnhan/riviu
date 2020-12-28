@@ -59,7 +59,13 @@ function addUser($userName,$passWord){
     return exec1($sql,$userName,$passWord);
 }
 
-function changInfo($name, $username, $pass, $id) {
-    return postdulieu("UPDATE `taikhoan` SET `name`='$username',`password`='$pass',`tenkh`='$name' WHERE id = $id");
+function changInfo($name, $username,$email, $pass,$avt, $id) {
+    if(!$avt){
+        $sql ="UPDATE `taikhoan` SET `name`=?,`password`=?,email=?,tenkh=? WHERE id = ?";
+        return exec1($sql,$username, $pass,$email,$name,$id);
+    }else{
+        $sql ="UPDATE `taikhoan` SET `name`=?,`password`=?,avatar=?,email=?,tenkh=? WHERE id = ?";
+        return exec1($sql,$username, $pass,$avt,$email,$name,$id);
+     }
 }
 ?>

@@ -32,7 +32,7 @@
                 </div>
                 <div class="dangky">
                     <div><a href="" class="mr-3">Quên Mật Khẩu</a></div>
-                    <div> <a href="">Đăng ký tài khoản</a></div>
+                    <div> <a href="?act=signup">Đăng ký tài khoản</a></div>
                 </div>
                 <div class="taiapp mt-3">Tải app Riviu</div>
                 <div class="boxapp">

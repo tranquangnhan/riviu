@@ -28,36 +28,45 @@
                   margin-bottom: 10px;
                 }
               </style>
-              <img src="./uploads/<?= $thongtin['avatar'] ?>" alt="">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label for="avt" class="labelavt">
+                    <img src="<?php if(is_file(PATH_IMG_SITE. $thongtin['avatar']) ) echo PATH_IMG_SITE. $thongtin['avatar']; else echo PATH_IMG_SITE. 'logo.png'; ?>" alt="">
+                  </label>
+                  <input type="file" name="avt" id="avt" class="form-control" >
+                </div>
+              </div>
+             
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Họ tên</label>
-                  <input type="text" name="hoten" class="form-control" value="<?= $thongtin['tenkh'] ?>">
+                  <input type="text" name="hoten" class="form-control" value="<?= $thongtin['tenkh'] ?>" required>
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group">
                   <label>Tên đăng nhập</label>
-                  <input type="text" name="username" class="form-control" value="<?= $thongtin['name'] ?>">
+                  <input type="text" name="username" class="form-control" value="<?= $thongtin['name'] ?>" required>
                 </div>
               </div>
-              <!-- <div class="col-md-12">
+              <div class="col-md-12">
                 <div class="form-group">
-                  <label>Bạn muốn đổi mật khẩu?</label>
-                  <input type="checkbox" name="" id="doimk"></div>
+                  <label>Email</label>
+                  <input type="email" name="email" class="form-control" value="<?= $thongtin['email'] ?>" required>
+                </div>
               </div>
-              <div class="col-md-12 changepass">
+              <div class="col-md-12 ">
                 <div class="form-group">
                   <label>Mật khẩu</label>
-                  <input id="pass" type="password" name="pass" class="form-control" value="<?= $thongtin['password'] ?>">
+                  <input id="pass" type="password" name="pass" class="form-control" placeholder="Nhập mật khẩu mới" required>
                 </div>
               </div>
-              <div class="col-md-12 changepass" id="repass">
+              <div class="col-md-12 " id="repass">
                 <div class="form-group">
                   <label>Nhập lại mật khẩu</label>
-                  <input type="password" name="repass" class="form-control" placeholder="Xác nhận mật khẩu mới">
+                  <input type="password" name="repass" class="form-control" placeholder="Xác nhận mật khẩu mới" required>
                 </div>
-              </div> -->
+              </div>
             </div>
             <input type="hidden" name="idus" value="<?= $thongtin['id'] ?>">
             <div class="row">

@@ -2,6 +2,7 @@
 session_start();
 ob_start();
 require_once "site/models/index.php";
+require_once "site/models/user.php";
 require_once "system/conn.php";
 require_once "lib/myfunctions.php";
 if (isset($_GET['act'])) {
@@ -158,14 +159,17 @@ switch ($act) {
             $name = $_POST['hoten'];
             $username = $_POST['username'];
             $pass = $_POST['pass'];
-            $id = $_POST['idus'];
+            $id = $_SESSION['sid'];
+            $email = $_POST['email'];
+            $allFile = $_FILES['avt'];                
+            $avt = checkUpLoadMany($allFile,PATH_IMG_SITE);
+            $tb= '';
             if(isset($_POST['repass'])) {
                 $repass = $_POST['repass'];
                 if($repass==$pass)
-                    changInfo($name, $username, $pass, $id);
+                if(changInfo($name, $username,$email, $pass,$avt, $id)) header('location: index.php');
                 else $tb = "mật khẩu không khớp";
             }else
-            changInfo($name, $username, $pass, $id);
             header("location: index.php?act=tttk");
             echo $tb;
         }
