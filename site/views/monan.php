@@ -112,7 +112,7 @@
                                     <div class="boxaddress">
                                         <?php $quan = getInfoQuan($review['idquan']) ?>
                                         <div class="boxaddress-img">
-                                            <img src="<?= $quan['img'] ?>" alt="">
+                                            <img src="./uploads/<?= $quan['img'] ?>" alt="">
                                         </div>
                                         <div class="boxaddress-text">
                                             <h3 class="title-h3"><b><?= $quan['tenquan'] ?></b></h3>

@@ -44,8 +44,8 @@ if (isset($baiviet['idquan']))
         </div>
         <div class="ttquan">
             <div style="display: flex;">
-                <div class="avatar">
-                    <img src="<?= $quan['img'] ?>" alt="">
+                <div class="avatarquan">
+                    <img src="./uploads/<?= $quan['img'] ?>" alt="">
                 </div>
                 <div class="ttquan_chitiet">
                     <div>

@@ -146,6 +146,13 @@ a {
     float: left;
 }
 
+.avatarquan {
+    width: 90px;
+    margin-right: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
 .tttg {
     float: left;
 }
@@ -729,6 +736,7 @@ main {
 
 .tab {
     overflow: hidden;
+    padding: 20px 0;
 }
 
 
@@ -765,7 +773,7 @@ main {
 /* Create an active/current tablink class */
 
 .tab button.active {
-    color: #fff;
+    color: #fff !important;
     background-color: #f60;
 }
 
@@ -778,14 +786,20 @@ main {
 }
 
 .baivietct {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .baivietct .baivietct-item {
     width: 32%;
+    float: left;
     height: 450px;
+    margin-right: 2%;
+}
+
+.baivietct .baivietct-item:nth-child(3n) {
+    margin-right: 0;
 }
 
 .baivietct-item a {
@@ -836,6 +850,7 @@ main {
     transform: translateY(30px);
     transition: 0.5s;
     margin-top: 10px;
+    line-height: 150%;
 }
 
 .baivietct .baivietct-item .baivietct-item__img img {
@@ -853,6 +868,7 @@ main {
 .kh,
 .name {
     display: flex;
+    align-items: center;
 }
 
 .kh .name img {
@@ -1206,6 +1222,7 @@ img {
 .boxaddress {
     background: #f7f7f7;
     display: flex;
+    margin-top: 10px;
 }
 
 .boxaddress-img {
