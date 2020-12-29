@@ -32,11 +32,6 @@ $('#tag').keyup(function (e) {
                             cancelButtonText: 'Huỷ'
                         }).then(async (result) => {
                             if (result.isConfirmed) {
-                                Swal.fire(
-                                    'Thành Công!',
-                                    'Đã thêm tag mới.',
-                                    'success'
-                                )
                                 await $.ajax({
                                     type: "post",
                                     url: "site/controllers/ajax/searchTag.php",
@@ -64,7 +59,6 @@ $('#tag').keyup(function (e) {
                                 });
                             }
                         })
-
                     })
                 } else {
                     $('#box-suggest li').remove();
