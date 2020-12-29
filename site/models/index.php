@@ -55,12 +55,17 @@ function themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon) {
 }
 
 function getAllMonAn() {
-    $sql = "SELECT * FROM monan order by id";
+    $sql = "SELECT * FROM monan WHERE loai = 0 ORDER BY id DESC";
     return result1(0,$sql);
 }
 
 function getallDouong() {
-    $sql = "SELECT * from monan where loai = 1";
+    $sql = "SELECT * FROM monan WHERE loai = 1 ORDER BY id ASC";
+    return result1(0,$sql);
+}
+function getAllAmThuc()
+{
+    $sql = "SELECT * from monan where loai = 2 ORDER BY id DESC";
     return result1(0,$sql);
 }
 
@@ -157,4 +162,10 @@ function refreshLike($idbv) {
 function getallBaiviet_($type) {
     return laydulieu("SELECT * FROM `baiviet` WHERE idmonan IN (SELECT id FROM monan WHERE loai= $type)");
 }
+
+function addTag($tag){
+    $sql ="INSERT INTO tag(tentag) VALUES(?)";  
+    return lastIdInsert($sql,$tag);
+}
+
 ?>

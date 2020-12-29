@@ -38,7 +38,7 @@ switch ($act) {
             }else{
                 addDmMonAn($tenDm,$imgupload,$loaiDm );
             }
-            header("location: index.php?ctrl=monan&act=index");
+            header("location: index.php?ctrl=dmmonan&act=index");
         }   
     break;
     case 'del':

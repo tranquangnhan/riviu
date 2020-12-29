@@ -545,7 +545,9 @@ li {
 .profile .chuong img,
 .profile .avt img {
     width: 45px;
+    height: 45px;
     border-radius: 45px;
+    object-fit: cover;
 }
 
 .profile .avt img {
@@ -943,6 +945,12 @@ footer {
 
 .box-suggest li {
     padding: 10px 20px;
+    background-color: white;
+}
+
+.box-suggest li:active {
+    background-color: #f60;
+    color: white;
 }
 
 .Tagselected {
@@ -1385,4 +1393,13 @@ img {
 .labelavt {
     display: flex;
     align-items: center;
+}
+
+.spanclick {
+    float: right;
+}
+
+#newtag {
+    background-color: #f60;
+    color: white;
 }

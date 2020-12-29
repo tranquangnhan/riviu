@@ -19,6 +19,7 @@ switch ($act) {
         $baivietUong = getallBaiviet_(1);
         $monUong = getallDouong();
         $monan = getAllMonAn();
+        $anThuc = getAllAmThuc();
         // print_r($monan);
         $view = "./site/views/home.php";
         require_once "./site/views/layout.php";
@@ -169,7 +170,7 @@ switch ($act) {
             if(isset($_POST['repass'])) {
                 $repass = $_POST['repass'];
                 if($repass==$pass)
-                if(changInfo($name, $username,$email, $pass,$avt, $id)) header('location: index.php');
+                if(changInfo($name, $username,$email, $pass,$avt, $id)) header("location: index.php");
                 else $tb = "mật khẩu không khớp";
             }else
             header("location: index.php?act=tttk");

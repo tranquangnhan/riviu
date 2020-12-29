@@ -83,8 +83,6 @@
                     <div class="formqc" id="formqc">
                         
                     </div>
-
-
                 </div>
                 <div class="boxform">
                     <div class="tieude">Loại Món Ăn</div>
@@ -101,12 +99,6 @@
                         <input type="hidden" class="counter" id="counter" value="5" name="sao">
                     </div>
                 </div>
-                <!-- <div class="boxform">
-                    <div class="tieude tieudeafter">Youtube</div>
-                    <div class="boxinput">
-                        <input type="text" placeholder="https://youtube.com/watch?v=zzzzz">
-                    </div>
-                </div> -->
                 <input type="hidden" name="idquan" id="idquan">
                 <input type="hidden" name="idTag"  id="idTag">
                 <div class="boxform">

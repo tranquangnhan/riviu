@@ -85,11 +85,16 @@
                 <div class="profile">
                     <?php
                     $avatar = getTacGia($_SESSION['sid']);
-                    $avatar = $avatar['avatar'];
+
+                    if(empty($avatar['avatar'])){
+                        $avatar = 'no_avatar.png';
+                    }else{
+                        $avatar = $avatar['avatar'];
+                    }
                     if(isset($_SESSION['sid'])) {
                       ?>
                      <div class="avt">
-                        <img src="./uploads/<?=$avatar?>" alt="" id="open">
+                        <img src="<?=PATH_IMG_SITE.$avatar?>" alt="" id="open">
                         <div class="menudx"  id="popup">
                             <ul>
                                 <li><a href="?act=tttk">Thông tin tài khoản</a></li>

@@ -39,68 +39,25 @@
                 </a>'; } ?>
             </div>
         </div>
-        <!-- <h2 class="mt-2">Ẩm thực vùng miền</h2>
+        <h2 class="mt-2">Ẩm thực vùng miền</h2>
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
-                <div class="item danhmuc">
-                    <img src="./site/views/images/buffet.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Buffet Nướng</h4>
-                        <p>206 bài viết</p>
+                 <?php
+                foreach ($anThuc as $amthuc) {
+                    echo '
+                    <a href="?act=monan&idmon=' . $amthuc['id'] . '">
+                    <div class="item danhmuc">
+                        <img src="'.PATH_IMG_SITE.$amthuc['img'] . '" alt="" class="img-dm">
+                        <div class="danhmuc-text">
+                            <h4>' . $amthuc['name'] . '</h4>
+                            <p>'.demSobv($amthuc['id']).' bài viết</p>
+                        </div>
                     </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/milodam.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Hài Sản</h4>
-                        <p>206 bài viết</p>
-                    </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/haisan.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Milo Dầm</h4>
-                        <p>206 bài viết</p>
-                    </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/lau.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Bún Bò</h4>
-                        <p>206 bài viết</p>
-                    </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/bunbo.jpeg" alt="" class="img-dm">
-                    <div class="danhmuc-text">
-                        <h4>Phở</h4>
-                        <p>206 bài viết</p>
-                    </div>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/buffet.jpeg" alt="" class="img-dm">
-                    <h4>1</h4>
-                    <p>206 bài viết</p>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/milodam.jpeg" alt="" class="img-dm">
-                    <h4>2</h4>
-                    <p>206 bài viết</p>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/haisan.jpeg" alt="" class="img-dm">
-                    <h4>3</h4>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/lau.jpeg" alt="" class="img-dm">
-                    <h4>4</h4>
-                </div>
-                <div class="item danhmuc">
-                    <img src="./site/views/images/bunbo.jpeg" alt="" class="img-dm">
-                    <h4>5</h4>
-                </div>
+                    
+                </a>'; } ?>
+               
             </div>
-        </div> -->
+        </div>
         <div class="boxbanner mt-2">
             <img src="./site/views/images/banner.png" alt="" class="imgbaner">
         </div>

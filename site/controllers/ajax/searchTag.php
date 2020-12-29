@@ -8,11 +8,18 @@ switch ($_POST['action']) {
         if(isset($_POST['key'])) {
             $keys = searchTag($_POST['key']);
             $arr['key'] = $keys;
-
         }
         echo json_encode($arr);
         break;
-    }
+    case 'addtag':
+        $arr = array();
+
+        $lastId =  addTag($_POST['tag']);
+        $showTag = gettag_($lastId);
+        $arr['tag'] =$showTag ;
+        echo json_encode($arr);
+        break;
+}
 ?>
 
     
