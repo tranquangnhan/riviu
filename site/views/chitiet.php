@@ -74,7 +74,7 @@ if (isset($baiviet['idquan']))
                     } else $likeimg = "./site/views/images/btnlike.png";
 
                     ?>
-                    <img id="btn_like" src="<?= $likeimg ?>" alt="">
+                    <img id="btn_like_<?=$_GET['id']?>" src="<?= $likeimg ?>" alt="">
                     <span id="soLike_<?=$_GET['id']?>"><?= countLike($_GET['id']) ?></span>
                 </div>
                 <div>
