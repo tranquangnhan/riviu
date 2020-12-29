@@ -10,7 +10,7 @@ if (isset($baiviet['idquan']))
         <div class="info">
             <div>
                 <div class="avatar">
-                    <img src="./uploads/<?=$baiviet['avatar']?>" alt="">
+                    <img src="<?php if(is_file(PATH_IMG_SITE. $thongtin['avatar']) ) echo PATH_IMG_SITE. $thongtin['avatar']; else echo PATH_IMG_SITE. 'no_avatar.png'; ?>" alt="">
                 </div>
                 <div class="tttg">
                     <div><strong><?= $baiviet['tenkh'] ?></strong></div>
@@ -87,7 +87,7 @@ if (isset($baiviet['idquan']))
             <div class="binhluan">
                 <p class="border-bottom pb-3"><strong><?= countCmt($_GET['id']) ?> Bình luận</strong></p>
                 <div class="box-cmt">
-                <img src="./uploads/<?=$baiviet['avatar']?>" alt="">
+                <img src="<?php if(is_file(PATH_IMG_SITE. $thongtin['avatar']) ) echo PATH_IMG_SITE. $thongtin['avatar']; else echo PATH_IMG_SITE. 'no_avatar.png'; ?>" alt="">
                     <form action="?act=comment" method="post">
                         <textarea name="noidung" id="" cols="12" rows="10" placeholder="Bình luận"></textarea>
                         <input type="reset" value="Hủy" class="bbtn-second">
