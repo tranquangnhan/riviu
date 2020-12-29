@@ -1,4 +1,4 @@
-$('#tag').keyup(function(e) {
+$('#tag').keyup(function (e) {
     key = $('#tag').val();
     var formData = new FormData();
     formData.append('action', 'search');
@@ -12,13 +12,13 @@ $('#tag').keyup(function(e) {
             contentType: false,
             processData: false,
             data: formData,
-            success: function(response) {
+            success: function (response) {
                 if (response.key == '') {
 
                     $('#box-suggest').show();
                     $('#box-suggest').html("<li id='newtag' >" + key + "<span class='spanclick'>Click để thêm tags</span> </li>");
 
-                    $('#newtag').click(function() {
+                    $('#newtag').click(function () {
                         var formData = new FormData();
                         formData.append('action', 'addtag');
                         formData.append('tag', key);
@@ -30,7 +30,7 @@ $('#tag').keyup(function(e) {
                             cancelButtonColor: '#ccc',
                             confirmButtonText: 'Thêm',
                             cancelButtonText: 'Huỷ'
-                        }).then(async(result) => {
+                        }).then(async (result) => {
                             if (result.isConfirmed) {
                                 Swal.fire(
                                     'Thành Công!',
@@ -45,8 +45,17 @@ $('#tag').keyup(function(e) {
                                     contentType: false,
                                     processData: false,
                                     data: formData,
-                                    success: function(response) {
+                                    success: function (response) {
                                         $('#box-suggest li').remove();
+                                        element = '<span class="Tagselected">#'+response.tag.tentag + '</span>';
+                                        $('#boxinpt-tag').append(element);
+                                        listidtag = $('#idTag').val();
+                                        if (listidtag == "")
+                                            listidtag += response.tag.id;
+                                        else
+                                            listidtag += "," + response.tag.id;
+                                        $('#idTag').val(listidtag);
+                                        // console.log(response.tag);
                                         for (let i = 0; i < response.tag.length; i++) {
                                             $('#box-suggest').show();
                                             $('#box-suggest').append("<li onclick='addTag(" + response.tag[i].id + ")' id='" + response.tag[i].id + "'>" + response.tag[i].tentag + "</li>");
@@ -76,7 +85,7 @@ function like(idbv) {
     $.ajax({
         type: "GET",
         url: "index.php?act=like&idbv=" + idbv,
-        success: function(data) {
+        success: function (data) {
             //   alert(data);
             if (data == 0) {
                 $("#btn_like_" + idbv).attr("src", "./site/views/images/btnlike.png");
@@ -96,7 +105,7 @@ function refreshLike(idbv) {
     $.ajax({
         type: "GET",
         url: "index.php?act=countLike&idbv=" + idbv,
-        success: function(response) {
+        success: function (response) {
             $('#soLike_' + idbv).html(response);
         }
     });

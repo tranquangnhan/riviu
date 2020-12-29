@@ -50,7 +50,7 @@
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tag</div>
                     <div class="boxinput" id="boxinpt-tag">
-                        <input type="text" placeholder="Tìm kiếm hay thêm tag" name="tag" id="tag">
+                        <input autocomplete="off" type="text" placeholder="Tìm kiếm hay thêm tag" name="tag" id="tag">
                         <div class="box-suggest">
                             <ul id="box-suggest">
                             </ul>

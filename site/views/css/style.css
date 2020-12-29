@@ -1190,6 +1190,8 @@ img {
 
 .boxtext {
     margin-top: 1rem;
+    clear: both;
+    float: left;
 }
 
 .boxtext h2 {
@@ -1402,4 +1404,58 @@ img {
 #newtag {
     background-color: #f60;
     color: white;
+}
+
+.bg img{
+    object-fit: cover;   
+    border-radius: 5px; 
+    margin-bottom: 2px;
+}
+
+.type1 img {
+    border-radius: 10px;
+}
+
+.type2 img {
+    width: calc(50% - 5px);
+    float: left;
+}
+
+.type2 img:nth-child(2n) {
+    margin-left: 5px;
+}
+
+.type3 {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+}
+
+.type3 img {
+    width: 33%;
+}
+
+.type4 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.type4 img {
+    width: 49%;
+}
+
+.bg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.type5 img {
+    width: 33%;
+    margin-bottom: 2px;
+}
+
+.type5 img:nth-child(4), .type5 img:nth-child(5) {
+    width: 49%;
 }

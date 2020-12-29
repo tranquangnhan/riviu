@@ -168,4 +168,66 @@ function addTag($tag){
     return lastIdInsert($sql,$tag);
 }
 
-?>
+function showNhieuAnh($idbv) {
+    $anhArr = laymot("SELECT img FROM `baiviet` WHERE id = $idbv");
+    if($anhArr['img']!=null) {
+    $anhlist = explode(',',$anhArr['img']);
+    switch (count($anhlist)) {
+        case '1':
+            return print('<div class="boxcontent-img mt-2 type1">
+            <div class="container-type1">
+                <div class="bg">
+                    <img src="./uploads/'.$anhlist[0].'" alt="">
+                </div>
+            </div>
+            </div>');
+            break;
+        case '2':
+            return print('<div class="boxcontent-img mt-2 type2">
+            <div class="container-type1">
+                <div class="bg">
+                    <img src="./uploads/'.$anhlist[0].'" alt="">
+                    <img src="./uploads/'.$anhlist[1].'" alt="">
+                </div>
+            </div>
+            </div>');
+            break;
+        case '3':
+            return print('<div class="boxcontent-img mt-2 type3">
+            <div class="container-type1">
+                <div class="bg">
+                    <img src="./uploads/'.$anhlist[0].'" alt="">
+                    <img src="./uploads/'.$anhlist[1].'" alt="">
+                    <img src="./uploads/'.$anhlist[2].'" alt="">
+                </div>
+            </div>
+            </div>');
+            break;
+        case '4':
+            return print('<div class="boxcontent-img mt-2 type4">
+            <div class="container-type1">
+                <div class="bg">
+                    <img src="./uploads/'.$anhlist[0].'" alt="">
+                    <img src="./uploads/'.$anhlist[1].'" alt="">
+                    <img src="./uploads/'.$anhlist[2].'" alt="">
+                    <img src="./uploads/'.$anhlist[3].'" alt="">
+                </div>
+            </div>
+            </div>');
+            break;
+        default:
+            return print('<div class="boxcontent-img mt-2 type5">
+            <div class="container-type1">
+                <div class="bg">
+                    <img src="./uploads/'.$anhlist[0].'" alt="">
+                    <img src="./uploads/'.$anhlist[1].'" alt="">
+                    <img src="./uploads/'.$anhlist[2].'" alt="">
+                    <img src="./uploads/'.$anhlist[3].'" alt="">
+                    <img src="./uploads/'.$anhlist[4].'" alt="">
+                </div>
+            </div>
+            </div>');
+            break;
+        }
+    }
+}

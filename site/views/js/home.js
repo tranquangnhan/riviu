@@ -79,7 +79,7 @@ function addTag(i) {
     nameTag = $('#' + i).text();
     idTag = i;
     $('#box-suggest').hide();
-    $('#boxinpt-tag').append('<span class="Tagselected">' + nameTag + '</span>');
+    $('#boxinpt-tag').append('<span class="Tagselected">#'+nameTag + '</span>');
     $('#tag').val('');
     if (listidtag == "")
         listidtag += i;
