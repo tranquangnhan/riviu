@@ -89,10 +89,3 @@ function addTag(i) {
     $('#idTag').val(listidtag);
 
 }
-
-function chonquan(i) {
-    $('#idquan').val(i);
-    nameQuan = $('#q' + i).text();
-    $('#tenquan').val(nameQuan);
-    $('.boxqc').remove();
-}

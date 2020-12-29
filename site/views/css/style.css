@@ -1129,6 +1129,10 @@ img {
     width: 15%;
 }
 
+.author img {
+    object-fit: cover;
+}
+
 .card-body .author {
     width: 100%;
 }
@@ -1402,4 +1406,17 @@ img {
 #newtag {
     background-color: #f60;
     color: white;
+}
+
+.btnbv {
+    background: #ff8a00;
+    border-radius: 6px;
+    color: #fff;
+    padding: 0 12px;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    margin-top: 1rem;
+    cursor: pointer;
 }

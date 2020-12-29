@@ -43,7 +43,7 @@
     </script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="site/views/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-   
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- /Nhân  -->

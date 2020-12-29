@@ -26,3 +26,10 @@ $('#tenquan').keyup(function(e) {
     });
     return false;
 });
+
+function chonquan(i) {
+    $('#idquan').val(i);
+    nameQuan = $('#q' + i).text();
+    $('#tenquan').val(nameQuan);
+    $('.boxqc').remove();
+}
