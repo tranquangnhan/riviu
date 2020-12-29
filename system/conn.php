@@ -167,4 +167,20 @@ function SqlExecDebug($sql){//thêm, xoá ....
         echo "Lỗi: " . $e->getMessage();
     }
 }
+
+function lastIdInsert($sql){
+    $sqlValue = array_slice(func_get_args(),1);
+    try {
+        $conn =  ketnoidb(); //connect database
+
+        $stmt = $conn->prepare($sql); // select * from sanpham where id = ?
+
+        $stmt->execute($sqlValue);// thực thi
+
+        $last_id = $conn->lastInsertId();
+        return $last_id;
+    } catch (PDOException $e) {
+        echo "Lỗi: " . $e->getMessage();
+    }
+}
 ?>

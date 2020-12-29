@@ -18,7 +18,7 @@
           <h5 class="card-title">Sửa thông tin</h5>
         </div>
         <div class="card-body">
-          <form method="POST" action="index.php?act=changeinfo">
+          <form method="POST" action="index.php?act=changeinfo" enctype="multipart/form-data">
             <div class="row">
               <style>
                 img {
@@ -31,9 +31,9 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label for="avt" class="labelavt">
-                    <img src="<?php if(is_file(PATH_IMG_SITE. $thongtin['avatar']) ) echo PATH_IMG_SITE. $thongtin['avatar']; else echo PATH_IMG_SITE. 'logo.png'; ?>" alt="">
+                    <img width="130" height="130" style="object-fit:cover" src="<?php if(is_file(PATH_IMG_SITE. $thongtin['avatar']) ) echo PATH_IMG_SITE. $thongtin['avatar']; else echo PATH_IMG_SITE. 'logo.png'; ?>" alt="">
                   </label>
-                  <input type="file" name="avt" id="avt" class="form-control" >
+                  <input type="file" name="avt[]" id="avt" class="form-control" >
                 </div>
               </div>
              
