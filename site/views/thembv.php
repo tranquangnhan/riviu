@@ -33,7 +33,7 @@
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tag</div>
                     <div class="boxinput" id="boxinpt-tag">
-                        <input type="text" placeholder="Tìm kiếm hay thêm tag" name="tag" id="tag">
+                        <input autocomplete="off" type="text" placeholder="Tìm kiếm hay thêm tag" name="tag" id="tag">
                         <div class="box-suggest">
                             <ul id="box-suggest">
                             </ul>
@@ -59,8 +59,32 @@
                     <div class="tieude diadiem">Tên quán</div>
                     <div class="boxinput diadiem">
                         <input autocomplete="off" type="text" id="tenquan" placeholder="Hãy nhập tên của quán">
-                        <div class="btnbv">
+                        <div class="btnbv" id="myBtn">
                             Thêm Quán
+                        </div>
+                         <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div>
+                                <label for="">Tên Địa Điểm</label>
+                                <input type="text" class="diadiem" id="tendd" placeholder="Thêm Địa Điểm">
+                            </div>
+                            <div>
+                                <label for="">Địa Chỉ</label>
+                                <input type="text" class="diadiem" id="diachi" placeholder="Thêm Địa Điểm">
+                            </div>
+                            <div>
+                                <label for="">Ảnh</label>
+                                <input type="file" name="sortpic" class="diadiem" name="avt[]" id="anh" placeholder="Thêm Địa Điểm">
+                            </div>
+                            <div>
+                                <div class="btnaddquan" id="btnaddquan">Thêm</div>
+                            </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>

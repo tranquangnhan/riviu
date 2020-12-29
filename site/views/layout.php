@@ -43,7 +43,7 @@
     </script>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="site/views/js/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-
+   
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- /Nhân  -->
@@ -54,7 +54,7 @@
     <link rel="stylesheet" href="site/views/css/SweetAlert2.css">
 
     <script src="site/views/js/jquery.rateyo.min.js"></script>
-    <script src="site/views/js/newblog.js"></script>
+   
  
 </head>
 <body>  
@@ -144,6 +144,7 @@ Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
 <script src="site/views/js/ajax/signup.js"></script>
 <script src="site/views/js/ajax/search.js"></script>
 <script src="site/views/js/home.js"></script>
+<script src="site/views/js/newblog.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
 
 </body>

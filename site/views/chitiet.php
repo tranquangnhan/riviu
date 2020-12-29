@@ -23,10 +23,14 @@ if (isset($baiviet['idquan']))
                 <p><span class="small"><?= $baiviet['sao'] ?></span>/5</p>
             </div>
         </div>
-        <?php if($baiviet['img']!="") {?>
+        <?php if($baiviet['img']!="") {
+            $imgArr = explode(',',$baiviet['img']);    
+        ?>
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="uploads/<?= $baiviet['img'] ?>" alt=""></div>
+                <?php foreach ($imgArr as $img) { ?>
+                <div class="swiper-slide"><img src="uploads/<?= $img ?>" alt=""></div>
+                <?php }?>
             </div>
             <!-- Add Arrows -->
             <div class="swiper-button-next"></div>

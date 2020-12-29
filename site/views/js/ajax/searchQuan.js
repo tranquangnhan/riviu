@@ -33,3 +33,38 @@ function chonquan(i) {
     $('#tenquan').val(nameQuan);
     $('.boxqc').remove();
 }
+
+
+// add new quán
+
+$("#btnaddquan").click(function() {
+    var tendd = $("#tendd").val();
+    var diachi = $("#diachi").val();
+    var file_data = $('#anh').prop('files')[0];
+    //lấy ra kiểu file
+
+
+    var formData = new FormData();
+    formData.append('action', 'addnewquan');
+    formData.append('tenquan', tendd);
+    formData.append('diachi', diachi);
+    formData.append('file', file_data);
+
+    $.ajax({
+        type: 'POST',
+        url: 'site/controllers/ajax/searchQuan.php',
+        dataType: 'JSON',
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: formData,
+        success: function(response) {
+            element = '<div class="boxqc"><div class="boxqc-left">' +
+                '<img src="site/views/images/icon_place.png">' +
+                '</div><div class="boxqc-right" id="q' + response.quan.id + '" onclick="chonquan(' + response.quan.id + ')">' + response.quan.tenquan + '</div></div>'
+            $('#formqc').append(element);
+            document.getElementById("myModal").style.display = "none";
+        }
+    });
+
+})
