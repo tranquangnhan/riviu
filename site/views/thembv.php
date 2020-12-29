@@ -75,8 +75,16 @@
                 <div class="boxform">
                     <div class="tieude diadiem">Tên quán</div>
                     <div class="boxinput diadiem">
-                        <input type="text" id="tenquan" placeholder="Hãy nhập tên của quán">
+                        <input autocomplete="off" type="text" id="tenquan" placeholder="Hãy nhập tên của quán">
                     </div>
+                </div>
+                
+                <div class="boxform">
+                    <div class="formqc" id="formqc">
+                        
+                    </div>
+
+
                 </div>
                 <div class="boxform">
                     <div class="tieude">Loại Món Ăn</div>
@@ -87,18 +95,8 @@
                     </select>
                 </div>
                 <div class="boxform">
-                    <div class="formqc" id="formqc">
-                        
-                    </div>
-
-
-                </div>
-                <div class="boxform">
-                    <div class="tieude danhgia">Đánh giá của bạn</div>
-                </div>
-                <div class="boxform">
                     <div class="boxdanhgia">
-                        <div class="tieude danhgiach">Đánh giá chung :</div>
+                        <div class="tieude danhgiach">Đánh giá :</div>
                         <div class="rate" id="rateYo"></div>
                         <input type="hidden" class="counter" id="counter" value="5" name="sao">
                     </div>

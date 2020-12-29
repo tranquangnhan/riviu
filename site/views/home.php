@@ -32,7 +32,7 @@
                         <img src="'.PATH_IMG_SITE.$monu['img'] . '" alt="" class="img-dm">
                         <div class="danhmuc-text">
                             <h4>' . $monu['name'] . '</h4>
-                            <p>'.demSobv($mon['id']).' bài viết</p>
+                            <p>'.demSobv($monu['id']).' bài viết</p>
                         </div>
                     </div>
                     
@@ -122,7 +122,7 @@
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img src="./uploads/<?=$bv['img'] ?>" alt="">
+                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$bv['img'] ?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
                                         <p><?= $bv['noidung'] ?></p>
@@ -158,7 +158,7 @@
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img src="./uploads/<?=$bv['img'] ?>" alt="">
+                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$bv['img'] ?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
                                         <p><?= $bv['noidung'] ?></p>
@@ -196,7 +196,7 @@
                                 <div class="baivietct-item__img">
                                     <img src="./uploads/<?=$bv['img'] ?>" alt="">
                                     <div class="img-boxhover">
-                                        <img src="./site/views/images/bookmark2.png" alt="">
+                                        <img onerror="this.src='./uploads/error.png';" src="./site/views/images/bookmark2.png" alt="">
                                         <p><?= $bv['noidung'] ?></p>
                                     </div>
                                 </div>

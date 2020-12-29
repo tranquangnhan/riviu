@@ -1189,6 +1189,10 @@ img {
     font-weight: 600;
 }
 
+.boxtext a {
+    color: #111;
+}
+
 .white-space-word {
     font-size: 14px;
     white-space: pre-line;
@@ -1322,6 +1326,7 @@ img {
 .binhluanlist {
     border-top: 1px solid #efefef;
     padding-top: 20px;
+    padding-left: 20px;
 }
 
 .binhluanlist .item {

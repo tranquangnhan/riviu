@@ -12,7 +12,7 @@
                 </div>
                 <div class="box-imgdm">
                     <div class="imgdm">
-                        <img src="./uploads/<?= getImgmon($reviewList[0]['idmonan']) ?>" alt="">
+                        <img src="./uploads/<?= getImgmon($_GET['idmon']) ?>" alt="">
                         <div class="overplay cover"></div>
                         <div class="btn-share"><img src="./site/views/images/btn-share.png" alt=""></div>
                     </div>
@@ -20,7 +20,8 @@
                 </div>
 
                 <?php
-                if (!is_null($reviewList)) {
+                // var_dump(count($reviewList));
+                if (count($reviewList!=0)) {
                     foreach ($reviewList as $review) {
                         # code...
 
@@ -154,7 +155,9 @@
                         </div>
 
                 <?php }
-                } ?>
+                }else{ ?>
+                Chưa có bài viết nào về món này
+                <?php }?>
                 <!-- end blog -->
             </div>
 

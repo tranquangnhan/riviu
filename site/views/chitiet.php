@@ -1,6 +1,7 @@
 <?php
 $ngaydang = date("d-m-Y", strtotime($baiviet['ngaydang']));
-$tagList = gettag($baiviet['idhashtag']);
+if($baiviet['idhashtag']!='')
+    $tagList = gettag($baiviet['idhashtag']);
 if (isset($baiviet['idquan']))
     $quan = getQuanById($baiviet['idquan']);
 ?>
@@ -101,7 +102,7 @@ if (isset($baiviet['idquan']))
                     foreach ($cmtList as $cmt) {
                 ?>
                 <div class="item">
-                    <img src="<?=$cmt['avatar']?>" alt="">
+                    <img src="./uploads/<?=$cmt['avatar']?>" alt="">
                     <div>
                         <p class="user"><?= $cmt['name'] ?></p>
                         <p><?= $cmt['noidung'] ?></p>
