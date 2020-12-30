@@ -256,3 +256,8 @@ function showNhieuAnh($idbv) {
 function getBvByNguoidang($idnguoidang) {
     return laydulieu("SELECT * FROM `baiviet` WHERE iduser = $idnguoidang");
 }
+
+function totalrow() {
+    $tong = laymot("SELECT COUNT(*) as tong FROM `baiviet`");
+    return $tong['tong'];
+}

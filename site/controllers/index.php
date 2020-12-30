@@ -186,6 +186,13 @@ switch ($act) {
         $view = "./site/views/trangcanhan.php";
         require_once "./site/views/layout.php";
         break;
+    
+    case 'xemthem':
+        $baiviet = getallBaiviet($_GET['start'],$_GET['end']);
+        print_r(json_encode($baiviet));
+        break;
+
+
 }
 
 ?>

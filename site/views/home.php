@@ -71,7 +71,7 @@
             </div>
             <!-- tab 1 -->
             <div id="London" class=" tabcontent">
-                <div class="baivietct">
+                <div class="baivietct" id="baivietct">
                     <?php
                     if (isset($baiviet)) {
                         foreach ($baiviet as $bv) {
@@ -112,6 +112,7 @@
                     } ?>
 
                 </div>
+                <span class="btn-outline none" onclick="loadmore(1,6,<?= totalrow()?>)">Xem thêm</span>
             </div>
             <!--end tab 1 -->
             <!-- tab 2 -->
@@ -191,3 +192,51 @@
         </div>
     </div>
 </main>
+
+<script>
+   
+    function loadmore(star,end,total) {
+        $.ajax({
+            type: "GET",
+            url: "?act=xemthem&start="+star+"&end="+end+"&limit="+total,
+            dataType: "JSON",
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (response) {
+                for (let i = 0; i < response.length; i++) {
+                element = '<div class="xh baivietct-item">'+
+                                '<div class="baivietct-item__img">'+
+                                    '<img src="'+response[i][6]+'" alt="">'+
+                                    '<a href="?act=chitiet&id='+response[i][0]+'">'+
+                                        '<div class="img-boxhover">'+
+                                            '<img src="./site/views/images/bookmark2.png" alt="">'+
+                                            '<p class="limitText">'+response[i][2]+'</p>'+
+                                           
+                                        '</div>'+
+                                    '</a>'+
+                                '</div>'+
+                                '<a href="?act=chitiet&id='+response[i][0]+'">'+
+                                '<h4 class="mt-1">'+response[i][1]+'</h4>'+
+                                '<div class="kh">'+
+                                    '<div class="name">'+
+                                        '<img src="./uploads/chuacohinh" alt="">'+
+                                        '<p>Tacgiachuaco</p>'+
+                                    '</div>'+
+                                    '<div class="star">'+
+                                        '<img src="./site/views/images/star.png" alt="">'+
+                                        '<p>'+response[i][5]+'</p>'+
+                                    '</div>'+
+                                '</div>'+
+                                '</a>'+
+                            '</div>'
+                    $('#baivietct').append(element);
+                }
+            }
+        }); 
+
+    }
+
+
+
+</script>
