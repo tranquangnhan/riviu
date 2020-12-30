@@ -159,6 +159,7 @@ li {
 
 .nav-link {
     display: flex;
+    align-items: center;
 }
 
 .nav-main__icon {

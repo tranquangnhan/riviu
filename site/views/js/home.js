@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 15,
@@ -30,13 +30,13 @@ function closest(e, t) {
 container = document.getElementById("popup");
 open = document.getElementById("open");
 
-open.addEventListener("click", function(e) {
+open.addEventListener("click", function (e) {
     container.style.display = "block";
     open.disabled = true;
     e.stopPropagation();
 });
 
-document.body.addEventListener("click", function(e) {
+document.body.addEventListener("click", function (e) {
     if (!closest(e.target, container)) {
         container.style.display = "none";
         open.disabled = false;
@@ -70,7 +70,7 @@ function openCity(evt, cityName) {
 //     $('#box-suggest').show();
 // });
 
-$('.item').click(function() {
+$('.item').click(function () {
 
 });
 listidtag = '';
@@ -79,7 +79,7 @@ function addTag(i) {
     nameTag = $('#' + i).text();
     idTag = i;
     $('#box-suggest').hide();
-    $('#boxinpt-tag').append('<span class="Tagselected">#'+nameTag + '</span>');
+    $('#boxinpt-tag').append('<span class="Tagselected">#' + nameTag + '</span>');
     $('#tag').val('');
     if (listidtag == "")
         listidtag += i;
@@ -96,3 +96,82 @@ function chonquan(i) {
     $('#tenquan').val(nameQuan);
     $('.boxqc').remove();
 }
+
+$(document).ready(function () {
+    $("#formnewblog").validate({
+        onfocusout: false,
+        onkeyup: false,
+        onclick: false,
+        rules: {
+            "tieude": {
+                required: true,
+                maxlength: 255
+            },
+            "noidung": {
+                required: true,
+                minlength: 8
+            },
+            "tenquan": {
+                required: true
+            }
+        },
+        messages: {
+            "tieude": {
+                required: "Bắt buộc nhập username",
+                maxlength: "Hãy nhập tối đa 15 ký tự"
+            },
+            "noidung": {
+                required: "Bắt buộc nhập password",
+                minlength: "Hãy nhập ít nhất 8 ký tự"
+            },
+            "tenquan": {
+                required: "jfsdjkfsf",
+            }
+        }
+    });
+});
+
+$(document).ready(function () {
+    $("#changInfo").validate({
+        rules: {
+            hoten: {
+                required: true,
+                maxlength: 30
+            },
+            username: {
+                required: true,
+            },
+            pass: {
+                required: true,
+                minlength: 8
+            },
+            repass: {
+                required: true,
+                equalTo: "#pass"
+            }
+
+        },
+        messages: {
+            hoten: {
+                required: "<span class='badge badge-danger'>Bạn chưa nhập họ tên</span>",
+                maxlength: "<span class='badge badge-danger'>Tên quá dài</span>"
+            },
+            username: {
+                required: "<span class='badge badge-danger'>Bạn chưa điền tên đăng nhập</span>",
+            },
+            pass: {
+                required: "<span class='badge badge-danger'>Bạn chưa nhập mật khẩu</span>",
+                minlength: "<span class='badge badge-danger'>Mật khẩu có ít nhất 8 kí tự</span>"
+            },
+            repass: {
+                required: "<span class='badge badge-danger'>Bạn chưa nhập lại mật khẩu</span>",
+                equalTo: "<span class='badge badge-danger'>Mật khẩu không khớp</span>"
+            }
+            // ten: {
+            // 	required: "Bạn chưa nhập tên",
+            // },
+        },
+
+    });
+});
+

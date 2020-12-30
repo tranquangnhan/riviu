@@ -39,7 +39,7 @@
                 </a>'; } ?>
             </div>
         </div>
-        <h2 class="mt-2">Ẩm thực vùng miền</h2>
+        <!-- <h2 class="mt-2">Ẩm thực vùng miền</h2>
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                  <?php
@@ -57,7 +57,7 @@
                 </a>'; } ?>
                
             </div>
-        </div>
+        </div> -->
         <div class="boxbanner mt-2">
             <img src="./site/views/images/banner.png" alt="" class="imgbaner">
         </div>
@@ -75,14 +75,15 @@
                     <?php
                     if (isset($baiviet)) {
                         foreach ($baiviet as $bv) {
+                            $anh = explode(',', $bv['img']);
                             $tacgia = getTacGia($bv['iduser']);
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$bv['img'] ?>" alt="">
+                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0]?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
-                                        <p><?= $bv['noidung'] ?></p>
+                                        <p class="limitText" ><?= $bv['noidung'] ?></p>
                                     </div>
                                 </div>
                                 <a href="?act=chitiet&id=<?=$bv['id']?>">
@@ -111,14 +112,15 @@
                     <?php
                     if (isset($baivietAn)) {
                         foreach ($baivietAn as $bv) {
+                            $anh = explode(',', $bv['img']);
                             $tacgia = getTacGia($bv['iduser']);
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$bv['img'] ?>" alt="">
+                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0] ?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
-                                        <p><?= $bv['noidung'] ?></p>
+                                        <p class="limitText"><?= $bv['noidung'] ?></p>
                                     </div>
                                 </div>
                                 <a href="?act=chitiet&id=<?=$bv['id']?>">
@@ -148,13 +150,14 @@
                     if (isset($baivietUong)) {
                         foreach ($baivietUong as $bv) {
                             $tacgia = getTacGia($bv['iduser']);
+                            $anh = explode(',', $bv['img']);
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img src="./uploads/<?=$bv['img'] ?>" alt="">
+                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0] ?>" alt="">
                                     <div class="img-boxhover">
-                                        <img onerror="this.src='./uploads/error.png';" src="./site/views/images/bookmark2.png" alt="">
-                                        <p><?= $bv['noidung'] ?></p>
+                                        <img src="./site/views/images/bookmark2.png" alt="">
+                                        <p class="limitText"><?= $bv['noidung'] ?></p>
                                     </div>
                                 </div>
                                 <a href="?act=chitiet&id=<?=$bv['id']?>">

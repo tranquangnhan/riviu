@@ -25,13 +25,13 @@
             <div class="col-lg-4 mt-5">
                 <h1>Đăng nhập</h1>
                 <p>Chào mừng bạn đến với trang web hiện đại nhất hiện nay!</p>
-                <div class="btn-face mt-4">
+                <!-- <div class="btn-face mt-4">
                     <ul class="yoo-social-area yoo-style1 yoo-mp0">
                         <li><a href="https://www.facebook.com/dialog/oauth?client_id=782652022521704&redirect_uri=http://localhost/duan1final/admin/controllers/callback.php&scope=public_profile" class="btn btn-primary  btn-dn"><i class="fa fa-facebook-f mr-4"></i><span>Đăng Nhập Với Facebook</span></a></li>
                         <li><a href="#" class="btn btn-danger mt-3  btn-dn"><i class="fa fa-google mr-4"></i><span>Đăng Nhập Với Google</span></a></li>
                     </ul>
-                </div>
-                <div class="yoo-form-separator mt-4">Or</div>
+                </div> -->
+                <!-- <div class="yoo-form-separator mt-4">Or</div> -->
                 <form action="" method="post" >
                     <div class="row">
                         <?php if(isset($canhbao)){ ?>

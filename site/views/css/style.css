@@ -1459,3 +1459,12 @@ img {
 .type5 img:nth-child(4), .type5 img:nth-child(5) {
     width: 49%;
 }
+
+.limitText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+}

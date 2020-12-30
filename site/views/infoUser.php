@@ -18,7 +18,7 @@
           <h5 class="card-title">Sửa thông tin</h5>
         </div>
         <div class="card-body">
-          <form method="POST" action="index.php?act=changeinfo" enctype="multipart/form-data">
+          <form method="POST" id="changInfo" action="index.php?act=changeinfo" enctype="multipart/form-data">
             <div class="row">
               <style>
                 img {
@@ -39,14 +39,14 @@
              
               <div class="col-md-12">
                 <div class="form-group">
-                  <label>Họ tên</label>
-                  <input type="text" name="hoten" class="form-control" value="<?= $thongtin['tenkh'] ?>" required>
+                  <label>Tên đăng nhập</label>
+                  <input disabled type="text" name="username" class="form-control" value="<?= $thongtin['name'] ?>" required>
                 </div>
               </div>
               <div class="col-md-12">
                 <div class="form-group">
-                  <label>Tên đăng nhập</label>
-                  <input type="text" name="username" class="form-control" value="<?= $thongtin['name'] ?>" required>
+                  <label>Họ tên</label>
+                  <input type="text" name="hoten" class="form-control" value="<?= $thongtin['tenkh'] ?>" required>
                 </div>
               </div>
               <div class="col-md-12">

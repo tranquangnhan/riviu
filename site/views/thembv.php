@@ -28,23 +28,15 @@
                         </ol>
                     </nav>
                 </div>
-                <form action="index.php?act=thembv_" method="post" id="formnewblog"  enctype="multipart/form-data">
+                <form action="index.php?act=thembv_" method="post" id="formnewblog" name="formnewblog"  enctype="multipart/form-data">
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tiêu Đề</div>
                     <div class="boxinput">
-                        <input type="text" name="tieude" placeholder="Hãy viết tiêu đề bài">
+                        <input type="text" id="tieude" name="tieude" placeholder="Hãy viết tiêu đề bài">
                     </div>
                 </div>
                 <div class="boxform">
-                    <textarea class="noidung" name="noidung" value="" id="" cols="30" rows="10" placeholder="Hãy viết cảm nhận của bạn"></textarea>
-                   
-                </div>
-                <div class="boxform boxshowimg hidden">
-                    <div class="ouputimg">
-                        <br>
-                        <div class="output-fet"><output id="list"></output></div>
-                        <a href="#" id="clear">Xoá</a>
-                    </div>
+                    <textarea class="noidung" name="noidung" value="" id="noidung" cols="30" rows="10" placeholder="Hãy viết cảm nhận của bạn"></textarea>
                    
                 </div>
                 <div class="boxform">
@@ -57,6 +49,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="boxform boxshowimg hidden">
+                    <div class="ouputimg">
+                        <br>
+                        <div class="output-fet"><output id="list"></output></div>
+                        <a href="#" id="clear">Xoá</a>
+                    </div>
+                   
+                </div>
+                
                 <div class="boxform">
                     <div class="themhinh">
                         <img src="site/views/images/icon_image.png" alt="">
