@@ -252,3 +252,7 @@ function showNhieuAnh($idbv) {
         }
     }
 }
+
+function getBvByNguoidang($idnguoidang) {
+    return laydulieu("SELECT * FROM `baiviet` WHERE iduser = $idnguoidang");
+}

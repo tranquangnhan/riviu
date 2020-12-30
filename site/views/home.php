@@ -89,7 +89,8 @@
                                     <a href="?act=chitiet&id=<?=$bv['id']?>">
                                         <div class="img-boxhover">
                                             <img src="./site/views/images/bookmark2.png" alt="">
-                                            <p><?= substr($bv['noidung'],0,600) .'...'?></p>
+                                            <p class="limitText"><?= $bv['noidung'] ?></p>
+                                            <!-- <p><?= substr($bv['noidung'],0,600) .'...'?></p> -->
                                         </div>
                                     </a>
                                 </div>

@@ -97,39 +97,6 @@ function chonquan(i) {
     $('.boxqc').remove();
 }
 
-$(document).ready(function() {
-    // $("#formnewblog").validate({
-    //     onfocusout: false,
-    //     onkeyup: false,
-    //     onclick: false,
-    //     rules: {
-    //         "tieude": {
-    //             required: true,
-    //             maxlength: 255
-    //         },
-    //         "noidung": {
-    //             required: true,
-    //             minlength: 8
-    //         },
-    //         "tenquan": {
-    //             required: true
-    //         }
-    //     },
-    //     messages: {
-    //         "tieude": {
-    //             required: "Bắt buộc nhập username",
-    //             maxlength: "Hãy nhập tối đa 15 ký tự"
-    //         },
-    //         "noidung": {
-    //             required: "Bắt buộc nhập password",
-    //             minlength: "Hãy nhập ít nhất 8 ký tự"
-    //         },
-    //         "tenquan": {
-    //             required: "jfsdjkfsf",
-    //         }
-    //     }
-    // });
-});
 
 $(document).ready(function() {
     $("#changInfo").validate({
