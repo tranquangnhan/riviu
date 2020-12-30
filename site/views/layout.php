@@ -53,9 +53,13 @@
     <link rel="stylesheet" href="site/views/css/SweetAlert2.css">
 
     <script src="site/views/js/jquery.rateyo.min.js"></script>
+<<<<<<< HEAD
     <script src="site/views/js/newblog.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
 
+=======
+   
+>>>>>>> b4ea491412df44944aaa16182f3ec5a55246691f
  
 </head>
 <body>  
@@ -145,6 +149,7 @@ Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
 <script src="site/views/js/ajax/signup.js"></script>
 <script src="site/views/js/ajax/search.js"></script>
 <script src="site/views/js/home.js"></script>
+<script src="site/views/js/newblog.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
 
 </body>

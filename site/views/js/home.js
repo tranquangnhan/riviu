@@ -88,6 +88,7 @@ function addTag(i) {
 
     $('#idTag').val(listidtag);
 
+<<<<<<< HEAD
 }
 
 function chonquan(i) {
@@ -175,3 +176,6 @@ $(document).ready(function () {
     });
 });
 
+=======
+}
+>>>>>>> b4ea491412df44944aaa16182f3ec5a55246691f

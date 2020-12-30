@@ -1,21 +1,4 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>riviu</title>
-    <script src="jquery/jquery-3.5.1.min.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/allblog.css">
-    <link rel="stylesheet" href="css/newblog.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/jquery.rateyo.min.css">
-    <script src="js/jquery.rateyo.min.js"></script>
-    <script src="js/newblog.js"></script>
-</head> -->
-
-    <!-- end header -->
     <main>
         <div class="boxcenter">
             <div class="boxnewblog">
@@ -77,6 +60,33 @@
                     <div class="tieude diadiem">Tên quán</div>
                     <div class="boxinput diadiem">
                         <input autocomplete="off" type="text" id="tenquan" placeholder="Hãy nhập tên của quán">
+                        <div class="btnbv" id="myBtn">
+                            Thêm Quán
+                        </div>
+                         <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <div>
+                                <label for="">Tên Địa Điểm</label>
+                                <input type="text" class="diadiem" id="tendd" placeholder="Thêm Địa Điểm">
+                            </div>
+                            <div>
+                                <label for="">Địa Chỉ</label>
+                                <input type="text" class="diadiem" id="diachi" placeholder="Thêm Địa Điểm">
+                            </div>
+                            <div>
+                                <label for="">Ảnh</label>
+                                <input type="file" name="sortpic" class="diadiem" name="avt[]" id="anh" placeholder="Thêm Địa Điểm">
+                            </div>
+                            <div>
+                                <div class="btnaddquan" id="btnaddquan">Thêm</div>
+                            </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
                 

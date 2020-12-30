@@ -77,14 +77,29 @@
                         foreach ($baiviet as $bv) {
                             $anh = explode(',', $bv['img']);
                             $tacgia = getTacGia($bv['iduser']);
+                            if(is_file(PATH_IMG_SITE.explode(',',$bv['img'])[0])){
+                                $imgbv = PATH_IMG_SITE.explode(',',$bv['img'])[0];
+                            }else{
+                                $imgbv =PATH_IMG_SITE.'error.png';
+                            }
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
+<<<<<<< HEAD
                                     <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0]?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
                                         <p class="limitText" ><?= $bv['noidung'] ?></p>
                                     </div>
+=======
+                                    <img src="<?=$imgbv?>" alt="">
+                                    <a href="?act=chitiet&id=<?=$bv['id']?>">
+                                        <div class="img-boxhover">
+                                            <img src="./site/views/images/bookmark2.png" alt="">
+                                            <p><?= substr($bv['noidung'],0,600) .'...'?></p>
+                                        </div>
+                                    </a>
+>>>>>>> b4ea491412df44944aaa16182f3ec5a55246691f
                                 </div>
                                 <a href="?act=chitiet&id=<?=$bv['id']?>">
                                 <h4 class="mt-1"><?= $bv['tieude'] ?></h4>

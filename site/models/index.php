@@ -167,7 +167,10 @@ function addTag($tag){
     $sql ="INSERT INTO tag(tentag) VALUES(?)";  
     return lastIdInsert($sql,$tag);
 }
-
+function themQuanAjax($diachi,$tenquan,$img){
+    $sql = "INSERT INTO quan(diachi,tenquan,img) VALUES(?,?,?)";
+    return lastIdInsert($sql,$diachi,$tenquan,$img);
+}
 function showNhieuAnh($idbv) {
     $anhArr = laymot("SELECT img FROM `baiviet` WHERE id = $idbv");
     if($anhArr['img']!=null) {
