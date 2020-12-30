@@ -1,4 +1,4 @@
-window.onload = function () {
+window.onload = function() {
     $('.owl-carousel').owlCarousel({
         loop: true,
         margin: 15,
@@ -30,13 +30,13 @@ function closest(e, t) {
 container = document.getElementById("popup");
 open = document.getElementById("open");
 
-open.addEventListener("click", function (e) {
+open.addEventListener("click", function(e) {
     container.style.display = "block";
     open.disabled = true;
     e.stopPropagation();
 });
 
-document.body.addEventListener("click", function (e) {
+document.body.addEventListener("click", function(e) {
     if (!closest(e.target, container)) {
         container.style.display = "none";
         open.disabled = false;
@@ -70,7 +70,7 @@ function openCity(evt, cityName) {
 //     $('#box-suggest').show();
 // });
 
-$('.item').click(function () {
+$('.item').click(function() {
 
 });
 listidtag = '';
@@ -97,41 +97,41 @@ function chonquan(i) {
     $('.boxqc').remove();
 }
 
-$(document).ready(function () {
-    $("#formnewblog").validate({
-        onfocusout: false,
-        onkeyup: false,
-        onclick: false,
-        rules: {
-            "tieude": {
-                required: true,
-                maxlength: 255
-            },
-            "noidung": {
-                required: true,
-                minlength: 8
-            },
-            "tenquan": {
-                required: true
-            }
-        },
-        messages: {
-            "tieude": {
-                required: "Bắt buộc nhập username",
-                maxlength: "Hãy nhập tối đa 15 ký tự"
-            },
-            "noidung": {
-                required: "Bắt buộc nhập password",
-                minlength: "Hãy nhập ít nhất 8 ký tự"
-            },
-            "tenquan": {
-                required: "jfsdjkfsf",
-            }
-        }
-    });
+$(document).ready(function() {
+    // $("#formnewblog").validate({
+    //     onfocusout: false,
+    //     onkeyup: false,
+    //     onclick: false,
+    //     rules: {
+    //         "tieude": {
+    //             required: true,
+    //             maxlength: 255
+    //         },
+    //         "noidung": {
+    //             required: true,
+    //             minlength: 8
+    //         },
+    //         "tenquan": {
+    //             required: true
+    //         }
+    //     },
+    //     messages: {
+    //         "tieude": {
+    //             required: "Bắt buộc nhập username",
+    //             maxlength: "Hãy nhập tối đa 15 ký tự"
+    //         },
+    //         "noidung": {
+    //             required: "Bắt buộc nhập password",
+    //             minlength: "Hãy nhập ít nhất 8 ký tự"
+    //         },
+    //         "tenquan": {
+    //             required: "jfsdjkfsf",
+    //         }
+    //     }
+    // });
 });
 
-$(document).ready(function () {
+$(document).ready(function() {
     $("#changInfo").validate({
         rules: {
             hoten: {
@@ -174,4 +174,3 @@ $(document).ready(function () {
 
     });
 });
-

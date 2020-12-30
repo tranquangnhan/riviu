@@ -171,6 +171,7 @@ function themQuanAjax($diachi,$tenquan,$img){
     $sql = "INSERT INTO quan(diachi,tenquan,img) VALUES(?,?,?)";
     return lastIdInsert($sql,$diachi,$tenquan,$img);
 }
+
 function showNhieuAnh($idbv) {
     $anhArr = laymot("SELECT img FROM `baiviet` WHERE id = $idbv");
     if($anhArr['img']!=null) {
@@ -218,7 +219,7 @@ function showNhieuAnh($idbv) {
             </div>
             </div>');
             break;
-        default:
+        case '5':
             return print('<div class="boxcontent-img mt-2 type5">
             <div class="container-type1">
                 <div class="bg">
@@ -227,6 +228,23 @@ function showNhieuAnh($idbv) {
                     <img src="./uploads/'.$anhlist[2].'" alt="">
                     <img src="./uploads/'.$anhlist[3].'" alt="">
                     <img src="./uploads/'.$anhlist[4].'" alt="">
+                </div>
+            </div>
+            </div>');
+            break;
+        default: 
+         
+            return print('<div class="boxcontent-img mt-2 type5">
+            <div class="container-type1">
+                <div class="bg">
+                    <img src="./uploads/'.$anhlist[0].'" alt="">
+                    <img src="./uploads/'.$anhlist[1].'" alt="">
+                    <img src="./uploads/'.$anhlist[2].'" alt="">
+                    <img src="./uploads/'.$anhlist[3].'" alt="">
+                    <div class="lastimg">
+                        <img src="./uploads/'.$anhlist[4].'" alt="">
+                        <a href="index.php?act=chitiet&id='.$idbv.'"><div class="overflow" id="overflow">'.(count($anhlist) - 5).'+</div> </a>
+                    </div>
                 </div>
             </div>
             </div>');
