@@ -88,20 +88,39 @@ $(document).ready(function() {
 
 
 
-    // validate new blog
-
-    $("#formnewblog").validate({
-        rules: {
-            tieude: {
-                required: true,
-            }
-        },
-        messages: {
-            tieude: {
-                required: "<script>fireErr('Vui lòng nhập tiêu đề')</script>",
-            }
-        }
-    });
-
 
 });
+
+// validate new blog
+function validateNewBlog() {
+    var tieude = document.getElementById('tieude').value;
+    var noidung = document.getElementById('noidung').value;
+    var tag = document.getElementById('tag').value;
+    var img = document.getElementById('control').value;
+    var tenquan = document.getElementById('tenquan').value;
+    var loaimon = document.getElementById('loaimon').value;
+    var star = document.getElementById('counter').value;
+    if (tieude.length <= 5) {
+        fireErr('Tiêu đề quá ngắn.')
+        return false;
+    } else if (noidung.length <= 20) {
+        fireErr('Nội dung quá ngắn.')
+        return false;
+    } else if (tag.length <= 0) {
+        fireErr('Phải thêm tag.')
+        return false;
+    } else if (img.length <= 0) {
+        fireErr('Phải thêm ảnh.')
+        return false;
+    } else if (tenquan.length <= 0) {
+        fireErr('Tên quán không được bỏ trống.')
+        return false;
+    } else if (loaimon.length <= 0) {
+        fireErr('Phải chọn loại món.')
+        return false;
+    } else if (star.length <= 0 || star.length >= 6) {
+        fireErr('Đánh giá sai.')
+        return false;
+    }
+    return true;
+}

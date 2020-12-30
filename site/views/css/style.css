@@ -779,6 +779,8 @@
         /* display: flex;
     justify-content: space-between;
     flex-wrap: wrap; */
+<<<<<<< HEAD
+=======
 }
 
 .baivietct .baivietct-item {
@@ -1456,6 +1458,7 @@ img {
     /* number of lines to show */
     -webkit-box-orient: vertical;
 }
+>>>>>>> f9d6286407d3525357a5e4387cd103061d06b739
     }
     
     .baivietct .baivietct-item {
@@ -2150,7 +2153,40 @@ img {
         margin-bottom: 2px;
     }
     
+    .type5 .lastimg:nth-child(4),
+    .type5 .lastimg:nth-child(5) {
+        width: 49%;
+    }
+    
     .type5 img:nth-child(4),
     .type5 img:nth-child(5) {
         width: 49%;
     }
+<<<<<<< HEAD
+    
+    .lastimg {
+        position: relative;
+    }
+    
+    .lastimg img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .overflow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0, 0, 0, .44);
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        font-size: 32px;
+        border-radius: 8px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+=======
+>>>>>>> f9d6286407d3525357a5e4387cd103061d06b739

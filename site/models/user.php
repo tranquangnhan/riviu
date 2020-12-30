@@ -15,11 +15,11 @@
     $name = addslashes($name);
     $password = addslashes($password);
     $sql = "select * from taikhoan where name=? and password=?";
-    $name = result1(1,$sql,$name,$password);
-    if(is_array($name)){
-        $_SESSION['sid'] = $name['id'];
-        $_SESSION['sname']= $name['name'];
-        $_SESSION['role'] = $name['role'];
+    $user = result1(1,$sql,$name,$password);
+    if(is_array($user)){
+        $_SESSION['sid'] = $user['id'];
+        $_SESSION['sname']= $user['name'];
+        $_SESSION['role'] = $user['role'];
         return true;
     }else{
         return false;

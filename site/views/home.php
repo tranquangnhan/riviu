@@ -85,7 +85,7 @@
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0]?>" alt="">
+                                    <img src="<?=$imgbv?>" alt="">
                                     <a href="?act=chitiet&id=<?=$bv['id']?>">
                                         <div class="img-boxhover">
                                             <img src="./site/views/images/bookmark2.png" alt="">

@@ -11,7 +11,7 @@
                         </ol>
                     </nav>
                 </div>
-                <form action="index.php?act=thembv_" method="post" id="formnewblog" name="formnewblog"  enctype="multipart/form-data">
+                <form action="index.php?act=thembv_"  method="post" id="formnewblog" name="formnewblog"  enctype="multipart/form-data">
                 <div class="boxform">
                     <div class="tieude tieudeafter">Tiêu Đề</div>
                     <div class="boxinput">
@@ -59,7 +59,7 @@
                 <div class="boxform">
                     <div class="tieude diadiem">Tên quán</div>
                     <div class="boxinput diadiem">
-                        <input autocomplete="off" type="text" id="tenquan" placeholder="Hãy nhập tên của quán">
+                        <input autocomplete="off" type="text" id="tenquan" placeholder="Tìm quán, nếu không có hãy thêm quán">
                         <div class="btnbv" id="myBtn">
                             Thêm Quán
                         </div>
@@ -97,7 +97,7 @@
                 </div>
                 <div class="boxform">
                     <div class="tieude">Loại Món Ăn</div>
-                    <select name="loaimon" id="">
+                    <select name="loaimon" id="loaimon">
                         <?php foreach ($loaiMonAn as $loai) {
                            echo '<option value="'.$loai['id'].'">'.$loai['name'].'</option>';
                         } ?>
@@ -113,7 +113,7 @@
                 <input type="hidden" name="idquan" id="idquan">
                 <input type="hidden" name="idTag"  id="idTag">
                 <div class="boxform">
-                    <input type="submit" name="submit" value="Đăng bài" class="btn btn-review btn-submit hover">
+                    <input type="submit" name="submit" onclick="return validateNewBlog()" value="Đăng bài" class="btn btn-review btn-submit hover">
                 </div>
                 </form>
             </div>
