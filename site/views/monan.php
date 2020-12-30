@@ -94,7 +94,9 @@
                                     <div class="boxname">
                                         <div class="name-level">
                                             <div class="name">
+                                                <a class="linkstyle" href="?act=trangcanhan&id=<?=$tacgia['id']?>">
                                                 <?= $tacgia['tenkh'] ?>
+                                                </a>
                                             </div>
                                             <!-- <div class="level">level 6</div> -->
                                         </div>

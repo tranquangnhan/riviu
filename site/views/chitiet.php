@@ -13,7 +13,7 @@ if (isset($baiviet['idquan']))
                     <img src="<?php if(is_file(PATH_IMG_SITE. $thongtin['avatar']) ) echo PATH_IMG_SITE. $thongtin['avatar']; else echo PATH_IMG_SITE. 'no_avatar.png'; ?>" alt="">
                 </div>
                 <div class="tttg">
-                    <div><strong><?= $baiviet['tenkh'] ?></strong></div>
+                    <div><a class="linkstyle" href="?act=trangcanhan&id=<?=$baiviet['iduser']?>"><strong><?= $baiviet['tenkh'] ?></strong></a></div>
                     <div class="sub"><?= $ngaydang ?> tại <a href=""> <?= $quan['diachi'] ?></a></div>
                 </div>
             </div>

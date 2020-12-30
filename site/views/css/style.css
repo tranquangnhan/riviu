@@ -2201,3 +2201,7 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+.linkstyle {
+    color: #111;
+}
