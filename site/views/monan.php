@@ -70,8 +70,8 @@
                         <img src="./uploads/<?= getImgmon($_GET['idmon']) ?>" alt="">
                         <div class="overplay cover"></div>
                         <div class="btn-share"><img src="./site/views/images/btn-share.png" alt=""></div>
+                        <div class="title"><?= $tenMon ?></div>
                     </div>
-                    <div class="title"><?= $tenMon ?></div>
                 </div>
 
                 <?php
