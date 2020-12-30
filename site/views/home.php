@@ -136,7 +136,7 @@
                                 <div class="kh">
                                     <div class="name">
                                         <img src="./uploads/<?=$tacgia['avatar']?>" alt="">
-                                        <p><?= $tacgia['name'] ?></p>
+                                        <p>z<?= $tacgia['name'] ?></p>
                                     </div>
                                     <div class="star">
                                         <img src="./site/views/images/star.png" alt="">

@@ -34,8 +34,8 @@ function gettag($id) {
     return $tagList;
 }
 
-function getallBaiviet() {
-    $sql ="SELECT * FROM baiviet order by id DESC";
+function getallBaiviet($start, $end) {
+    $sql ="SELECT * FROM baiviet order by id DESC limit $start, $end";
     return result1(0,$sql);
 }
 
