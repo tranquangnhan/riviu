@@ -85,21 +85,14 @@
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-<<<<<<< HEAD
-                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0]?>" alt="">
-                                    <div class="img-boxhover">
-                                        <img src="./site/views/images/bookmark2.png" alt="">
-                                        <p class="limitText" ><?= $bv['noidung'] ?></p>
-                                    </div>
-=======
-                                    <img src="<?=$imgbv?>" alt="">
+                                <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0]?>" alt="">
                                     <a href="?act=chitiet&id=<?=$bv['id']?>">
                                         <div class="img-boxhover">
                                             <img src="./site/views/images/bookmark2.png" alt="">
-                                            <p><?= substr($bv['noidung'],0,600) .'...'?></p>
+                                            <p class="limitText"><?= $bv['noidung'] ?></p>
+                                            <!-- <p><?= substr($bv['noidung'],0,600) .'...'?></p> -->
                                         </div>
                                     </a>
->>>>>>> b4ea491412df44944aaa16182f3ec5a55246691f
                                 </div>
                                 <a href="?act=chitiet&id=<?=$bv['id']?>">
                                 <h4 class="mt-1"><?= $bv['tieude'] ?></h4>

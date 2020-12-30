@@ -779,7 +779,6 @@
         /* display: flex;
     justify-content: space-between;
     flex-wrap: wrap; */
-<<<<<<< HEAD
 }
 
 .baivietct .baivietct-item {
@@ -1457,7 +1456,6 @@ img {
     /* number of lines to show */
     -webkit-box-orient: vertical;
 }
-=======
     }
     
     .baivietct .baivietct-item {
@@ -2142,4 +2140,3 @@ img {
     .type5 img:nth-child(5) {
         width: 49%;
     }
->>>>>>> b4ea491412df44944aaa16182f3ec5a55246691f

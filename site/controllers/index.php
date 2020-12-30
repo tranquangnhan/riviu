@@ -177,6 +177,15 @@ switch ($act) {
             echo $tb;
         }
         break;
+
+    case 'trangcanhan':
+        if(isset($_GET['id'])) {
+            $idnguoidang = $_GET['id'];
+           $baiviet = getBvByNguoidang($idnguoidang);
+        }
+        $view = "./site/views/trangcanhan.php";
+        require_once "./site/views/layout.php";
+        break;
 }
 
 ?>

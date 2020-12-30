@@ -117,7 +117,7 @@ $(document).ready(function () {
         },
         messages: {
             "tieude": {
-                required: "Bắt buộc nhập username",
+                required: "<span class='badge badge-danger'>Bạn chưa nhập tiêu đề</span>",
                 maxlength: "Hãy nhập tối đa 15 ký tự"
             },
             "noidung": {
