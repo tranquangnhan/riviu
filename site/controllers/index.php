@@ -188,7 +188,7 @@ switch ($act) {
         break;
     
     case 'xemthem':
-        $baiviet = getallBaiviet($_GET['start'],$_GET['end']);
+        $baiviet = getallBaiviet2($_GET['start'],$_GET['end']);
         print_r(json_encode($baiviet));
         break;
 

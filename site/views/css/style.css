@@ -2205,3 +2205,25 @@ img {
 .linkstyle {
     color: #111;
 }
+
+#btnxemthem, #btnthongbao {
+  background-color: #f60;
+  width: fit-content;
+  color: #fff;
+  display: block;
+  border: none;
+  clear: left;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+  padding: 15px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#btnthongbao {
+  background-color: #fff;
+  border: 1px solid #f60;
+  color: #f60;
+  font-size: 16px;
+}

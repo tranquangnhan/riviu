@@ -9,10 +9,10 @@
                     echo '
                     <a href="?act=monan&idmon=' . $mon['id'] . '">
                     <div class="item danhmuc">
-                        <img src="'.PATH_IMG_SITE.$mon['img'] . '" alt="" class="img-dm">
+                        <img src="' . PATH_IMG_SITE . $mon['img'] . '" alt="" class="img-dm">
                         <div class="danhmuc-text">
                             <h4>' . $mon['name'] . '</h4>
-                            <p>'.demSobv($mon['id']).' bài viết</p>
+                            <p>' . demSobv($mon['id']) . ' bài viết</p>
                         </div>
                     </div>
                     
@@ -29,32 +29,34 @@
                     echo '
                     <a href="?act=monan&idmon=' . $monu['id'] . '">
                     <div class="item danhmuc">
-                        <img src="'.PATH_IMG_SITE.$monu['img'] . '" alt="" class="img-dm">
+                        <img src="' . PATH_IMG_SITE . $monu['img'] . '" alt="" class="img-dm">
                         <div class="danhmuc-text">
                             <h4>' . $monu['name'] . '</h4>
-                            <p>'.demSobv($monu['id']).' bài viết</p>
+                            <p>' . demSobv($monu['id']) . ' bài viết</p>
                         </div>
                     </div>
                     
-                </a>'; } ?>
+                </a>';
+                } ?>
             </div>
         </div>
         <!-- <h2 class="mt-2">Ẩm thực vùng miền</h2>
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                  <?php
-                foreach ($anThuc as $amthuc) {
-                    echo '
+                    foreach ($anThuc as $amthuc) {
+                        echo '
                     <a href="?act=monan&idmon=' . $amthuc['id'] . '">
                     <div class="item danhmuc">
-                        <img src="'.PATH_IMG_SITE.$amthuc['img'] . '" alt="" class="img-dm">
+                        <img src="' . PATH_IMG_SITE . $amthuc['img'] . '" alt="" class="img-dm">
                         <div class="danhmuc-text">
                             <h4>' . $amthuc['name'] . '</h4>
-                            <p>'.demSobv($amthuc['id']).' bài viết</p>
+                            <p>' . demSobv($amthuc['id']) . ' bài viết</p>
                         </div>
                     </div>
                     
-                </a>'; } ?>
+                </a>';
+                    } ?>
                
             </div>
         </div> -->
@@ -77,47 +79,47 @@
                         foreach ($baiviet as $bv) {
                             $anh = explode(',', $bv['img']);
                             $tacgia = getTacGia($bv['iduser']);
-                            if(is_file(PATH_IMG_SITE.explode(',',$bv['img'])[0])){
-                                $imgbv = PATH_IMG_SITE.explode(',',$bv['img'])[0];
-                            }else{
-                                $imgbv =PATH_IMG_SITE.'error.png';
+                            if (is_file(PATH_IMG_SITE . explode(',', $bv['img'])[0])) {
+                                $imgbv = PATH_IMG_SITE . explode(',', $bv['img'])[0];
+                            } else {
+                                $imgbv = PATH_IMG_SITE . 'error.png';
                             }
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img src="<?=$imgbv?>" alt="">
-                                    <a href="?act=chitiet&id=<?=$bv['id']?>">
+                                    <img src="<?= $imgbv ?>" alt="">
+                                    <a href="?act=chitiet&id=<?= $bv['id'] ?>">
                                         <div class="img-boxhover">
                                             <img src="./site/views/images/bookmark2.png" alt="">
                                             <p class="limitText"><?= $bv['noidung'] ?></p>
-                                            <!-- <p><?= substr($bv['noidung'],0,600) .'...'?></p> -->
+                                            <!-- <p><?= substr($bv['noidung'], 0, 600) . '...' ?></p> -->
                                         </div>
                                     </a>
                                 </div>
-                                <a href="?act=chitiet&id=<?=$bv['id']?>">
-                                <h4 class="mt-1"><?= $bv['tieude'] ?></h4>
-                                <div class="kh">
-                                    <div class="name">
-                                        <img src="./uploads/<?=$tacgia['avatar']?>" alt="">
-                                        <p><?= $tacgia['name'] ?></p>
+                                <a href="?act=chitiet&id=<?= $bv['id'] ?>">
+                                    <h4 class="mt-1"><?= $bv['tieude'] ?></h4>
+                                    <div class="kh">
+                                        <div class="name">
+                                            <img src="./uploads/<?= $tacgia['avatar'] ?>" alt="">
+                                            <p><?= $tacgia['name'] ?></p>
+                                        </div>
+                                        <div class="star">
+                                            <img src="./site/views/images/star.png" alt="">
+                                            <p><?= $bv['sao'] ?></p>
+                                        </div>
                                     </div>
-                                    <div class="star">
-                                        <img src="./site/views/images/star.png" alt="">
-                                        <p><?= $bv['sao'] ?></p>
-                                    </div>
-                                </div>
                                 </a>
                             </div>
                     <?php   }
                     } ?>
 
                 </div>
-                <span class="btn-outline none" onclick="loadmore(1,6,<?= totalrow()?>)">Xem thêm</span>
+                <span class="btn-outline" id="btnxemthem" onclick="loadmore(4,3,<?= totalrow() ?>)">Xem thêm</span>
             </div>
             <!--end tab 1 -->
             <!-- tab 2 -->
             <div id="Paris" class=" tabcontent">
-            <div class="baivietct">
+                <div class="baivietct">
                     <?php
                     if (isset($baivietAn)) {
                         foreach ($baivietAn as $bv) {
@@ -126,24 +128,24 @@
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0] ?>" alt="">
+                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?= $anh[0] ?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
                                         <p class="limitText"><?= $bv['noidung'] ?></p>
                                     </div>
                                 </div>
-                                <a href="?act=chitiet&id=<?=$bv['id']?>">
-                                <h4 class="mt-1"><?= $bv['tieude'] ?></h4>
-                                <div class="kh">
-                                    <div class="name">
-                                        <img src="./uploads/<?=$tacgia['avatar']?>" alt="">
-                                        <p>z<?= $tacgia['name'] ?></p>
+                                <a href="?act=chitiet&id=<?= $bv['id'] ?>">
+                                    <h4 class="mt-1"><?= $bv['tieude'] ?></h4>
+                                    <div class="kh">
+                                        <div class="name">
+                                            <img src="./uploads/<?= $tacgia['avatar'] ?>" alt="">
+                                            <p>z<?= $tacgia['name'] ?></p>
+                                        </div>
+                                        <div class="star">
+                                            <img src="./site/views/images/star.png" alt="">
+                                            <p><?= $bv['sao'] ?></p>
+                                        </div>
                                     </div>
-                                    <div class="star">
-                                        <img src="./site/views/images/star.png" alt="">
-                                        <p><?= $bv['sao'] ?></p>
-                                    </div>
-                                </div>
                                 </a>
                             </div>
                     <?php   }
@@ -154,7 +156,7 @@
             <!-- end tab2 -->
 
             <div id="Tokyo" class="tabcontent">
-            <div class="baivietct">
+                <div class="baivietct">
                     <?php
                     if (isset($baivietUong)) {
                         foreach ($baivietUong as $bv) {
@@ -163,24 +165,24 @@
                     ?>
                             <div class="xh baivietct-item">
                                 <div class="baivietct-item__img">
-                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?=$anh[0] ?>" alt="">
+                                    <img onerror="this.src='./uploads/error.png';" src="./uploads/<?= $anh[0] ?>" alt="">
                                     <div class="img-boxhover">
                                         <img src="./site/views/images/bookmark2.png" alt="">
                                         <p class="limitText"><?= $bv['noidung'] ?></p>
                                     </div>
                                 </div>
-                                <a href="?act=chitiet&id=<?=$bv['id']?>">
-                                <h4 class="mt-1"><?= $bv['tieude'] ?></h4>
-                                <div class="kh">
-                                    <div class="name">
-                                        <img src="./uploads/<?=$tacgia['avatar']?>" alt="">
-                                        <p><?= $tacgia['name'] ?></p>
+                                <a href="?act=chitiet&id=<?= $bv['id'] ?>">
+                                    <h4 class="mt-1"><?= $bv['tieude'] ?></h4>
+                                    <div class="kh">
+                                        <div class="name">
+                                            <img src="./uploads/<?= $tacgia['avatar'] ?>" alt="">
+                                            <p><?= $tacgia['name'] ?></p>
+                                        </div>
+                                        <div class="star">
+                                            <img src="./site/views/images/star.png" alt="">
+                                            <p><?= $bv['sao'] ?></p>
+                                        </div>
                                     </div>
-                                    <div class="star">
-                                        <img src="./site/views/images/star.png" alt="">
-                                        <p><?= $bv['sao'] ?></p>
-                                    </div>
-                                </div>
                                 </a>
                             </div>
                     <?php   }
@@ -188,55 +190,74 @@
 
                 </div>
             </div>
-            </div>
         </div>
+    </div>
     </div>
 </main>
 
 <script>
-   
-    function loadmore(star,end,total) {
+    function loadmore(start, end, total) {
+        console.log('start'+start,end);
+        start = parseInt(start) + 3; 
+        console.log('end'+start,end);
+        if (start > total) {
+            start=total;
+        }
         $.ajax({
             type: "GET",
-            url: "?act=xemthem&start="+star+"&end="+end+"&limit="+total,
+            url: "?act=xemthem&start=" + start + "&end=" + end + "&limit=" + total,
             dataType: "JSON",
             cache: false,
             contentType: false,
             processData: false,
-            success: function (response) {
+            success: function(response) {
+                imgbv = 'error.png';
                 for (let i = 0; i < response.length; i++) {
-                element = '<div class="xh baivietct-item">'+
-                                '<div class="baivietct-item__img">'+
-                                    '<img src="'+response[i][6]+'" alt="">'+
-                                    '<a href="?act=chitiet&id='+response[i][0]+'">'+
-                                        '<div class="img-boxhover">'+
-                                            '<img src="./site/views/images/bookmark2.png" alt="">'+
-                                            '<p class="limitText">'+response[i][2]+'</p>'+
-                                           
-                                        '</div>'+
-                                    '</a>'+
-                                '</div>'+
-                                '<a href="?act=chitiet&id='+response[i][0]+'">'+
-                                '<h4 class="mt-1">'+response[i][1]+'</h4>'+
-                                '<div class="kh">'+
-                                    '<div class="name">'+
-                                        '<img src="./uploads/chuacohinh" alt="">'+
-                                        '<p>Tacgiachuaco</p>'+
-                                    '</div>'+
-                                    '<div class="star">'+
-                                        '<img src="./site/views/images/star.png" alt="">'+
-                                        '<p>'+response[i][5]+'</p>'+
-                                    '</div>'+
-                                '</div>'+
-                                '</a>'+
-                            '</div>'
+                    if (response[i][6] == null || response[i][6] == "") {
+                        imgbv = 'error.png';
+                    } else {
+                        vitrichuoi = response[i][6].indexOf(',');
+                        if(vitrichuoi!=-1)        
+                            imgbv = response[i][6].slice(0,vitrichuoi);
+                        else imgbv = response[i][6];
+                    }
+        
+                    element = '<div class="xh baivietct-item">' +
+                        '<div class="baivietct-item__img">' +
+                        '<img src="./uploads/' + imgbv + '" alt="">' +
+                        '<a href="?act=chitiet&id=' + response[i][0] + '">' +
+                        '<div class="img-boxhover">' +
+                        '<img src="./site/views/images/bookmark2.png" alt="">' +
+                        '<p class="limitText">' + response[i][2] + '</p>' +
+
+                        '</div>' +
+                        '</a>' +
+                        '</div>' +
+                        '<a href="?act=chitiet&id=' + response[i][0] + '">' +
+                        '<h4 class="mt-1">' + response[i][1] + '</h4>' +
+                        '<div class="kh">' +
+                        '<div class="name">' +
+                        '<img src="./uploads/' + response[i]['avatar'] + '" alt="">' +
+                        '<p>' + response[i]['tenkh'] + '</p>' +
+                        '</div>' +
+                        '<div class="star">' +
+                        '<img src="./site/views/images/star.png" alt="">' +
+                        '<p>' + response[i][5] + '</p>' +
+                        '</div>' +
+                        '</div>' +
+                        '</a>' +
+                        '</div>'
                     $('#baivietct').append(element);
                 }
+                $('#btnxemthem').remove();
+                $('#London').append('<span class="btn-outline" id="btnxemthem" onclick="loadmore('+start+','+end+',<?= totalrow() ?>)">Xem thêm</span>');
+                if(response.length==0) {
+                    $('#btnxemthem').remove();
+                    $('#London').append('<span class="btn-outline" id="btnthongbao">Đã hết bài viết, nhớ ghé thăm Riviu thường xuyên nhé!</span>')
+                }
+                
             }
-        }); 
+        });
 
     }
-
-
-
 </script>

@@ -39,6 +39,11 @@ function getallBaiviet($start, $end) {
     return result1(0,$sql);
 }
 
+function getallBaiviet2($start, $end) {
+    $sql ="SELECT * FROM baiviet bv inner join taikhoan tk on bv.iduser = tk.id order by bv.id DESC limit $start, $end";
+    return result1(0,$sql);
+}
+
 function searchTag($key) {
     return laydulieu("SELECT * FROM tag WHERE tentag LIKE '$key%'");
 }
