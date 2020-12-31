@@ -79,7 +79,7 @@ $("#login").click(async function(e) {
                                     icon: "success"
                                 });
 
-                                window.location.href = ('?act=home');
+                                window.history.back();
                             } else if (response.StatusCode === 1) {
                                 Swal.fire({
                                     type: 'error',
