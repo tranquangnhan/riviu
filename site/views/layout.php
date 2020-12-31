@@ -98,7 +98,8 @@
                         <img src="<?=PATH_IMG_SITE.$avatar?>" alt="" id="open">
                         <div class="menudx"  id="popup">
                             <ul>
-                                <li><a href="?act=tttk">Thông tin tài khoản</a></li>
+                                <li><a href="?act=trangcanhan&id=<?=$_SESSION['sid']?>">Trang Cá Nhân</a></li>
+                                <li><a href="?act=tttk">Sửa thông tin</a></li>
                                 <li><a href="index.php?act=logout&idout=1">Đăng xuất</a></li>
                             </ul>
                         </div>

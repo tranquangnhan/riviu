@@ -6,7 +6,7 @@
                     <nav>
                         <ol data-v-53d0ffbc="" class="breadcrumb">
                             <li class="active breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><?= $tacgia['tenkh'] ?></li>
+                            <li class="breadcrumb-item"><?= $tacgia['name'] ?></li>
                         </ol>
                     </nav>
                 </div>
