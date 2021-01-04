@@ -1,6 +1,5 @@
 window.onload = function() {
     $('.owl-carousel').owlCarousel({
-        loop: true,
         margin: 15,
         nav: true,
         dots: false,
@@ -139,5 +138,18 @@ $(document).ready(function() {
             // },
         },
 
+    });
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            $('.l-bt-fixed-to-top').fadeIn();
+        } else {
+            $('.l-bt-fixed-to-top').fadeOut();
+        }
+    });
+    $('#bt-to-top').click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 500)
+        return false;
     });
 });

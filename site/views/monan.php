@@ -100,7 +100,7 @@
                                             </div>
                                             <!-- <div class="level">level 6</div> -->
                                         </div>
-                                        <div class="date"><?= $review['ngaydang'] ?></div>
+                                        <div class="date"><?= date("d-m-y",strtotime($review['ngaydang'])) ?></div>
                                         <div class="star">
                                             <?php
                                             for ($i = 0; $i < $review['sao']; $i++) {

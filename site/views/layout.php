@@ -135,6 +135,9 @@ Số điện thoại: 1900 272736
 MST:0316141166
 Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
     </div>
+    <div class="l-bt-fixed-to-top" id="bt-to-top">
+        <div class="bt-icon"><i class="fa fa-sort-asc"></i></div>
+    </div>
 </footer>
 
 
@@ -146,6 +149,7 @@ Giấy phép thiết lập MXH số 528/GP-BTTTT , Ký ngày : 17/11/2020
 <script src="site/views/js/ajax/xemthem.js"></script>
 <script src="site/views/js/ajax/signup.js"></script>
 <script src="site/views/js/ajax/search.js"></script>
+<script src="site/views/js/ajax/like.js"></script>
 <script src="site/views/js/home.js"></script>
 <script src="site/views/js/newblog.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>

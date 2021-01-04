@@ -160,8 +160,8 @@ function demSobv($idmon) {
 }
 
 function refreshLike($idbv) {
-    $like = laymot("SELECT COUNT(*) as tong FROM likebv WHERE idbaiviet = $idbv");
-    return $like['tong'];
+    $sql = "SELECT COUNT(*) as tong FROM likebv WHERE idbaiviet = ?";
+    return result1(1,$sql,$idbv)['tong'];
 }
 
 function getallBaiviet_($type) {
@@ -259,7 +259,7 @@ function showNhieuAnh($idbv) {
 }
 
 function getBvByNguoidang($idnguoidang) {
-    return laydulieu("SELECT * FROM `baiviet` WHERE iduser = $idnguoidang");
+    return laydulieu("SELECT * FROM `baiviet` WHERE iduser = $idnguoidang ORDER BY id DESC");
 }
 
 function totalrow() {

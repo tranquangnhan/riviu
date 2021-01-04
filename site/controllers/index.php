@@ -103,19 +103,28 @@ switch ($act) {
         break;
 
     case 'like':
-        if(isset($_SESSION['sid'])&&(isset($_GET['idbv']))) {
-            // exit($_SESSION['sid']);
+        // echo $_SESSION['sid'];
+        if(empty($_SESSION['sid'])){
+            $arr= array();
+            $arr['StatusCode'] = 0;
+            echo json_encode($arr);
+        }else{
+            $arr= array();
+            $arr['StatusCode'] = 1;
+           
+             if(isset($_SESSION['sid'])&&(isset($_GET['idbv']))) {
             $check = checkLike($_GET['idbv'], $_SESSION['sid']);
             if($check) {
                 unlike($_GET['idbv'], $_SESSION['sid']);
-                print(0);
+                $arr['Data'] =0;
             }else{
                 like($_GET['idbv'], $_SESSION['sid']);
-                print(1);
+                 $arr['Data'] =1;
+                }
             }
-        }else {
-            header("location: index.php?act=login");
+            echo json_encode($arr);
         }
+
         break;
 
     case 'countLike':
