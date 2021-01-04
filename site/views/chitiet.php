@@ -69,9 +69,9 @@ if (isset($baiviet['idquan']))
                 </div>
             </a>
         </div>
-        <div class="comment">
+        <div class="comment" id="comment-box">
             <div class="thanhtuongtac">
-                <div class="like" onclick="like(<?= $_GET['id'] ?>)">
+                <div class="like like2" onclick="like(<?= $_GET['id'] ?>)">
                     <?php
                     if (isset($_SESSION['sid'])) {
                         $likeimg = (checkLike($_GET['id'], $_SESSION['sid'])) ? "./site/views/images/heart_fill.png" : "./site/views/images/btnlike.png";

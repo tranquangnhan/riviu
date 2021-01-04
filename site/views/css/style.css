@@ -2262,3 +2262,10 @@ img {
     padding: 7px 12px;
     border-radius: 5px;
 }
+.like img {
+  width: 40px;
+}
+
+.like2 img {
+  width: unset;
+}

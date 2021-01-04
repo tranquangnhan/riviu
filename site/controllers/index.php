@@ -169,19 +169,12 @@ switch ($act) {
     case 'changeinfo':
         if(isset($_POST['submit'])) {
             $name = $_POST['hoten'];
-            $username = $_POST['username'];
-            $pass = $_POST['pass'];
             $id = $_SESSION['sid'];
             $email = $_POST['email'];
             $allFile = $_FILES['avt'];                
             $avt = checkUpLoadMany($allFile,PATH_IMG_SITE);
             $tb= '';
-            if(isset($_POST['repass'])) {
-                $repass = $_POST['repass'];
-                if($repass==$pass)
-                if(changInfo($name, $username,$email, $pass,$avt, $id)) header("location: index.php");
-                else $tb = "mật khẩu không khớp";
-            }else
+            if(changInfo($name,$email, $pass,$avt, $id)) 
             header("location: index.php?act=tttk");
             echo $tb;
         }
@@ -201,7 +194,11 @@ switch ($act) {
         print_r(json_encode($baiviet));
         break;
 
-
+    case 'changepass':
+        $thongtin = getThongtin($_SESSION['sid']);
+        $view = "./site/views/changePass.php";
+        require_once "./site/views/layout.php";
+        break;   
 }
 
 ?>
