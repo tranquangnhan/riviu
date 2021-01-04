@@ -61,9 +61,9 @@ switch ($act) {
                 $sao = $_POST['sao'];
                 $iduser =$_SESSION['sid'];
                 $loaiMon = $_POST['loaimon'];
-
-                if( themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon)){
-                    header("location: index.php?act=home");
+                $lastId = themrv($tieude, $noidung,$quan, $tag,$sao,$img,$iduser,$loaiMon);
+                if($lastId){
+                    header("location: index.php?act=chitiet&id=".$lastId."");
                 };
             }
 

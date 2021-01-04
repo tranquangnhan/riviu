@@ -95,7 +95,7 @@ $(document).ready(function() {
 function validateNewBlog() {
     var tieude = document.getElementById('tieude').value;
     var noidung = document.getElementById('noidung').value;
-    var tag = document.getElementById('tag').value;
+    var tag = document.querySelectorAll('.Tagselected');
     var img = document.getElementById('control').value;
     var tenquan = document.getElementById('tenquan').value;
     var loaimon = document.getElementById('loaimon').value;

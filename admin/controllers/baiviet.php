@@ -3,7 +3,7 @@
     if(isset($_GET['act'])&&($_GET['act'])){
         $act = $_GET['act'];
     }else{
-        $act = 'home';
+        $act = 'index';
     }
     switch ($act) {
         case 'index':

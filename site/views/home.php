@@ -40,7 +40,7 @@
                 } ?>
             </div>
         </div>
-        <!-- <h2 class="mt-2">Ẩm thực vùng miền</h2>
+        <h2 class="mt-2">Ẩm thực vùng miền</h2>
         <div class="owl mt-1">
             <div class="owl-carousel owl-theme">
                  <?php
@@ -59,7 +59,7 @@
                     } ?>
                
             </div>
-        </div> -->
+        </div>
         <div class="boxbanner mt-2">
             <img src="./site/views/images/banner.png" alt="" class="imgbaner">
         </div>

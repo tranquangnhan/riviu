@@ -9,7 +9,7 @@
 
     // require controllers
     define('ARR_CONTROLLER',["home","quan","binhluan","khachhang","baiviet","dmmonan"]);
-    $ctrl = 'home';
+    $ctrl = 'baiviet';
     if(isset($_GET['ctrl'])==true) $ctrl=$_GET['ctrl'];
     if(in_array($ctrl,ARR_CONTROLLER)==false) die("Không thấy địa chỉ not found 404");
     $pathFile = "controllers/$ctrl.php";
