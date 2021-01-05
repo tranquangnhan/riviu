@@ -152,4 +152,13 @@ $(document).ready(function() {
         }, 500)
         return false;
     });
+
 });
+
+function checkBl() {
+    if ($("#noidungbl").val() == "") {
+        fireErr("Chưa Nhập Bình Luận");
+        return false;
+    }
+    return true;
+} //validate Bình Luận
