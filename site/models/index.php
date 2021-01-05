@@ -14,7 +14,9 @@ function layImgTag($id) {
 }
 
 function layDanhgiaChitiet($id) {
-    return laymot("SELECT * FROM baiviet bv inner join taikhoan tk on bv.iduser = tk.id WHERE bv.id = $id");
+    $sql = "SELECT * FROM baiviet bv inner join taikhoan tk on bv.iduser = tk.id WHERE bv.id = ?";
+    return result1(1,$sql,$id);
+    // return laymot("SELECT * FROM baiviet bv inner join taikhoan tk on bv.iduser = tk.id WHERE bv.id = $id");
 }
 
 function getQuanById($id) {
@@ -145,7 +147,7 @@ function loaiMonAn(){
     return result1(0,$sql); 
 }
 function getTacGia($idtg) {
-    $sql ="SELECT name, avatar FROM taikhoan WHERE id = ?";
+    $sql ="SELECT tenkh, avatar FROM taikhoan WHERE id = ?";
     return result1(1,$sql,$idtg);
 }
 

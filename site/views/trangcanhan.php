@@ -82,7 +82,7 @@
                                     </a>
                                     <div class="white-space-word">
                                         <?= $bv['noidung'] ?>
-                                        <span class="hover btn-see-more-content">Xem thêm</span>
+                                        <!-- <span class="hover btn-see-more-content">Xem thêm</span> -->
                                     </div>
                                     <div class="tags">
                                         <?php

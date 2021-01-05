@@ -101,7 +101,7 @@
                                     <div class="kh">
                                         <div class="name">
                                             <img src="./uploads/<?= $tacgia['avatar'] ?>" alt="">
-                                            <p><?= $tacgia['name'] ?></p>
+                                            <p><?= $tacgia['tenkh'] ?></p>
                                         </div>
                                         <div class="star">
                                             <img src="./site/views/images/star.png" alt="">
@@ -139,7 +139,7 @@
                                     <div class="kh">
                                         <div class="name">
                                             <img src="./uploads/<?= $tacgia['avatar'] ?>" alt="">
-                                            <p>z<?= $tacgia['name'] ?></p>
+                                            <p><?= $tacgia['tenkh'] ?></p>
                                         </div>
                                         <div class="star">
                                             <img src="./site/views/images/star.png" alt="">
@@ -176,7 +176,7 @@
                                     <div class="kh">
                                         <div class="name">
                                             <img src="./uploads/<?= $tacgia['avatar'] ?>" alt="">
-                                            <p><?= $tacgia['name'] ?></p>
+                                            <p><?= $tacgia['tenkh'] ?></p>
                                         </div>
                                         <div class="star">
                                             <img src="./site/views/images/star.png" alt="">
