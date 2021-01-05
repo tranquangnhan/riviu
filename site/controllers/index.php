@@ -171,10 +171,12 @@ switch ($act) {
             $name = $_POST['hoten'];
             $id = $_SESSION['sid'];
             $email = $_POST['email'];
+            $pass = $_POST['pass'];
+            $repass = $_POST['repass'];
             $allFile = $_FILES['avt'];                
             $avt = checkUpLoadMany($allFile,PATH_IMG_SITE);
             $tb= '';
-            if(changInfo($name,$email, $pass,$avt, $id)) 
+            if(changInfo($name,$email,$pass,$repass,$avt,$id)); 
             header("location: index.php?act=tttk");
             echo $tb;
         }
@@ -193,12 +195,7 @@ switch ($act) {
         $baiviet = getallBaiviet2($_GET['start'],$_GET['end']);
         print_r(json_encode($baiviet));
         break;
-
-    case 'changepass':
-        $thongtin = getThongtin($_SESSION['sid']);
-        $view = "./site/views/changePass.php";
-        require_once "./site/views/layout.php";
-        break;   
+   
 }
 
 ?>

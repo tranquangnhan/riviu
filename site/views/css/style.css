@@ -2269,3 +2269,7 @@ img {
 .like2 img {
   width: unset;
 }
+
+small {
+    color: #999;
+}

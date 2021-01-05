@@ -107,14 +107,14 @@ $(document).ready(function() {
             username: {
                 required: true,
             },
-            pass: {
-                required: true,
-                minlength: 8
-            },
-            repass: {
-                required: true,
-                equalTo: "#pass"
-            }
+            // pass: {
+            //     required: true,
+            //     minlength: 8
+            // },
+            // repass: {
+            //     required: true,
+            //     equalTo: "#pass"
+            // }
 
         },
         messages: {
@@ -125,14 +125,14 @@ $(document).ready(function() {
             username: {
                 required: "<span class='badge badge-danger'>Bạn chưa điền tên đăng nhập</span>",
             },
-            pass: {
-                required: "<span class='badge badge-danger'>Bạn chưa nhập mật khẩu</span>",
-                minlength: "<span class='badge badge-danger'>Mật khẩu có ít nhất 8 kí tự</span>"
-            },
-            repass: {
-                required: "<span class='badge badge-danger'>Bạn chưa nhập lại mật khẩu</span>",
-                equalTo: "<span class='badge badge-danger'>Mật khẩu không khớp</span>"
-            }
+            // pass: {
+            //     required: "<span class='badge badge-danger'>Bạn chưa nhập mật khẩu</span>",
+            //     minlength: "<span class='badge badge-danger'>Mật khẩu có ít nhất 8 kí tự</span>"
+            // },
+            // repass: {
+            //     required: "<span class='badge badge-danger'>Bạn chưa nhập lại mật khẩu</span>",
+            //     equalTo: "<span class='badge badge-danger'>Mật khẩu không khớp</span>"
+            // }
             // ten: {
             // 	required: "Bạn chưa nhập tên",
             // },
