@@ -88,15 +88,15 @@ if (isset($baiviet['idquan']))
             <!-- <div class="view">
                 <strong>331</strong> lượt xem bài viết
             </div> -->
-            <div class="binhluan">
+            <div class="binhluan"  id="cmt">
                 <p class="border-bottom pb-3"><strong><?= countCmt($_GET['id']) ?> Bình luận</strong></p>
                 <div class="box-cmt">
                 <img src="<?php if(is_file(PATH_IMG_SITE. $baiviet['avatar']) ) echo PATH_IMG_SITE. $baiviet['avatar']; else echo PATH_IMG_SITE. 'no_avatar.png'; ?>" alt="">
                     <form action="?act=comment" method="post">
-                        <textarea name="noidung" id="" cols="12" rows="10" placeholder="Bình luận"></textarea>
+                        <textarea name="noidung" id="noidungbl" cols="12" rows="10" placeholder="Bình luận"></textarea>
                         <input type="reset" value="Hủy" class="bbtn-second">
                         <input type="hidden" name="idbv" value="<?=$_GET['id']?>">
-                        <input type="submit" value="Bình luận" class="bbtn">
+                        <input type="submit"  value="Bình luận" class="bbtn" onclick="return checkBl()" >
                     </form>
                 </div>
             </div>
