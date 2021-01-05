@@ -1,59 +1,4 @@
-    <!-- end header -->
-     <!-- <div class="boxcontent-img mt-2 type1">
-        <div class="container-type1">
-            <div class="bg">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-            </div>
-        </div>
-    </div>
 
-    <div class="boxcontent-img mt-2 type2">
-        <div class="container-type1">
-            <div class="bg">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-            </div>
-
-        </div>
-
-    </div>
-    <div class="boxcontent-img mt-2 type3">
-        <div class="container-type1">
-            <div class="bg">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-            </div>
-
-        </div>
-
-    </div>
-    <div class="boxcontent-img mt-2 type4">
-        <div class="container-type1">
-            <div class="bg">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                
-            </div>
-
-        </div>
-
-    </div>
-    <div class="boxcontent-img mt-2 type5">
-        <div class="container-type1">
-            <div class="bg">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-                <img src="./uploads/thanh-pham-105.jpg" alt="">
-            </div>
-
-        </div>
-
-    </div> -->
     <main>
         <div class="boxcenter">
             <div class="boxblog">
@@ -75,11 +20,8 @@
                 </div>
 
                 <?php
-                // var_dump(count($reviewList));
                 if (count($reviewList != 0)) {
                     foreach ($reviewList as $review) {
-                        # code...
-
                 ?>
                         <!-- start blog -->
                         <div class="blog">
@@ -116,28 +58,6 @@
                                 <?php 
 
                                     showNhieuAnh($review['id']); ?>
-                                <!-- <div class="boxcontent-img mt-2">
-                                    <div class="container1">
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog1.jpeg" alt="">
-                                        </div>
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog2.jpeg" alt="">
-                                        </div>
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog3.jpeg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="container2">
-                                        <div class="bg2">
-                                            <img src="./site/views/images/blog4.jpeg" alt="">
-                                        </div>
-                                        <div class="bg2">
-                                            <img src="./site/views/images/blog5.jpeg" alt="">
-                                            <div class="them"><span>+14</span></div>
-                                        </div>
-                                    </div>
-                                </div> -->
                                 <div class="boxtext">
                                     <a href="?act=chitiet&id=<?= $review['id'] ?>">
                                         <h2 data-v-ccafa7e2="" class="title-h2"><?= $review['tieude'] ?></h2>
@@ -157,9 +77,6 @@
                                         }
                                         }
                                         ?>
-                                        <!-- <a href=""><span>#chuyencuaneo</span></a>
-                                        <a href=""><span>#chuyencuaneo</span></a>
-                                        <a href=""><span>#chuyencuaneo</span></a> -->
                                     </div>
                                     <div class="boxaddress">
                                         <?php $quan = getInfoQuan($review['idquan']) ?>
@@ -189,7 +106,7 @@
                                         </div>
 
                                         <div class="cmt">
-                                            <a href="?act=chitiet&id=<?= $review['id'] ?>">
+                                            <a href="?act=chitiet&id=<?= $review['id']."#cmt"?>">
                                                 <img src="./site/views/images/btncmt.png" alt="">
                                             </a>
                                         </div>

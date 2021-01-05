@@ -139,7 +139,7 @@ switch ($act) {
             $noidung = $_POST['noidung'];
             $idbv = $_POST['idbv'];
             dangCmt($noidung, $idbv);
-            header("location: index.php?act=chitiet&id=$idbv");
+            header("location: index.php?act=chitiet&id=$idbv"."#cmt");
         }else header("location: index.php?act=login");
         break;
 
