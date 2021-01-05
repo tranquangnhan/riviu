@@ -1,5 +1,5 @@
     <!-- end header -->
-     <!-- <div class="boxcontent-img mt-2 type1">
+    <!-- <div class="boxcontent-img mt-2 type1">
         <div class="container-type1">
             <div class="bg">
                 <img src="./uploads/thanh-pham-105.jpg" alt="">
@@ -94,13 +94,13 @@
                                     <div class="boxname">
                                         <div class="name-level">
                                             <div class="name">
-                                                <a class="linkstyle" href="?act=trangcanhan&id=<?=$tacgia['id']?>">
-                                                <?= $tacgia['tenkh'] ?>
+                                                <a class="linkstyle" href="?act=trangcanhan&id=<?= $tacgia['id'] ?>">
+                                                    <?= $tacgia['tenkh'] ?>
                                                 </a>
                                             </div>
                                             <!-- <div class="level">level 6</div> -->
                                         </div>
-                                        <div class="date"><?= date("d-m-y",strtotime($review['ngaydang'])) ?></div>
+                                        <div class="date"><?= date("d-m-y", strtotime($review['ngaydang'])) ?></div>
                                         <div class="star">
                                             <?php
                                             for ($i = 0; $i < $review['sao']; $i++) {
@@ -113,31 +113,8 @@
                                          <div>Theo dõi</div> 
                                     </div> -->
                                 </div>
-                                <?php 
-
-                                    showNhieuAnh($review['id']); ?>
-                                <!-- <div class="boxcontent-img mt-2">
-                                    <div class="container1">
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog1.jpeg" alt="">
-                                        </div>
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog2.jpeg" alt="">
-                                        </div>
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog3.jpeg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="container2">
-                                        <div class="bg2">
-                                            <img src="./site/views/images/blog4.jpeg" alt="">
-                                        </div>
-                                        <div class="bg2">
-                                            <img src="./site/views/images/blog5.jpeg" alt="">
-                                            <div class="them"><span>+14</span></div>
-                                        </div>
-                                    </div>
-                                </div> -->
+                                <?php
+                                showNhieuAnh($review['id']); ?>
                                 <div class="boxtext">
                                     <a href="?act=chitiet&id=<?= $review['id'] ?>">
                                         <h2 data-v-ccafa7e2="" class="title-h2"><?= $review['tieude'] ?></h2>
@@ -149,28 +126,30 @@
                                     <div class="tags">
                                         <?php
                                         $idlist = $review['idhashtag'];
-                                        if($idlist!='') {
-                                        $idlist = explode(",", $idlist);
-                                        foreach ($idlist as $idtag) {
-                                            $tag = getTagName($idtag);
-                                            echo '<a href="' . $tag['id'] . '"><span>#' . $tag['tentag'] . ' </span></a>';
-                                        }
+                                        if ($idlist != '') {
+                                            $idlist = explode(",", $idlist);
+                                            foreach ($idlist as $idtag) {
+                                                $tag = getTagName($idtag);
+                                                echo '<a href="' . $tag['id'] . '"><span>#' . $tag['tentag'] . ' </span></a>';
+                                            }
                                         }
                                         ?>
                                         <!-- <a href=""><span>#chuyencuaneo</span></a>
                                         <a href=""><span>#chuyencuaneo</span></a>
                                         <a href=""><span>#chuyencuaneo</span></a> -->
                                     </div>
-                                    <div class="boxaddress">
-                                        <?php $quan = getInfoQuan($review['idquan']) ?>
-                                        <div class="boxaddress-img">
-                                            <img src="./uploads/<?= $quan['img'] ?>" alt="">
+                                    <a href="?act=quan&idquan=<?= $review['idquan'] ?>">
+                                        <div class="boxaddress">
+                                            <?php $quan = getInfoQuan($review['idquan']) ?>
+                                            <div class="boxaddress-img">
+                                                <img src="./uploads/<?= $quan['img'] ?>" alt="">
+                                            </div>
+                                            <div class="boxaddress-text">
+                                                <h3 class="title-h3"><b><?= $quan['tenquan'] ?></b></h3>
+                                                <p><?= $quan['diachi'] ?></p>
+                                            </div>
                                         </div>
-                                        <div class="boxaddress-text">
-                                            <h3 class="title-h3"><b><?= $quan['tenquan'] ?></b></h3>
-                                            <p><?= $quan['diachi'] ?></p>
-                                        </div>
-                                    </div>
+                                    </a>
                                     <div class="boxlike">
 
                                         <div class="like" onclick="like(<?= $review['id'] ?>)">

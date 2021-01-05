@@ -81,6 +81,15 @@ switch ($act) {
         require_once "./site/views/layout.php";
         break;
 
+    case 'quan': 
+        if(isset($_GET['idquan'])) {
+            $reviewList = getBvByQuan($_GET['idquan']);
+            $infoQuan = getInfoQuan($_GET['idquan']);
+        }
+        $view = "./site/views/quan.php";
+        require_once "./site/views/layout.php";
+        break;
+
     case 'login':
         echo '<link rel="stylesheet" href="site/views/css/allblog.css">';
         echo '<link rel="stylesheet" href="site/views/css/login.css">';

@@ -131,7 +131,8 @@ function dangCmt($noidung, $idbv) {
 }
 
 function countCmt($idbv) {
-    $demCmt = laymot("SELECT COUNT(*) as tong FROM binhluan WHERE idbaiviet = $idbv");
+    $sql = "SELECT COUNT(*) as tong FROM binhluan WHERE idbaiviet = ?";
+    $demCmt = result1(1,$sql, $idbv);
     return $demCmt['tong'];
 } 
 
@@ -262,6 +263,11 @@ function showNhieuAnh($idbv) {
 
 function getBvByNguoidang($idnguoidang) {
     return laydulieu("SELECT * FROM `baiviet` WHERE iduser = $idnguoidang ORDER BY id DESC");
+}
+
+function getBvByQuan($idquan) {
+    $sql = "SELECT * FROM `baiviet` WHERE idquan = ? ORDER BY id DESC";
+    return result1(0,$sql,$idquan);
 }
 
 function totalrow() {
