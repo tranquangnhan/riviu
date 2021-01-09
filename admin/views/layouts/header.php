@@ -154,7 +154,9 @@
                                         <div class="menu-alert">
                                             <ul>
                                                 <li><a href="index.php?ctrl=dmmonan&act=add">Thêm Mới</a></li>
-                                                <li><a href="index.php?ctrl=dmmonan&act=index">Danh Sách</a></li>
+                                                <li><a href="index.php?ctrl=dmmonan&act=index">Tất cả</a></li>
+                                                <li><a href="index.php?ctrl=dmmonan&act=doan">Đồ ằn</a></li>
+                                                <li><a href="index.php?ctrl=dmmonan&act=douong">Đồ uống</a></li>
                                             </ul>
                                         </div>
                                     </div>

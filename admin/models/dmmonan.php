@@ -25,4 +25,12 @@
         $sql = "SELECT * FROM monan ORDER BY id DESC";
         return result1(0,$sql);
     }
+    function showAllDoAn() {
+        $sql = "SELECT * FROM monan where loai = 0 ORDER BY id DESC";
+        return result1(0,$sql);
+    }
+    function showAllDoUong() {
+        $sql = "SELECT * FROM monan where loai = 1 ORDER BY id DESC";
+        return result1(0,$sql);
+    }
 ?>
