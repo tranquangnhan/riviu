@@ -114,7 +114,8 @@
                     } ?>
 
                 </div>
-                <span class="btn-outline" id="btnxemthem" onclick="loadmore(4,3,<?= totalrow() ?>)">Xem thêm</span>
+                <!-- Sửa đoaạn này nữa -->
+                <span class="btn-outline" id="btnxemthem" onclick="loadmore(3,3,<?= totalrow() ?>)">Xem thêm</span>
             </div>
             <!--end tab 1 -->
             <!-- tab 2 -->
@@ -197,9 +198,7 @@
 
 <script>
     function loadmore(start, end, total) {
-        console.log('start'+start,end);
         start = parseInt(start) + 3; 
-        console.log('end'+start,end);
         if (start > total) {
             start=total;
         }
