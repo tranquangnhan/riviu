@@ -32,7 +32,7 @@
                 $Return = array();
                 $userName = trim(stripTags($_POST['username']));
                 $passWord = trim(stripTags($_POST['password']));
-                
+               
                 $Return['StatusCode']  = (int) addUser($userName,$passWord) ? 1 : 0;
                 echo json_encode($Return);
 
