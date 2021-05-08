@@ -38,7 +38,7 @@
                                     <label for=""><strong>Địa Chỉ</strong></label>
                                 </div>
                                 <div class="col-lg-9">
-                                    <input type="text" name="diachi" id="" class="form-control" placeholder="Tên Khách Hàng" aria-describedby="helpId" required>
+                                    <input type="text" name="diachi" id="" class="form-control" placeholder="Địa Chỉ Quán Ăn" aria-describedby="helpId" required>
                                 </div>
                             </div>
                             <div class="row mt-4">

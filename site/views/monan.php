@@ -20,7 +20,7 @@
                 </div>
 
                 <?php
-                if (count($reviewList != 0)) {
+                if (count($reviewList) != 0) {
                     foreach ($reviewList as $review) {
                 ?>
                         <!-- start blog -->
@@ -42,7 +42,7 @@
                                             </div>
                                             <!-- <div class="level">level 6</div> -->
                                         </div>
-                                        <div class="date"><?= date("d-m-y",strtotime($review['ngaydang'])) ?></div>
+                                        <div class="date"><?= date("d-m-Y", strtotime($review['ngaydang']))?></div>
                                         <div class="star">
                                             <?php
                                             for ($i = 0; $i < $review['sao']; $i++) {

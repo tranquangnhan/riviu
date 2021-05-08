@@ -28,19 +28,22 @@ function closest(e, t) {
 
 container = document.getElementById("popup");
 open = document.getElementById("open");
+if (open) {
+    open.addEventListener("click", function(e) {
+        container.style.display = "block";
+        open.disabled = true;
+        e.stopPropagation();
+    });
+}
 
-open.addEventListener("click", function(e) {
-    container.style.display = "block";
-    open.disabled = true;
-    e.stopPropagation();
-});
-
-document.body.addEventListener("click", function(e) {
-    if (!closest(e.target, container)) {
-        container.style.display = "none";
-        open.disabled = false;
-    }
-});
+if (container) {
+    document.body.addEventListener("click", function(e) {
+        if (!closest(e.target, container)) {
+            container.style.display = "none";
+            open.disabled = false;
+        }
+    });
+}
 
 
 function openCity(evt, cityName) {
@@ -56,18 +59,6 @@ function openCity(evt, cityName) {
     document.getElementById(cityName).style.display = "block";
     evt.currentTarget.className += " active";
 }
-
-// Get the element with id="defaultOpen" and click on it
-
-// $('#tag').blur(function (e) { 
-//     e.preventDefault();
-//     $('#box-suggest').hide();
-// });
-
-// $('#tag').focus(function (e) { 
-//     e.preventDefault();
-//     $('#box-suggest').show();
-// });
 
 $('.item').click(function() {
 

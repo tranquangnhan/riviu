@@ -114,7 +114,7 @@
                     } ?>
 
                 </div>
-                <span class="btn-outline" id="btnxemthem" onclick="loadmore(4,3,<?= totalrow() ?>)">Xem thêm</span>
+                <span class="btn-outline" id="btnxemthem" onclick="loadmore(3,3,<?= totalrow() ?>)">Xem thêm</span>
             </div>
             <!--end tab 1 -->
             <!-- tab 2 -->

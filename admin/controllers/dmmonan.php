@@ -46,11 +46,31 @@ switch ($act) {
             $id = $_GET['iddel'];
             xoaDmQuan($id);
         }
-        $showAllDmMonAn = showAllDmMonAn();
+        if($_GET['loai'] == 'index'){
+            $showAllDmMonAn = showAllDmMonAn();
+        }elseif($_GET['loai'] == 'doan'){
+            $showAllDmMonAn = showAllDoAn();
+        }elseif($_GET['loai'] == 'douong'){
+            $showAllDmMonAn = showAllDoUong();
+        }elseif($_GET['loai'] == 'amthuc'){
+            $showAllDmMonAn = showAllAmThuc();
+        }
         require_once "views/dmmonanindex.php";
     break;
-        default:
-            break;
+    case 'doan':
+        $showAllDmMonAn = showAllDoAn();
+        require_once "views/dmmonanindex.php";
+        break;
+    case 'douong':
+        $showAllDmMonAn = showAllDoUong();
+        require_once "views/dmmonanindex.php";
+        break;
+    case 'amthuc':
+        $showAllDmMonAn = showAllAmThuc();
+        require_once "views/dmmonanindex.php";
+        break;
+    default:
+        break;
 }
 
 ?>

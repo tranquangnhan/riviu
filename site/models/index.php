@@ -76,7 +76,7 @@ function getAllAmThuc()
 }
 
 function getBvByMon($idmon) {
-    $sql = "SELECT * FROM `baiviet` WHERE idmonan = ?";
+    $sql = "SELECT * FROM `baiviet` WHERE idmonan = ? ORDER BY id DESC";
     return result1(0,$sql,$idmon);
 }
 

@@ -14,7 +14,7 @@ if (isset($_GET['act'])) {
 switch ($act) {
     case 'home':
         $mess = "";
-        $baiviet = getallBaiviet(1,6);
+        $baiviet = getallBaiviet(0,6);
         $baivietAn = getallBaiviet_(0);
         $baivietUong = getallBaiviet_(1);
         $monUong = getallDouong();
