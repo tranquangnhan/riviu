@@ -8,19 +8,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <base href="/duan1final/admin/">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="views/css/style.css">
+    <link rel="stylesheet" href="/admin/views/css/style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mt-5">
-                <img src="views/img/01.png" alt="">
+                <img src="/admin/views/img/01.png" alt="">
             </div>
             <div class="col-lg-4 mt-5">
                 <h1>Đăng nhập</h1>
