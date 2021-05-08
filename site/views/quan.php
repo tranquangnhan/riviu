@@ -1,4 +1,3 @@
-
     <main>
         <div class="boxcenter">
             <div class="boxblog">
@@ -6,21 +5,21 @@
                     <nav>
                         <ol data-v-53d0ffbc="" class="breadcrumb">
                             <li class="active breadcrumb-item"><a href="index.php">Trang chủ</a></li>
-                            <li class="breadcrumb-item"><?= $tenMon ?></li>
+                            <li class="breadcrumb-item"><?= $infoQuan['tenquan'] ?></li>
                         </ol>
                     </nav>
                 </div>
                 <div class="box-imgdm">
                     <div class="imgdm">
-                        <img src="./uploads/<?= getImgmon($_GET['idmon']) ?>" alt="">
+                        <img src="./uploads/<?= $infoQuan['img'] ?>" alt="">
                         <div class="overplay cover"></div>
                         <div class="btn-share"><img src="./site/views/images/btn-share.png" alt=""></div>
-                        <div class="title"><?= $tenMon ?></div>
+                        <div class="title"><?= $infoQuan['tenquan'] ?></div>
                     </div>
                 </div>
 
                 <?php
-                if (count($reviewList) != 0) {
+                if (count($reviewList != 0)) {
                     foreach ($reviewList as $review) {
                 ?>
                         <!-- start blog -->
@@ -42,7 +41,7 @@
                                             </div>
                                             <!-- <div class="level">level 6</div> -->
                                         </div>
-                                        <div class="date"><?= date("d-m-Y", strtotime($review['ngaydang']))?></div>
+                                        <div class="date"><?= date("d-m-y", strtotime($review['ngaydang'])) ?></div>
                                         <div class="star">
                                             <?php
                                             for ($i = 0; $i < $review['sao']; $i++) {
@@ -72,20 +71,19 @@
                                             $idlist = explode(",", $idlist);
                                             foreach ($idlist as $idtag) {
                                                 $tag = getTagName($idtag);
-                                                echo '<a href="' . $tag['id'] . '"><span>#' . $tag['tentag'] . ' </span></a>';
+                                                echo '<a href=""><span>#' . $tag['tentag'] . ' </span></a>';
                                             }
                                         }
                                         ?>
                                     </div>
                                     <a href="?act=quan&idquan=<?= $review['idquan'] ?>">
                                         <div class="boxaddress">
-                                            <?php $quan = getInfoQuan($review['idquan']) ?>
                                             <div class="boxaddress-img">
-                                                <img src="./uploads/<?= $quan['img'] ?>" alt="">
+                                                <img src="./uploads/<?= $infoQuan['img'] ?>" alt="">
                                             </div>
                                             <div class="boxaddress-text">
-                                                <h3 class="title-h3"><b><?= $quan['tenquan'] ?></b></h3>
-                                                <p><?= $quan['diachi'] ?></p>
+                                                <h3 class="title-h3"><b><?= $infoQuan['tenquan'] ?></b></h3>
+                                                <p><?= $infoQuan['diachi'] ?></p>
                                             </div>
                                         </div>
                                     </a>
@@ -99,15 +97,14 @@
                                                 } else $likeimg = "./site/views/images/btnlike.png";
 
                                                 ?>
-                                                <!-- <img id="btn_like" src="<?= $likeimg ?>" alt="">
-                                            <span id="soLike_<?= $_GET['id'] ?>"><?= countLike($_GET['id']) ?></span> -->
+
                                                 <img id="btn_like_<?= $review['id'] ?>" src="<?= $likeimg ?>" alt="">
                                                 <span id="soLike_<?= $review['id'] ?>"><?= countLike($review['id']) ?></span>
                                             </a>
                                         </div>
 
                                         <div class="cmt">
-                                            <a href="?act=chitiet&id=<?= $review['id']."#cmt"?>">
+                                            <a href="?act=chitiet&id=<?= $review['id'] ?>">
                                                 <img src="./site/views/images/btncmt.png" alt="">
                                             </a>
                                         </div>

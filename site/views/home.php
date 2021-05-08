@@ -197,9 +197,7 @@
 
 <script>
     function loadmore(start, end, total) {
-        console.log('start'+start,end);
         start = parseInt(start) + 3; 
-        console.log('end'+start,end);
         if (start > total) {
             start=total;
         }

@@ -33,7 +33,7 @@
         $sql = "SELECT * FROM monan where loai = 1 ORDER BY id DESC";
         return result1(0,$sql);
     }
-    function showAllAmThuc() {
+    function showAllAmThuc(){
         $sql = "SELECT * FROM monan where loai = 2 ORDER BY id DESC";
         return result1(0,$sql);
     }

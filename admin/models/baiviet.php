@@ -26,10 +26,11 @@
     }
     function updateBlog($id,$name,$imgupload,$iddm,$noidung,$tacgia,$tag,$mota,$public) {
         $sql = "UPDATE baiviet SET name='$name', img='$imgupload', iddm='$iddm', noidung='$noidung', tacgia='$tacgia', tag='$tag', mota='$mota', public='$public' where id='$id';";
-        execute1($sql); 
+        exec1($sql); 
     }  
     function showTenbv($id){
         $sql ="select * from baiviet where id= ?";
         return result1(1,$sql,$id)['tieude'];
     }
+    
 ?>

@@ -54,28 +54,7 @@
                                 <?php
 
                                 showNhieuAnh($bv['id']); ?>
-                                <!-- <div class="boxcontent-img mt-2">
-                                    <div class="container1">
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog1.jpeg" alt="">
-                                        </div>
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog2.jpeg" alt="">
-                                        </div>
-                                        <div class="bg1">
-                                            <img src="./site/views/images/blog3.jpeg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="container2">
-                                        <div class="bg2">
-                                            <img src="./site/views/images/blog4.jpeg" alt="">
-                                        </div>
-                                        <div class="bg2">
-                                            <img src="./site/views/images/blog5.jpeg" alt="">
-                                            <div class="them"><span>+14</span></div>
-                                        </div>
-                                    </div>
-                                </div> -->
+
                                 <div class="boxtext">
                                     <a href="?act=chitiet&id=<?= $bv['id'] ?>">
                                         <h2 data-v-ccafa7e2="" class="title-h2"><?= $bv['tieude'] ?></h2>
@@ -95,20 +74,20 @@
                                             }
                                         }
                                         ?>
-                                        <!-- <a href=""><span>#chuyencuaneo</span></a>
-                                        <a href=""><span>#chuyencuaneo</span></a>
-                                        <a href=""><span>#chuyencuaneo</span></a> -->
+
                                     </div>
-                                    <div class="boxaddress">
-                                        <?php $quan = getInfoQuan($bv['idquan']) ?>
-                                        <div class="boxaddress-img">
-                                            <img src="./uploads/<?= $quan['img'] ?>" alt="">
+                                    <a href="?act=quan&idquan=<?= $bv['idquan']?>">
+                                        <div class="boxaddress">
+                                            <?php $quan = getInfoQuan($bv['idquan']) ?>
+                                            <div class="boxaddress-img">
+                                                <img src="./uploads/<?= $quan['img'] ?>" alt="">
+                                            </div>
+                                            <div class="boxaddress-text">
+                                                <h3 class="title-h3"><b><?= $quan['tenquan'] ?></b></h3>
+                                                <p><?= $quan['diachi'] ?></p>
+                                            </div>
                                         </div>
-                                        <div class="boxaddress-text">
-                                            <h3 class="title-h3"><b><?= $quan['tenquan'] ?></b></h3>
-                                            <p><?= $quan['diachi'] ?></p>
-                                        </div>
-                                    </div>
+                                    </a>
                                     <div class="boxlike">
 
                                         <div class="like" onclick="like(<?= $bv['id'] ?>)">
